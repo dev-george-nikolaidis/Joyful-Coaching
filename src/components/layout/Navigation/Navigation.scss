@@ -1,0 +1,22 @@
+.header {
+	grid-column: 2 / 14;
+	height: 6rem;
+}
+
+.navLogoWrapper {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.navList {
+	display: flex;
+	gap: 1.2rem;
+}
