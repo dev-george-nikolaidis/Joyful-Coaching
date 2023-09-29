@@ -13,22 +13,22 @@ export default function Navigation({}: Props) {
 				</NavLink>
 				<ul className="navList">
 					<li>
-						<NavLink to="/" end className={({ isActive }) => (isActive ? ` active ` : ` inactive`)}>
+						<NavLink to="/" end className={({ isActive }) => (isActive ? ` active ` : `  inactive`)}>
 							<span className="link"> Home</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/services" end className={({ isActive }) => (isActive ? ` active ` : ` inactive`)}>
+						<NavLink to="/services" end className={({ isActive }) => (isActive ? `  active ` : `   inactive`)}>
 							<span className="link">Services</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/About" end className={({ isActive }) => (isActive ? ` active ` : ` inactive`)}>
+						<NavLink to="/About" end className={({ isActive }) => (isActive ? `  active ` : `  inactive`)}>
 							<span className="link">About us</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/my-book" end className={({ isActive }) => (isActive ? ` active ` : ` inactive`)}>
+						<NavLink to="/my-book" end className={({ isActive }) => (isActive ? `  active ` : `  inactive`)}>
 							<span className="link">My ebook</span>
 						</NavLink>
 					</li>

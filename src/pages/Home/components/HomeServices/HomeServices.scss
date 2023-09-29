@@ -1,0 +1,22 @@
+.services {
+	grid-column: 2 / 14;
+	margin-top: var(--section-mt);
+}
+
+.servicesWrapper {
+	display: flex;
+	flex-wrap: auto;
+	gap: 4rem;
+	margin-top: 8rem;
+	height: 100%;
+}
+
+.serviceCardContainer {
+	flex: 1;
+}
+
+.serviceTitle {
+	margin: 6rem 0;
+}
+.serviceText {
+}

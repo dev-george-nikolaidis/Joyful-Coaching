@@ -8,11 +8,16 @@
 	--clr-purple-400: #7567ca;
 	--clr-purple-300: #c0b9ec;
 
-	--clr-green-600: #20ad96;
+	--clr-green-500: rgb(24, 137, 118);
+	--clr-green-400: #20ad96;
+	--clr-green-300: #2ad2b6;
+
+	--clr-green-2-400: #5a837d;
 	--clr-green-200: #483d8b;
 
 	--clr-body-bg: #ffff;
 	--clr-section-bg: #faf8f6;
+	--clr-body-text: #0c111d;
 
 	// --fs-900: 20rem;
 	--fs-800: 3.2rem;
@@ -23,6 +28,7 @@
 	--fs-300: 1.3rem;
 	// --fs-200: 1.5rem;
 
+	--section-mt: 18rem;
 	--box-shadow-1: 0 3px 8px rgba(0, 0, 0, 0.1);
 	--ff-normal: "Kumbh Sans", sans-serif;
 }

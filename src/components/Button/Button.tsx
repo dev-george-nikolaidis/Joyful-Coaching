@@ -5,5 +5,5 @@ type Props = {
 };
 
 export default function Button({ children }: Props) {
-	return <button>{children}</button>;
+	return <button className="btn">{children}</button>;
 }

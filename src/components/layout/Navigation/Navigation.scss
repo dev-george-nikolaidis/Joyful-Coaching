@@ -3,10 +3,19 @@
 	height: 6rem;
 }
 
+.active {
+	// background-color: blue;
+}
+
 .navLogoWrapper {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	background-color: #fff;
+}
+
+.logoText {
+	font-weight: 700;
 }
 
 .nav {
@@ -19,4 +28,16 @@
 .navList {
 	display: flex;
 	gap: 1.2rem;
+}
+
+.link {
+	transition: 0.5s all ease-in-out;
+	padding: 0.6rem 1rem;
+	background-color: var(--clr-green-2-400);
+	color: #fff;
+	font-weight: 600;
+}
+
+link:visited {
+	color: orange;
 }

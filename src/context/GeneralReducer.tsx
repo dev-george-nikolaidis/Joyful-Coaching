@@ -1,5 +1,5 @@
 import { Action, ActionTypes } from "./Actions";
-import { GeneralContextState } from "./GeneralContext";
+import { GeneralContextState } from "./State";
 
 type ReducerType = (state: GeneralContextState, action: Action) => GeneralContextState;
 
