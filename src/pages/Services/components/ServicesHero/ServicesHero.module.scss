@@ -1,0 +1,23 @@
+.serviceHero {
+	grid-column: 1 / -1;
+	background-color: var(--clr-section-bg);
+	height: 67rem;
+	align-content: end;
+}
+
+.heroTextWrapper {
+	grid-column: 2 / 8;
+	margin: auto 0.1rem;
+}
+
+.heroImgWrapper {
+	grid-column: 8 / 14;
+	justify-self: end;
+}
+.para {
+	margin: 2rem 0;
+}
+
+.heroImg {
+	max-height: 60rem;
+}

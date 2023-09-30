@@ -5,18 +5,8 @@
 
 .servicesWrapper {
 	display: flex;
-	flex-wrap: auto;
+	flex-wrap: wrap;
 	gap: 4rem;
 	margin-top: 8rem;
 	height: 100%;
-}
-
-.serviceCardContainer {
-	flex: 1;
-}
-
-.serviceTitle {
-	margin: 6rem 0;
-}
-.serviceText {
 }

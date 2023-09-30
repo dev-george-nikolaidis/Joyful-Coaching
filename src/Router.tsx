@@ -1,6 +1,7 @@
 // libraries
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
+import Services from "./pages/Services/Services";
 
 const Router: React.FC = () => {
 	return (
@@ -8,6 +9,7 @@ const Router: React.FC = () => {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />
+					<Route path="/services" element={<Services />} />
 					{/*
 					<Route path="/user/register" element={<Register />} />
 					<Route path="/user/login" element={<Login />} />

@@ -1,0 +1,31 @@
+.newsletter {
+	grid-column: 1 / -1;
+	margin-top: var(--section-mt);
+	background-color: var(--clr-section-bg);
+	height: 18rem;
+	align-content: center;
+}
+
+.textWrapper {
+	grid-column: 2 / 9;
+}
+
+.inputWrapper {
+	grid-column: 9 / 14;
+}
+
+.inputNewsletter {
+	width: 35rem;
+	padding: 0.6rem 1rem;
+	margin-right: 2rem;
+	border-radius: 0.8rem;
+}
+
+.inputNewsletter:focus {
+	outline: none;
+}
+
+.btnNewsletter {
+	text-transform: none;
+	font-weight: 500;
+}

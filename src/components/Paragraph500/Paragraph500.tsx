@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
-import "./Paragraph500.scss";
+import s from "./Paragraph500.module.scss";
 
 type Props = {
 	children: ReactNode;
 	className?: string;
 };
-export default function Paragraph400({ children, className }: Props) {
-	return <p className={` text ${className}`}>{children}</p>;
+export default function Paragraph500({ children, className }: Props) {
+	return <p className={` ${s.text} ${className}`}>{children}</p>;
 }

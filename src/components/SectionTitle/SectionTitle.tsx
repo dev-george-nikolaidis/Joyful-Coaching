@@ -1,4 +1,4 @@
-import "./SectionTitle.scss";
+import s from "./SectionTitle.module.scss";
 
 type Props = {
 	children: React.ReactNode;
@@ -6,5 +6,5 @@ type Props = {
 };
 
 export default function SectionTitle({ children, className }: Props) {
-	return <h4 className={` title ${className}`}>{children}</h4>;
+	return <h4 className={` ${s.title} ${className}`}>{children}</h4>;
 }

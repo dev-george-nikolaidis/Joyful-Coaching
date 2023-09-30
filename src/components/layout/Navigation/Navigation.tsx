@@ -1,35 +1,35 @@
 import { NavLink } from "react-router-dom";
-import Logo from "../../../assets/img/logo.svg";
-import "./Navigation.scss";
+
+import s from "./Navigation.module.scss";
 type Props = {};
 
 export default function Navigation({}: Props) {
 	return (
-		<header className="header">
-			<nav className="nav">
-				<NavLink to="/" end className="navLogoWrapper">
-					<img src={Logo} alt="" />
-					<span className="logoText">Joyful Coaching</span>
+		<header className={s.header}>
+			<nav className={s.nav}>
+				<NavLink to="/" end className={s.navLogoWrapper}>
+					<img src="http://127.0.0.1:5173/assets/logo.svg" alt="" />
+					<span className={s.logoText}>Joyful Coaching</span>
 				</NavLink>
-				<ul className="navList">
+				<ul className={s.navList}>
 					<li>
-						<NavLink to="/" end className={({ isActive }) => (isActive ? ` active ` : `  inactive`)}>
-							<span className="link"> Home</span>
+						<NavLink to="/" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
+							<span className={s.link}> Home</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/services" end className={({ isActive }) => (isActive ? `  active ` : `   inactive`)}>
-							<span className="link">Services</span>
+						<NavLink to="/services" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
+							<span className={s.link}>Services</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/About" end className={({ isActive }) => (isActive ? `  active ` : `  inactive`)}>
-							<span className="link">About us</span>
+						<NavLink to="/About" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
+							<span className={s.link}>About us</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/my-book" end className={({ isActive }) => (isActive ? `  active ` : `  inactive`)}>
-							<span className="link">My ebook</span>
+						<NavLink to="/my-book" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
+							<span className={s.link}>My ebook</span>
 						</NavLink>
 					</li>
 				</ul>

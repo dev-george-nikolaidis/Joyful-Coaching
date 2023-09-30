@@ -13,7 +13,7 @@
       "withLazy": false,
       "customTemplates":{
         "component":"templates/TemplateName.tsx",
-        "style":"templates/TemplateName.scss"
+        "style":"templates/TemplateName.module.scss"
       }
 
 
@@ -26,7 +26,7 @@
       "withLazy": false,
       "customTemplates":{
         "component":"templates/TemplateName.tsx",
-        "style":"templates/TemplateName.scss"
+        "style":"templates/TemplateName.module.scss"
       }
 
       },
@@ -38,7 +38,7 @@
       "withLazy": false,
       "customTemplates":{
         "component":"templates/TemplateName.tsx",
-        "style":"templates/TemplateName.scss"
+        "style":"templates/TemplateName.module.scss"
       }
 
       }
