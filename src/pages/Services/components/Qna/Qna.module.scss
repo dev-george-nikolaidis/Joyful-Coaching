@@ -1,0 +1,21 @@
+.qna {
+	margin-top: var(--section-mt);
+	grid-column: 2 / 14;
+}
+
+.qnaCardContainer {
+}
+
+.contactWrapper {
+	margin-top: 8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contactText {
+	margin: 2rem 0;
+}
+.btnContact {
+	text-transform: none;
+}

@@ -84,152 +84,286 @@ export const blogs = [
 	{
 		id: 0,
 		title: "The Power of Self-Expression: Why You Need to Embrace It.",
-		text: `Self-expression is the vital key to unlocking your authenticity and living a fulfilling life. As a live coach, I'm passionate about helping individuals understand why embracing self-expression is crucial for personal growth and happiness.
+		urlImg: "http://127.0.0.1:5173/assets/blog/exprecion.jpg",
+		text: `In a world filled with noise and conformity, the act of self-expression shines as a beacon of authenticity and empowerment. It's not merely an artistic endeavor; it's a fundamental aspect of being human. Here's why you need to embrace the transformative power of self-expression.
 
-		Authenticity: Self-expression allows you to be your true self, freeing you from societal expectations and pressures. It's a path to authenticity.
+		1. Unleashing Authenticity: Self-expression allows you to strip away the layers of societal expectations and reveal your true self. It's a journey toward authenticity, where you let your genuine thoughts, feelings, and creativity shine.
 
-		Emotional Release: Suppressing emotions can be detrimental. Expressing yourself enables the release of pent-up feelings, promoting emotional well-being.
+		2. A Path to Emotional Liberation: Bottling up emotions or thoughts can be detrimental to mental health. Self-expression acts as a release valve, allowing you to express your joys, frustrations, fears, and hopes in healthy ways.
 
-		Enhanced Communication: Effective communication hinges on self-expression. It helps you convey thoughts, needs, and desires clearly to others.
+		3. Effective Communication: The ability to express yourself clearly is vital in both personal and professional relationships. Self-expression enhances your communication skills, helping you convey your thoughts and feelings effectively.
 
-		Creativity and Innovation: Expressing yourself fosters creativity and innovation. It's the gateway to discovering new ideas and problem-solving.
+		4. Fostering Creativity: Whether through art, writing, music, or any form of creative expression, self-expression nurtures your creative spirit. It's a conduit for innovation, problem-solving, and self-discovery.
 
-		Empowerment: When you express yourself, you assert your voice and assertiveness. It empowers you to take charge of your life and decisions.
+		5. Building Self-Confidence: As you embrace self-expression, you'll find your self-confidence growing. Sharing your thoughts and creations with the world reinforces your sense of self-worth.
 
-		Connection: Self-expression builds connections with like-minded individuals who resonate with your authentic self.
+		6. Strengthening Relationships: Authentic self-expression fosters deeper connections with others. When you open up and share your true self, you invite others to do the same, creating meaningful and genuine relationships.
 
-		Remember, self-expression is a journey, not a destination. As a live coach, I encourage you to embrace it fully, as it is the cornerstone of a fulfilling and meaningful life. Your unique voice matters, and your expression has the power to transform not only your life but also the world around you.`,
+		7. Personal Growth: Self-expression is a continuous journey of self-discovery and improvement. It encourages introspection and self-reflection, leading to personal growth and a greater understanding of your own values and beliefs.
+
+		8. Resilience and Adaptability: The ability to express yourself helps you adapt to life's changes and challenges. It equips you with coping mechanisms and resilience, enabling you to navigate difficult situations with grace.
+
+		9. A Source of Fulfillment: Self-expression isn't just an activity; it's a source of immense fulfillment and joy. Whether you're creating art, writing, singing, or simply speaking your truth, it adds a layer of happiness to your life.
+
+		In a world that often encourages conformity, embracing self-expression is a radical act of self-love and empowerment. It's a declaration that your voice matters, your thoughts are valid, and your unique perspective enriches the world. So, whether through art, words, or simply speaking your truth, embrace the power of self-expression, and watch as it transforms your life into a canvas of authenticity, creativity, and personal growth.`,
 	},
 	{
 		id: 1,
 		title: "Why You Need to Take a Break from Social Media: Insights from a Live Coach.",
-		text: `In today's digital age, social media has become an integral part of our lives. While it offers connection and information, it's crucial to recognize the need for occasional breaks. As a live coach, I advocate for these hiatuses to nurture your mental and emotional well-being.
+		urlImg: "http://127.0.0.1:5173/assets/blog/quit-social-media.jpg",
+		text: `In our hyper-connected world, social media has become an integral part of our lives, enabling us to share our thoughts, experiences, and creativity with the world. While it has its merits, there's a compelling reason to occasionally step back and take a break from the digital realm. As a live coach, I've witnessed firsthand the transformative power of disconnecting from social media. Here's why you should consider it too:
 
-		Mental Clarity: Constant scrolling can overwhelm your mind. A break allows you to clear mental clutter, regain focus, and rediscover your priorities.
+		1. Reconnect with Your Authentic Self: Social media often encourages us to craft carefully curated personas. Taking a break allows you to reconnect with your authentic self, free from the pressures of likes and validation.
 
-		Authentic Connections: Social media often fosters superficial interactions. Disconnecting allows you to invest in genuine, face-to-face relationships, rekindling deeper connections.
+		2. Mindful Living: Constant scrolling can lead to mindless consumption of content. A break encourages mindfulness, helping you live in the present moment and engage with the real world.
 
-		Enhanced Productivity: Distractions from notifications can hinder productivity. A break lets you reclaim time for meaningful tasks and personal growth.
+		3. Mental Health and Well-being: Studies have shown a link between excessive social media use and increased stress, anxiety, and depression. Stepping away can significantly improve your mental health and well-being.
 
-		Improved Mental Health: Comparing your life to curated online profiles can lead to anxiety and low self-esteem. A hiatus promotes self-compassion and self-acceptance.
+		4. Reclaim Your Time: Social media can be a time sink. Taking a break gives you back precious hours that you can redirect toward meaningful activities, hobbies, and self-care.
 
-		Reconnect with Self: Use the break to reconnect with your interests, passions, and personal goals, fostering self-discovery and personal growth.
+		5. Improved Relationships: Digital interactions can never fully replace face-to-face connections. Disconnecting allows you to invest more time in nurturing meaningful relationships with loved ones.
 
-		Remember, social media should enhance your life, not consume it. Taking periodic breaks allows you to regain control and ensure a healthier, more balanced relationship with the digital world.`,
+		6. Greater Productivity: Distractions from notifications and scrolling can hinder productivity. A social media hiatus provides a focused environment for achieving your goals and tasks.
+
+		7. Boost Creativity: Consuming less content and experiencing more of the real world can ignite your creativity. Many artists and writers find inspiration during their digital detox.
+
+		8. Perspective and Gratitude: Stepping away from social media allows you to gain perspective and appreciate the simple joys of life. It's an opportunity to practice gratitude for the present moment.
+
+		As a live coach, I encourage you to periodically unplug from the digital world and embrace the power of self-expression in the real world. Use this break to rediscover your true self, nurture your mental health, and deepen your connections with the world around you. Remember, self-expression is not limited to social media; it's about living an authentic, mindful, and fulfilled life both online and offline.`,
 	},
 	{
 		id: 2,
 		title: "The Importance of a Balanced Life: Insights from a Live Coach.",
-		text: `In the fast-paced whirlwind of modern life, achieving balance can sometimes feel like an impossible feat. As a live coach, I emphasize the profound significance of maintaining equilibrium in all aspects of life.
+		urlImg: "http://127.0.0.1:5173/assets/blog/life-balance.jpg",
+		text: `In the relentless hustle and bustle of modern life, achieving balance can feel like a distant dream. As a live coach, I'm here to emphasize that balance is not only achievable but essential for your overall well-being. Let's explore why striking a balance between various aspects of life is crucial, and how self-expression plays a pivotal role in this pursuit.
 
-		Health and Well-being: A balanced life prioritizes physical and mental health. Regular exercise, a nutritious diet, and mindfulness practices foster well-being.
+		1. Mental and Emotional Well-being: Balancing your personal and professional life is vital for maintaining mental and emotional health. Self-expression serves as an emotional outlet, allowing you to process feelings and reduce stress.
 
-		Work-Life Harmony: Balancing career ambitions with personal life is crucial. It prevents burnout, nurtures relationships, and ensures sustainable success.
+		2. Fulfillment and Happiness: A balanced life leads to a greater sense of fulfillment and happiness. When you allocate time to your passions, relationships, and self-care, you experience a profound joy in your daily existence.
 
-		Personal Growth: Time for self-improvement and learning is essential. Balanced individuals are open to new experiences and continuous growth.
+		3. Health and Vitality: Neglecting one area of your life in favor of another can lead to health issues. Self-expression, whether through creative pursuits or open communication, contributes to overall vitality.
 
-		Relationships: Quality relationships require time and effort. Balance allows you to cultivate meaningful connections with loved ones.
+		4. Enhanced Relationships: Balanced individuals are better equipped to nurture healthy relationships. Self-expression fosters open and honest communication, strengthening bonds with loved ones.
 
-		Stress Reduction: A balanced life mitigates stress. It equips you with coping strategies and resilience, promoting emotional stability.
+		5. Productivity and Efficiency: Striking a balance enables you to maximize your productivity. When you allocate time wisely and express your needs, you work efficiently and achieve more.
 
-		Happiness and Fulfillment: Achieving a balance between work, relationships, and personal passions leads to greater happiness and fulfillment.
+		6. Personal Growth: Self-expression is a crucial tool for personal growth. It encourages self-discovery, introspection, and the pursuit of your passions and interests.
 
-		Striking this equilibrium is an ongoing process, unique to each individual. As a live coach, I guide you toward crafting a life where all the elements coexist harmoniously, ensuring a fulfilling and sustainable journey. Remember, balance isn't a destination; it's a continuous, enriching journey.`,
+		7. Resilience and Adaptability: A balanced life cultivates resilience and adaptability. When you're well-rounded and emotionally stable, you can navigate life's challenges with grace.
+
+		8. Inner Harmony: Achieving balance is like tuning a musical instrument to perfect harmony. It aligns your mind, body, and soul, fostering inner peace and tranquility.
+
+		As a live coach, I encourage you to prioritize self-expression as a means to achieve and maintain balance in your life. Whether it's through artistic endeavors, open communication, or simply setting boundaries, self-expression is the key to a well-rounded, fulfilling life. Remember, the journey toward balance is ongoing, and it's one of the most valuable investments you can make in yourself.`,
 	},
 	{
 		id: 3,
-		title: "Navigating Life's Challenges: A Live Coach's Guide to Resilience and Growth.",
-		text: `Life is an unpredictable journey, often presenting us with challenges that can test our resilience and leave us feeling overwhelmed. As a live coach, I specialize in helping individuals navigate these challenges and emerge stronger, wiser, and more self-assured.
+		title: "Navigating Life's Challenges: Insights from a Life Coach",
+		urlImg: "http://127.0.0.1:5173/assets/navigate-challenges.jpg",
+		text: `Life is an intricate journey filled with both triumphs and tribulations. As a life coach, I'm here to shed light on the art of navigating life's challenges with resilience, positivity, and personal growth.
 
-		In our sessions, I provide a safe and non-judgmental space for you to explore your feelings and thoughts. Together, we identify your strengths, values, and goals, crafting a personalized roadmap to overcome obstacles. I empower you to develop coping strategies, build resilience, and foster a growth mindset that can transform adversity into opportunities.
+		1. Embrace Change: Change is inevitable, and it often brings challenges. Instead of resisting it, embrace change as an opportunity for growth. A life coach can help you adapt to new circumstances, develop a growth mindset, and make the most of transitions.
 
-		Life's challenges may be daunting, but they are also powerful catalysts for personal growth. With the right guidance and mindset, you can not only survive but thrive amidst adversity. As your live coach, I am here to support and empower you on your journey to resilience and growth, helping you emerge from life's challenges stronger and more resilient than ever before. `,
+		2. Cultivate Self-Awareness: Understanding your strengths, weaknesses, values, and beliefs is essential when facing challenges. Self-awareness empowers you to make informed decisions and navigate obstacles with confidence.
+
+		3. Goal Setting: Setting clear and achievable goals is a vital tool for overcoming challenges. Life coaches can help you identify your objectives, create action plans, and stay motivated on your journey.
+
+		4. Mindset Matters: Your mindset plays a crucial role in how you perceive and tackle challenges. Shifting from a fixed mindset to a growth mindset can make challenges seem less daunting and more like opportunities for learning and development.
+
+		5. Effective Problem-Solving: Life coaches guide you in developing effective problem-solving skills. They help you break down complex challenges into manageable steps and explore various solutions.
+
+		6. Resilience Building: Resilience is the ability to bounce back from adversity. Life coaches provide strategies to enhance your resilience, helping you face challenges with grace and strength.
+
+		7. Support and Accountability: A life coach serves as your ally and confidant. They offer support, encouragement, and accountability, helping you stay committed to your goals, even when challenges arise.
+
+		8. Self-Care: Navigating challenges can be emotionally and mentally taxing. A life coach emphasizes the importance of self-care, helping you maintain well-being and balance during difficult times.
+
+		9. Learning from Setbacks: Life's challenges often come with setbacks. A life coach helps you see setbacks as opportunities for growth and learning, rather than as failures.
+
+		10. Celebrate Progress: Even small victories should be celebrated. A life coach reminds you to acknowledge your progress, boosting your confidence and motivation to tackle future challenges.
+
+		Navigating life's challenges is a journey of self-discovery and personal growth. As a life coach, I'm here to empower you with the tools, strategies, and support you need to overcome obstacles, embrace change, and thrive in the face of adversity. Remember, challenges are not roadblocks but stepping stones on your path to a more fulfilling life.`,
 	},
 	{
 		id: 4,
 		title: "How a Live Coach Can Transform Your Life.",
-		text: `Life can often feel like a maze, full of twists and turns, and it's easy to lose sight of your true self amidst the chaos. As a live coach, my mission is to be your guiding light, helping you navigate the labyrinth of life towards a more fulfilling and purpose-driven existence.
+		urlImg: "http://127.0.0.1:5173/assets/tranform.jpg",
+		text: `Life can often feel like a complex puzzle, with numerous pieces to fit together. Sometimes, it takes a guide to help you navigate the labyrinth and unlock your full potential. That's where a life coach comes in, offering transformative insights and support to help you flourish in various aspects of life.
 
-		My approach as a live coach is rooted in empathy and understanding. I provide a safe and non-judgmental space for you to explore your thoughts, feelings, and aspirations. Together, we uncover your unique strengths, values, and desires, paving the way for personal growth and self-discovery.
+		1. Clarity and Goal Setting: A life coach helps you gain clarity about your life's direction and purpose. By asking thought-provoking questions and encouraging self-reflection, they assist you in setting meaningful, achievable goals.
 
-		I work with you to set achievable goals and develop tailored strategies that align with your aspirations. Whether you're striving for career advancement, seeking better relationships, or simply yearning for a more balanced life, I'm here to support and empower you every step of the way.
+		2. Personal Growth: Life coaches are dedicated to your personal development. They guide you through challenges, helping you build resilience, self-confidence, and a growth mindset.
 
-		Through our partnership, you'll gain greater self-awareness, improved self-confidence, and the tools to overcome obstacles. Together, we'll unlock your full potential, transforming your life into one that's filled with purpose, passion, and a renewed sense of self. Embrace this journey of empowerment, and let's embark on a transformational path to a brighter future together. `,
+		3. Overcoming Obstacles: Life is filled with obstacles, but a life coach equips you with the tools to face them head-on. They provide strategies for problem-solving and help you navigate through life's toughest challenges.
+
+		4. Improved Relationships: Life coaches can enhance your interpersonal skills, aiding you in building and maintaining healthy, fulfilling relationships. They offer insights into effective communication, empathy, and conflict resolution.
+
+		5. Accountability: Having someone to hold you accountable for your goals and commitments is invaluable. A life coach helps you stay on track, providing motivation and support to ensure you make progress.
+
+		6. Increased Self-Awareness: Self-awareness is key to personal growth. A life coach encourages introspection, helping you understand your strengths, weaknesses, and values.
+
+		7. Work-Life Balance: Achieving a balance between work, family, and personal life is challenging. A life coach assists you in finding equilibrium, reducing stress, and fostering a more fulfilling life.
+
+		8. Confidence Building: Self-doubt can be a significant hurdle. A life coach helps you overcome it, boosting your self-esteem and empowering you to pursue your dreams with confidence.
+
+		9. Decision-Making: Life is filled with decisions, both big and small. A life coach assists you in making informed choices aligned with your values and long-term objectives.
+
+		10. Unleashing Potential: Perhaps most importantly, a life coach helps you tap into your full potential. They see the greatness within you and provide the guidance and encouragement to bring it to the forefront.
+
+		In essence, a life coach is your partner in personal and professional growth, offering you a roadmap to success and fulfillment. Through self-discovery, goal-setting, and ongoing support, a life coach has the power to transform your life, helping you become the best version of yourself and achieve your dreams.`,
 	},
 	{
 		id: 5,
 		title: "The Imperative of Self-Improvement: Why You Need to Embrace Growth.",
-		text: ` In the tapestry of life, growth is the thread that weaves success and fulfillment. As a live coach, I passionately advocate for the continuous journey of self-improvement, and here's why you should embrace it too.
+		urlImg: "http://127.0.0.1:5173/assets/improve.jpg",
+		text: ` Life is a journey of constant evolution, and the pursuit of self-improvement is the compass guiding us forward. Embracing personal growth is not merely an option; it's an imperative for a fulfilling and meaningful life. Here's why you need to wholeheartedly embrace the journey of self-improvement.
 
-		Unleash Your Potential: Self-improvement unlocks hidden talents and capabilities you never knew existed, enabling you to achieve more in every aspect of life.
+		1. Unleash Your Potential: Each of us possesses untapped potential waiting to be unleashed. Self-improvement is the key to discovering your hidden talents, strengths, and capabilities, enabling you to achieve more in every aspect of life.
 
-		Enhanced Resilience: Continuous growth equips you with the skills and mindset to navigate life's challenges with grace and resilience.
+		2. Resilience in Adversity: Life is filled with challenges. Self-improvement equips you with the mental fortitude and coping skills to navigate through adversity with grace and resilience.
 
-		Personal Fulfillment: The pursuit of self-improvement leads to a deep sense of accomplishment and personal fulfillment, enriching your overall quality of life.
+		3. Personal Fulfillment: The pursuit of self-improvement leads to a deep sense of accomplishment and personal fulfillment. It enriches your overall quality of life and instills a lasting sense of contentment.
 
-		Adaptability: In an ever-changing world, self-improvement ensures you stay relevant, adaptable, and ready to seize new opportunities.
+		4. Adaptability: In an ever-changing world, the ability to adapt is invaluable. Self-improvement ensures you remain relevant, open to new opportunities, and capable of thriving in different circumstances.
 
-		Positive Impact: As you grow and evolve, you become a source of inspiration and positive influence to those around you, fostering a ripple effect of improvement.
+		5. Positive Influence: As you embark on your self-improvement journey, you become a source of inspiration and positive influence to those around you. Your growth inspires others to strive for their best selves.
 
-		Lifelong Learning: Self-improvement is a lifelong journey that keeps your mind engaged, curious, and open to new experiences.
+		6. Lifelong Learning: Self-improvement fosters a love for lifelong learning. It keeps your mind engaged, curious, and open to new experiences, fostering continuous growth.
 
-		In conclusion, self-improvement is not just a choice; it's a necessity for a meaningful and rewarding life. Embrace the journey of growth, and watch as it transforms you into the best version of yourself.`,
+		7. Achieving Dreams: Your goals and dreams deserve to be pursued relentlessly. Self-improvement is the vehicle that drives you toward your aspirations, turning them into tangible reality.
+
+		8. Personal Growth: Perhaps the most profound reason to embrace self-improvement is the transformation it brings. It's not just about achieving external success; it's about becoming the best version of yourself.
+
+		9. Impact on Society: The world benefits from individuals committed to self-improvement. Personal growth leads to innovation, positive change, and a more compassionate society.
+
+		10. Lifelong Satisfaction: Self-improvement is a lifelong journey, and the satisfaction it brings is lasting. It keeps you engaged, fulfilled, and enthusiastic about the opportunities that lie ahead.
+
+		In conclusion, self-improvement is not a luxury; it's a necessity for a life well-lived. It's a continuous journey that empowers you to tap into your limitless potential, overcome challenges, and create a future filled with personal fulfillment and purpose. Embrace self-improvement, and watch as it transforms your life into a masterpiece of growth and achievement.`,
 	},
 	{
 		id: 6,
 		title: "The Power of Positivity: Why You Need to Embrace a Positive Mindset.",
-		text: ` As a live coach, I wholeheartedly believe in the transformative power of positivity. Here's why cultivating a positive mindset is essential for your personal growth and overall well-being.
+		urlImg: "http://127.0.0.1:5173/assets/positive.jpg",
+		text: ` In the canvas of life, the colors you choose to paint with make all the difference. Embracing a positive mindset is akin to selecting vibrant, uplifting hues that can transform even the darkest of days into moments of hope and opportunity. Here's why you need to make positivity a cornerstone of your life.
 
-		Mental Resilience: Positivity equips you with the mental resilience to navigate life's challenges. It allows you to bounce back from setbacks and maintain a hopeful outlook.
+		1. Mental Resilience: A positive mindset equips you with the mental resilience to navigate life's challenges. It helps you bounce back from setbacks, maintaining a hopeful outlook even in difficult times.
 
-		Health Benefits: A positive mindset is associated with lower stress levels, improved immune function, and overall better physical health.
+		2. Improved Health: Research shows that a positive mindset is associated with lower stress levels, improved immune function, and better overall physical health. Positivity can literally be a tonic for your well-being.
 
-		Enhanced Relationships: Positivity fosters better relationships by promoting empathy, understanding, and effective communication. It attracts positivity from others as well.
+		3. Enhanced Relationships: Positivity fosters better relationships. When you approach interactions with an optimistic attitude, it promotes empathy, understanding, and effective communication, leading to healthier connections with others.
 
-		Increased Productivity: A positive attitude can boost productivity and creativity, leading to better problem-solving and innovation.
+		4. Increased Productivity: A positive attitude can boost productivity and creativity. It encourages out-of-the-box thinking, better problem-solving, and increased innovation in your personal and professional life.
 
-		Personal Growth: Embracing positivity encourages self-reflection, goal setting, and personal development, driving you to become the best version of yourself.
+		5. Personal Growth: Embracing positivity encourages self-reflection, goal-setting, and personal development. It's a catalyst for continuous self-improvement and a commitment to becoming the best version of yourself.
 
-		Happiness: Ultimately, a positive mindset leads to a happier and more fulfilling life. It allows you to savor the joys of each day and find gratitude in everyday moments.
+		6. Emotional Well-being: A positive mindset leads to emotional well-being. It helps you find joy in the little things, experience gratitude for the present moment, and develop a deep sense of contentment.
 
-		Incorporating positivity into your daily life isn't just about looking on the bright side; it's about fostering resilience, better relationships, and personal growth. Embrace positivity, and watch it pave the way for a brighter, more rewarding future.`,
+		7. Stress Reduction: Positive thinking can significantly reduce stress levels. When you focus on solutions rather than dwelling on problems, you're better equipped to manage stress effectively.
+
+		8. Resilience to Adversity: Life inevitably throws curveballs, but a positive mindset helps you see adversity as an opportunity for growth. It allows you to adapt and bounce back from challenging situations with grace.
+
+		9. Improved Decision-Making: Positivity enhances your decision-making skills. A clear, optimistic outlook helps you make more informed choices and approach complex decisions with confidence.
+
+		10. Happiness: Ultimately, a positive mindset leads to a happier and more fulfilling life. It allows you to savor the joys of each day, appreciate the beauty in everyday moments, and radiate positivity to those around you.
+
+		In a world that often bombards us with negativity, embracing a positive mindset is not just a choice; it's a superpower. It's the foundation upon which you can build a more resilient, healthy, and fulfilling life. So, make positivity your guiding star, and watch as it illuminates the path to a brighter and more optimistic future.`,
 	},
 	{
 		id: 7,
 		title: "Passion Unleashed: Why You Need to Find Activities You Love.",
-		text: `As a live coach, I emphasize the importance of discovering and pursuing activities you're passionate about. Here's why it's essential for your personal growth and overall well-being.
+		urlImg: "http://127.0.0.1:5173/assets/passion.jpg",
+		text: `Life is a magnificent journey, and one of its most rewarding aspects is the pursuit of passion. When you find activities you love, you open the door to a world of fulfillment, purpose, and personal growth. Here's why it's essential to embark on the quest to discover and nurture your passions.
 
-		Fulfillment and Happiness: Engaging in activities you love brings genuine joy and a sense of fulfillment. It adds a layer of happiness to your life.
+		1. Fulfillment and Joy: Engaging in activities you love brings genuine joy and a profound sense of fulfillment. It adds vibrancy and purpose to your life, making each day more meaningful.
 
-		Stress Reduction: Immersing yourself in activities you're passionate about acts as a stress-reliever. It provides an escape from daily pressures, promoting relaxation.
+		2. Stress Reduction: Immersing yourself in activities you're passionate about acts as a powerful stress-reliever. It provides an escape from daily pressures, promoting relaxation and emotional well-being.
 
-		Personal Growth: Pursuing your passions encourages continuous learning and personal growth. It fosters creativity, resilience, and a sense of purpose.
+		3. Personal Development: Pursuing your passions encourages continuous learning and personal growth. It fosters creativity, resilience, and a sense of purpose that can positively impact all aspects of your life.
 
-		Enhanced Well-being: Activities you love boost your mental and emotional well-being, contributing to a positive outlook on life.
+		4. Self-Discovery: Exploring your interests helps you discover more about yourself, your strengths, and your values. It deepens your self-awareness and guides you toward a life that aligns with your authentic self.
 
-		Self-Discovery: Exploring your interests helps you discover more about yourself, your strengths, and your values.
+		5. Increased Energy and Motivation: When you engage in activities you love, you're more likely to feel energized and motivated. Passion ignites a fire within you, driving you to take action and pursue your goals.
 
-		Community and Connection: Shared interests create opportunities to connect with like-minded individuals, forming meaningful connections and friendships.
+		6. Enhanced Well-being: Activities you love boost your mental and emotional well-being, contributing to a positive outlook on life. They act as a buffer against stress and negativity.
 
-		Incorporating activities you love into your life isn't indulgence; it's a vital aspect of self-care and personal development. So, embark on the journey of discovering and nurturing your passions, and watch as it transforms your life into one filled with joy, purpose, and personal growth. `,
+		7. Sense of Community: Shared interests create opportunities to connect with like-minded individuals, forming meaningful connections and friendships. Passionate communities provide support and camaraderie.
+
+		8. Achieving Flow: When you're immersed in activities you love, you often experience a state of "flow," where time seems to disappear, and you're completely absorbed in the task. This is a source of deep satisfaction.
+
+		9. Greater Resilience: Pursuing your passions can help you develop greater resilience in the face of challenges. It provides a sense of purpose that can help you weather life's storms.
+
+		10. Improved Quality of Life: Ultimately, finding and nurturing activities you love leads to an improved quality of life. It's not just about pursuing hobbies; it's about embracing a more fulfilling and vibrant existence.
+
+		In a world filled with responsibilities and distractions, dedicating time to activities you love is a powerful act of self-care and personal development. It's an investment in your well-being and an essential step toward leading a more joyful, purposeful, and passionate life. So, embark on the journey of discovering and nurturing your passions, and watch as it transforms your world into one filled with enthusiasm, fulfillment, and personal growth. `,
 	},
 	{
 		id: 8,
 		title: "The Healing Power of Forgiveness: Why You Need to Embrace It.",
-		text: ` Forgiveness is a transformative act, often more beneficial for the forgiver than the forgiven. As a live coach, I firmly believe in the profound importance of practicing forgiveness, and here's why it's essential for your personal growth and well-being.
+		urlImg: "http://127.0.0.1:5173/assets/forgiveness.jpg",
+		text: `Forgiveness is a profound act that holds the power to heal wounds, mend broken relationships, and transform lives. As we journey through life, we encounter situations and individuals that challenge our capacity to forgive. However, it's crucial to understand why embracing forgiveness is essential for our well-being and personal growth.
 
-		Emotional Liberation: Forgiving frees you from the burden of carrying resentment and anger. It releases pent-up emotions, providing a sense of emotional liberation.
+		1. Emotional Liberation: Forgiveness liberates us from the weight of anger, resentment, and bitterness. It allows us to release pent-up emotions, providing a sense of emotional freedom and relief.
 
-		Stress Reduction: Holding onto grudges contributes to chronic stress. Forgiveness reduces stress levels, promoting physical and mental health.
+		2. Improved Mental Health: Holding onto grudges and harboring resentment can take a toll on our mental health. Forgiveness reduces stress, anxiety, and depression, promoting better overall well-being.
 
-		Improved Relationships: Forgiving fosters healthier, more harmonious relationships. It opens the door to communication, understanding, and reconciliation.
+		3. Restored Relationships: Forgiveness paves the way for reconciliation and the restoration of strained relationships. It fosters open communication, understanding, and the possibility of rebuilding trust.
 
-		Personal Growth: Forgiving is a sign of emotional maturity. It reflects your ability to reflect, empathize, and grow from challenging experiences.
+		4. Personal Growth: Forgiving is a testament to emotional maturity. It reflects our capacity to reflect, empathize, and grow from challenging experiences.
 
-		Enhanced Well-being: The act of forgiving is linked to increased overall well-being, greater life satisfaction, and a more positive outlook.
+		5. Inner Peace: Forgiveness brings inner peace. It allows us to move forward without the burden of past grievances, leading to a sense of tranquility and serenity.
 
-		Inner Peace: Forgiveness ultimately brings inner peace. It allows you to move forward without the weight of past grievances, promoting a sense of tranquility.
+		6. Enhanced Empathy: Through forgiveness, we develop greater empathy for others. It enables us to see the humanity in people, even those who have wronged us.
 
-		While forgiveness may not always be easy, it's a powerful tool for personal growth and healing. Embrace forgiveness as an essential step in your journey toward a more fulfilling and emotionally healthy life.`,
+		7. Letting Go of the Past: Holding onto grudges keeps us anchored in the past. Forgiveness is the key to letting go and embracing the present and the future with an open heart.
+
+		8. Physical Health Benefits: Research has shown that forgiveness can have positive effects on physical health, including lower blood pressure, improved heart health, and a strengthened immune system.
+
+		9. Improved Self-Esteem: Forgiving ourselves and others can boost our self-esteem. It reinforces the idea that we are worthy of love and respect, regardless of past mistakes.
+
+		10. Personal Freedom: Forgiveness is an act of personal liberation. It frees us from the cycle of negativity and empowers us to choose a more positive and compassionate path.
+
+		In the journey of life, we all encounter moments of pain, betrayal, and disappointment. Embracing forgiveness is not about condoning wrongdoing; it's about reclaiming our own peace and well-being. It's a profound act of self-love and a step toward personal growth and healing. So, take a deep breath, let go of resentment, and embrace the transformative power of forgiveness. Your heart will thank you, and your life will be enriched in ways you never imagined.`,
+	},
+];
+
+export const prices = [
+	{
+		level: "Basic",
+		price: "45 €",
+		service: `/For 1 session 60’ `,
+	},
+	{
+		level: "Standard",
+		price: "80 €",
+		service: `/For 2 sessions  60’ each`,
+	},
+	{
+		level: "Premium",
+		price: "140 €",
+		service: `/For 4 sessions  60’ each `,
+	},
+];
+
+export const questions = [
+	{
+		question: "What is life coaching?",
+		answer: ` Life coaching is a collaborative and goal-oriented process where a trained coach works with individuals to help them clarify their goals, overcome obstacles, and make positive changes in various aspects of their life, including personal, professional, and relationships.`,
+	},
+
+	{
+		question: ` How is life coaching different from therapy or counseling?`,
+		answer: `While therapy focuses on addressing past issues and healing emotional wounds, life coaching is future-focused, concentrating on setting and achieving goals. Coaches do not diagnose or treat mental health conditions, as therapists do.`,
+	},
+	{
+		question: `What can I expect from a life coaching session?`,
+		answer: ` In a life coaching session, you can expect open and non-judgmental conversations. The coach will ask questions to help you clarify your goals, challenges, and strategies to move forward. The focus is on self-discovery and personal growth.`,
+	},
+	{
+		question: `How long does a typical life coaching engagement last?`,
+		answer: ` The duration of life coaching can vary depending on individual goals and needs. Some clients may benefit from just a few sessions, while others may choose ongoing coaching over several months to work on long-term objectives.`,
+	},
+
+	{
+		question: ` Is life coaching only for people facing major life crises or transitions?`,
+		answer: `No, life coaching is beneficial for individuals at various stages of life. Whether you're navigating a major transition, seeking career advancement, improving relationships, or simply wanting personal growth, a life coach can provide valuable insights, motivation, and guidance to help you achieve your goals.`,
 	},
 ];

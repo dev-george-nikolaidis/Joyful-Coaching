@@ -1,0 +1,18 @@
+.pricing {
+	margin-top: var(--section-mt);
+	grid-column: 2 / 14;
+	padding: 10rem 0;
+}
+
+.pricingTitle {
+	grid-column: 1 / 14;
+}
+
+.pricingCardContainer {
+	margin-top: 8rem;
+	grid-column: 1 / 14;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4rem;
+	justify-content: center;
+}

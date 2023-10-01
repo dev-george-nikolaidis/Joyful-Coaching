@@ -32,12 +32,15 @@
 .bogText {
 }
 
+.blogLink {
+	align-self: center;
+}
+
 .btnBlog {
 	background-color: var(--clr-purple-400);
 	text-transform: none;
 	margin-top: 4rem;
 	width: fit-content;
-	align-self: center;
 }
 
 .blogCardWrapper {
