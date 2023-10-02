@@ -11,12 +11,17 @@ type Props = {};
 export default function HomeBlog({}: Props) {
 	let displayBlogs = blogs.slice(0, 3).map((b, i) => {
 		return (
-			<div className={s.blogCardWrapper} key={i}>
-				<HeaderH4 className={s.blogHeader}>{b.title}</HeaderH4>
-				<div className={s.textWrapper}>
-					<Paragraph400 className={s.bogText}>{b.text}</Paragraph400>
+			<NavLink to={`/blog/${b.id}`} className={s.blogLink} key={i}>
+				<div className={s.blogCardWrapper}>
+					<figure className={s.blogImgWrapper}>
+						<img src={b.urlImg} alt={b.title} className={s.blogImg} />
+					</figure>
+					<HeaderH4 className={s.blogHeader}>{b.title}</HeaderH4>
+					<div className={s.textWrapper}>
+						<Paragraph400 className={s.bogText}>{b.text}</Paragraph400>
+					</div>
 				</div>
-			</div>
+			</NavLink>
 		);
 	});
 

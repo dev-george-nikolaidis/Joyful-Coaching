@@ -1,5 +1,6 @@
 export enum ActionTypes {
 	TEST = "TEST",
+	OPEN_CLOSE_MODAL = "OPEN_CLOSE_MODAL",
 }
 
 export enum PayloadTypes {}

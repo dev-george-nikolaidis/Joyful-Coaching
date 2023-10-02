@@ -1,0 +1,70 @@
+.btn {
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	background: none;
+	border: 1px solid var(--clr-green-400);
+	width: 100%;
+	padding: 8px 0;
+	color: #fff;
+	transition: all 0.4s ease-in-out;
+	margin-top: 2rem;
+	height: 4.8rem;
+	font-weight: 300;
+	border-radius: 0.6rem;
+	transition: all 0.5s ease-in-out;
+}
+
+.btn:before,
+.btn:after,
+.btn span:before,
+.btn span:after {
+	content: "";
+	position: absolute;
+	width: 25%;
+	height: 100%;
+	background-color: var(--clr-green-400);
+	z-index: -1;
+	transition: all 0.5s;
+}
+
+.btn:before {
+	top: 0;
+	left: -25%;
+}
+.btn:after {
+	top: -100%;
+	left: 25%;
+}
+
+.btn:hover:before {
+	top: 0;
+	left: 0;
+}
+.btn:hover:after {
+	top: 0;
+	left: 25%;
+}
+
+.btn span:before {
+	top: 0;
+	right: -25%;
+	transition-delay: 0.2s;
+}
+.btn span:after {
+	bottom: -100%;
+	right: 25%;
+}
+
+.btn:hover span:before {
+	top: 0;
+	right: 0;
+}
+.btn:hover span:after {
+	top: 0;
+	right: 25%;
+}
+
+.btn:hover {
+	color: #fff;
+}

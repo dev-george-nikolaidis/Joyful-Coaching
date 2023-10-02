@@ -1,0 +1,33 @@
+.aboutText {
+	grid-column: 2 / 14;
+	background-color: var(--clr-section-bg);
+}
+
+.aboutTextWrapper {
+	display: flex;
+}
+
+.aboutTextContainer {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	padding: 2rem;
+}
+
+.title {
+}
+
+.paragraphText {
+	margin: 1rem;
+	width: 80%;
+}
+
+.imgWrapper {
+	display: flex;
+	justify-content: flex-end;
+	align-items: baseline;
+}
+
+.img {
+}

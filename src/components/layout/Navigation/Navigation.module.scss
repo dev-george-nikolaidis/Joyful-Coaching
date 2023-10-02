@@ -3,10 +3,6 @@
 	height: 6rem;
 }
 
-.active {
-	// background-color: blue;
-}
-
 .navLogoWrapper {
 	display: flex;
 	align-items: center;
@@ -40,4 +36,10 @@
 
 link:visited {
 	color: orange;
+}
+
+.active {
+	padding: 0.6rem 1rem;
+	background-color: var(--clr-green-400);
+	color: #fff;
 }

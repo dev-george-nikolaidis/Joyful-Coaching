@@ -8,8 +8,12 @@ export const reducer: ReducerType = (state, action) => {
 		case ActionTypes.TEST:
 			return {
 				...state,
-
 				test: action.payload,
+			};
+		case ActionTypes.OPEN_CLOSE_MODAL:
+			return {
+				...state,
+				isModalOpen: !state.isModalOpen,
 			};
 
 		default:

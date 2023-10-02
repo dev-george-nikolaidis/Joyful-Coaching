@@ -1,9 +1,9 @@
-import HeaderH3 from "../../../../components/HeadingH3/HeadingH3";
-import ImageSlider from "../../../../components/ImageSlider/ImageSlider";
-import s from "./HomeTestimonial.module.scss";
+import HeaderH3 from "../../HeadingH3/HeadingH3";
+import ImageSlider from "../../ImageSlider/ImageSlider";
+import s from "./Testimonial.module.scss";
 type Props = {};
 
-export default function HomeTestimonial({}: Props) {
+export default function Testimonial({}: Props) {
 	return (
 		<section className={s.testimonialsContainer}>
 			<div className={` col-12 ${s.testimonialWrapper} `}>

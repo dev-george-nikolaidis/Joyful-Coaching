@@ -1,0 +1,15 @@
+.companiesContainer {
+	grid-column: 2 / 14;
+	margin-top: var(--section-mt);
+}
+
+.companiesWrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.para {
+	text-align: center;
+	margin: 2rem 0;
+}

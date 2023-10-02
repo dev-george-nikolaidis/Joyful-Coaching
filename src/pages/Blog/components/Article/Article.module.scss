@@ -1,0 +1,21 @@
+.articleContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title {
+	max-width: 100rem;
+}
+
+.blogImg {
+	width: 50rem;
+	object-fit: fill;
+	max-height: 30rem;
+	margin: 4rem 0;
+}
+.text {
+	letter-spacing: 5%;
+	line-height: 4rem;
+	width: 90%;
+}

@@ -1,11 +1,12 @@
 import Newsletter from "../../components/Newsletter/Newsletter";
+import Companies from "../../components/layout/Companies/Companies";
 import Footer from "../../components/layout/Footer/Footer";
 import Navigation from "../../components/layout/Navigation/Navigation";
 import ServicesLayout from "../../components/layout/ServicesLayout/ServicesLayout";
+import Testimonial from "../../components/layout/Testimonial/Testimonial";
 import s from "./Home.module.scss";
 import Hero from "./components/Hero/Hero";
 import HomeBlog from "./components/HomeBlog/HomeBlog";
-import HomeTestimonial from "./components/HomeTestimonial/HomeTestimonial";
 
 type Props = {};
 
@@ -15,7 +16,8 @@ export default function Home({}: Props) {
 			<Navigation />
 			<Hero />
 			<ServicesLayout />
-			<HomeTestimonial />
+			<Testimonial />
+			<Companies />
 			<HomeBlog />
 			<Newsletter />
 			<Footer />

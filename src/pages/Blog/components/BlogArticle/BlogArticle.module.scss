@@ -1,33 +1,11 @@
 .blog {
-	margin-top: var(--section-mt);
 	grid-column: 2 / 14;
+	margin-top: var(--section-mt);
+}
 
+.blogWrapper {
 	display: flex;
-	flex-direction: column;
-}
-
-.blogsWrapper {
-	margin-top: 8rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	gap: 4rem;
-	transition: 0.5s all ease-in-out;
-}
-
-.testimonialTitle {
-	max-width: 45rem;
-}
-
-.blogLink {
-	align-self: center;
-}
-
-.btnBlog {
-	background-color: var(--clr-purple-400);
-	text-transform: none;
-	margin-top: 4rem;
-	width: fit-content;
+	justify-content: center;
 }
 
 .blogImgWrapper {
@@ -39,6 +17,8 @@
 	max-height: 30rem;
 }
 .blogCardWrapper {
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
 	max-width: 50rem;
 	padding: 1rem;
 }
@@ -48,7 +28,6 @@
 }
 
 .blogHeader {
-	color: var(--clr-green-500);
 	height: 6rem;
 }
 
@@ -59,4 +38,12 @@
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	margin-top: 2rem;
+}
+
+.articlesWrapper {
+	margin-top: 10rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 4rem;
 }

@@ -13,44 +13,44 @@ export default function Navigation({}: Props) {
 				</NavLink>
 				<ul className={s.navList}>
 					<li>
-						<NavLink to="/" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
-							<span className={s.link}> Home</span>
+						<NavLink to="/" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link} `)}>
+							<span> Home</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/services" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
-							<span className={s.link}>Buy Session</span>
+						<NavLink to="/services" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+							<span>Buy Session</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/my-book" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
-							<span className={s.link}>Book Session</span>
+						<NavLink to="/my-book" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+							<span>Book Session</span>
 						</NavLink>
 					</li>
 
 					<li>
-						<NavLink to="/blog" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
-							<span className={s.link}>Blog</span>
+						<NavLink to="/blog" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link}   ` : `  ${s.inactive} ${s.link}`)}>
+							<span>Blog</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/about" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
-							<span className={s.link}>About</span>
+						<NavLink to="/about" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+							<span>About</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/about" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
-							<span className={s.link}>Contact</span>
+						<NavLink to="/contact" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+							<span>Contact</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/my-book" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
-							<span className={s.link}>Login</span>
+						<NavLink to="/login" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+							<span>Login</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/my-book" end className={({ isActive }) => (isActive ? ` ${s.active} ` : `  ${s.inactive}`)}>
-							<span className={s.link}>Register</span>
+						<NavLink to="/register" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+							<span>Register</span>
 						</NavLink>
 					</li>
 				</ul>

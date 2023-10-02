@@ -3,8 +3,9 @@ import s from "./HeadingH1.module.scss";
 
 type Props = {
 	children: ReactNode;
+	className?: string;
 };
 
-export default function HeaderH1({ children }: Props) {
-	return <h1 className={`${s.title}`}>{children}</h1>;
+export default function HeaderH1({ children, className }: Props) {
+	return <h1 className={` ${className} ${s.title}`}>{children}</h1>;
 }

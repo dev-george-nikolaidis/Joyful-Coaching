@@ -158,7 +158,7 @@ export const blogs = [
 	{
 		id: 3,
 		title: "Navigating Life's Challenges: Insights from a Life Coach",
-		urlImg: "http://127.0.0.1:5173/assets/navigate-challenges.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/blog/navigate-challenges.jpg",
 		text: `Life is an intricate journey filled with both triumphs and tribulations. As a life coach, I'm here to shed light on the art of navigating life's challenges with resilience, positivity, and personal growth.
 
 		1. Embrace Change: Change is inevitable, and it often brings challenges. Instead of resisting it, embrace change as an opportunity for growth. A life coach can help you adapt to new circumstances, develop a growth mindset, and make the most of transitions.
@@ -186,7 +186,7 @@ export const blogs = [
 	{
 		id: 4,
 		title: "How a Live Coach Can Transform Your Life.",
-		urlImg: "http://127.0.0.1:5173/assets/tranform.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/blog/tranform.jpg",
 		text: `Life can often feel like a complex puzzle, with numerous pieces to fit together. Sometimes, it takes a guide to help you navigate the labyrinth and unlock your full potential. That's where a life coach comes in, offering transformative insights and support to help you flourish in various aspects of life.
 
 		1. Clarity and Goal Setting: A life coach helps you gain clarity about your life's direction and purpose. By asking thought-provoking questions and encouraging self-reflection, they assist you in setting meaningful, achievable goals.
@@ -214,7 +214,7 @@ export const blogs = [
 	{
 		id: 5,
 		title: "The Imperative of Self-Improvement: Why You Need to Embrace Growth.",
-		urlImg: "http://127.0.0.1:5173/assets/improve.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/blog/improve.jpg",
 		text: ` Life is a journey of constant evolution, and the pursuit of self-improvement is the compass guiding us forward. Embracing personal growth is not merely an option; it's an imperative for a fulfilling and meaningful life. Here's why you need to wholeheartedly embrace the journey of self-improvement.
 
 		1. Unleash Your Potential: Each of us possesses untapped potential waiting to be unleashed. Self-improvement is the key to discovering your hidden talents, strengths, and capabilities, enabling you to achieve more in every aspect of life.
@@ -242,7 +242,7 @@ export const blogs = [
 	{
 		id: 6,
 		title: "The Power of Positivity: Why You Need to Embrace a Positive Mindset.",
-		urlImg: "http://127.0.0.1:5173/assets/positive.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/blog/positive.jpg",
 		text: ` In the canvas of life, the colors you choose to paint with make all the difference. Embracing a positive mindset is akin to selecting vibrant, uplifting hues that can transform even the darkest of days into moments of hope and opportunity. Here's why you need to make positivity a cornerstone of your life.
 
 		1. Mental Resilience: A positive mindset equips you with the mental resilience to navigate life's challenges. It helps you bounce back from setbacks, maintaining a hopeful outlook even in difficult times.
@@ -270,7 +270,7 @@ export const blogs = [
 	{
 		id: 7,
 		title: "Passion Unleashed: Why You Need to Find Activities You Love.",
-		urlImg: "http://127.0.0.1:5173/assets/passion.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/blog/passion.jpg",
 		text: `Life is a magnificent journey, and one of its most rewarding aspects is the pursuit of passion. When you find activities you love, you open the door to a world of fulfillment, purpose, and personal growth. Here's why it's essential to embark on the quest to discover and nurture your passions.
 
 		1. Fulfillment and Joy: Engaging in activities you love brings genuine joy and a profound sense of fulfillment. It adds vibrancy and purpose to your life, making each day more meaningful.
@@ -298,7 +298,7 @@ export const blogs = [
 	{
 		id: 8,
 		title: "The Healing Power of Forgiveness: Why You Need to Embrace It.",
-		urlImg: "http://127.0.0.1:5173/assets/forgiveness.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/blog/forgiveness.jpg",
 		text: `Forgiveness is a profound act that holds the power to heal wounds, mend broken relationships, and transform lives. As we journey through life, we encounter situations and individuals that challenge our capacity to forgive. However, it's crucial to understand why embracing forgiveness is essential for our well-being and personal growth.
 
 		1. Emotional Liberation: Forgiveness liberates us from the weight of anger, resentment, and bitterness. It allows us to release pent-up emotions, providing a sense of emotional freedom and relief.
@@ -367,3 +367,32 @@ export const questions = [
 		answer: `No, life coaching is beneficial for individuals at various stages of life. Whether you're navigating a major transition, seeking career advancement, improving relationships, or simply wanting personal growth, a life coach can provide valuable insights, motivation, and guidance to help you achieve your goals.`,
 	},
 ];
+
+export const companies = [
+	{ name: "Layers", urlImg: "http://127.0.0.1:5173/assets/companies/layers.svg" },
+	{
+		name: "Sisyphus",
+		urlImg: "http://127.0.0.1:5173/assets/companies/sisyphus.svg",
+	},
+	{
+		name: "Circooles",
+		urlImg: "http://127.0.0.1:5173/assets/companies/circooles.svg",
+	},
+	{ name: "Catalog", urlImg: "http://127.0.0.1:5173/assets/companies/catalog.svg" },
+	{ name: "Quotient", urlImg: "http://127.0.0.1:5173/assets/companies/quotient.svg" },
+];
+
+export const aboutStory = {
+	title: `Unveiling the Journey: From Seeker to Successful Life Coach.`,
+	body: {
+		text_1:
+			"In the realm of personal development and life coaching, success stories often emerge from deeply personal journeys of self-discovery and growth. Today, we have the privilege to explore the incredible journey of Natalia, a remarkable individual who has transformed their own life and now dedicates themselves to guiding others toward their own paths of success, fulfillment, and self-realization.",
+		text_2: `Natalia's journey toward becoming a successful life coach began with a thirst for personal growth and a burning desire to unlock their true potential. Much like the clients they would later go on to inspire, Natalia faced their own set of challenges and uncertainties. This chapter of life was marked by a profound longing for meaning and fulfillment.`,
+		text_3: `The turning point in Natalia's life came when they encountered a mentor or a transformative experience that set them on a course of self-discovery. Through the guidance of this mentor or experience, Natalia gained insights into their strengths, values, and aspirations. This awakening ignited the spark of their life coaching journey.`,
+		text_4: `Recognizing their calling to empower and inspire others, Natalia embarked on an educational journey to develop the necessary coaching skills. They invested time and effort in formal coaching certifications, training programs, and workshops to hone their craft. Their commitment to continuous learning remains a cornerstone of their professional growth.`,
+		text_5: `One of Natalia's defining qualities as a life coach is their deep empathy and insight. Having traversed their own path of self-discovery, they possess a unique ability to connect with individuals on a profound level. Natalia's empathetic approach creates a safe and supportive environment for personal growth and transformation.`,
+		text_6: `Today, Natalia stands as a highly successful and sought-after life coach. Their coaching practice is characterized by a commitment to active listening, empathy, and evidence-based coaching techniques. They empower their clients to set and achieve meaningful goals, overcome obstacles, and embrace their authentic selves.`,
+		text_7: `Natalia's journey from seeker to guide is an inspiring narrative that demonstrates the profound impact of personal growth and the transformative power of empathy. They serve as a living testament to the potential that lies within each of us to inspire and guide others on their own journeys of self-discovery.`,
+		text_8: `In the world of life coaching, Natalia's story reminds us that our own experiences and transformations can become powerful tools for helping others realize their dreams and aspirations. Their journey exemplifies the beautiful fusion of personal growth and professional purpose, inspiring us all to embark on our own paths of self-discovery and, perhaps, one day guide others toward their own transformative journeys.`,
+	},
+};
