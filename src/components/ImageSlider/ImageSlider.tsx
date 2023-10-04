@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import { testimonials } from "../../data/data";
 import Paragraph400 from "../Paragraph400/Paragraph400";
 import s from "./ImageSlider.module.scss";
@@ -22,7 +23,7 @@ export default function ImageSlider({}: Props) {
 	};
 
 	let displayTheDots = testimonials.map((t, i) => {
-		return <img src="http://127.0.0.1:5173/assets/dot.svg" alt={t.name} key={i} onClick={() => goToSlide(i)} className="dot" />;
+		return <div key={t.id + i} onClick={() => goToSlide(i)} className={s.dot}></div>;
 	});
 
 	return (
@@ -31,8 +32,8 @@ export default function ImageSlider({}: Props) {
 			<span className={s.nameText}>{name}</span>
 			<Paragraph400 className={s.testimonialText}>{text}</Paragraph400>
 			<div className={s.dotsWrapper}>{displayTheDots}</div>
-			<img src="http://127.0.0.1:5173/assets/left-arrow.svg" alt="" className={`${s.arrow} ${s.arrowLeft}`} onClick={() => arrowClicked("left")} />
-			<img src="http://127.0.0.1:5173/assets/right-arrow.svg" alt="" className={`${s.arrow} ${s.arrowRight}`} onClick={() => arrowClicked("right")} />
+			<MdArrowBack className={`${s.arrow} ${s.arrowLeft}`} onClick={() => arrowClicked("left")} />
+			<MdArrowForward className={`${s.arrow} ${s.arrowRight}`} onClick={() => arrowClicked("right")} />
 		</div>
 	);
 }

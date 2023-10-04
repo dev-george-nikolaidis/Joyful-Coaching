@@ -44,12 +44,12 @@ export default function Navigation({}: Props) {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/login" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+						<NavLink to="/user/login" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
 							<span>Login</span>
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/register" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+						<NavLink to="/user/register" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
 							<span>Register</span>
 						</NavLink>
 					</li>

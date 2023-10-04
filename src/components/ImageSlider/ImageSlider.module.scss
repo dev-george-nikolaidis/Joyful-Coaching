@@ -34,16 +34,22 @@
 .dot {
 	transition: 0.5s ease-in-out;
 	cursor: pointer;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: var(--clr-green-400);
 }
 
 .dot:hover {
 	transform: scale(1.2);
+	background-color: var(--clr-green-300);
 }
 
 .arrow {
 	position: absolute;
 	transition: 0.5s ease-in-out;
 	cursor: pointer;
+	color: var(--clr-green-400) !important;
+	font-size: 8rem;
 }
 
 .arrow:hover {

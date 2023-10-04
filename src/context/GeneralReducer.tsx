@@ -5,10 +5,10 @@ type ReducerType = (state: GeneralContextState, action: Action) => GeneralContex
 
 export const reducer: ReducerType = (state, action) => {
 	switch (action.type) {
-		case ActionTypes.TEST:
+		case ActionTypes.GET_SELF:
 			return {
 				...state,
-				test: action.payload,
+				self: action.payload,
 			};
 		case ActionTypes.OPEN_CLOSE_MODAL:
 			return {

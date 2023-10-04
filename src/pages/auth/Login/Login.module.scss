@@ -1,4 +1,4 @@
-.register {
+.login {
 	background-color: #fff;
 	width: 30%;
 	min-height: 60rem;
@@ -7,19 +7,12 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 1;
 }
 
 .logoImg {
 	margin: 0 auto;
 	width: 4rem;
 	margin-top: 2rem;
-}
-
-.successMessage {
-	margin-top: 1rem;
-	text-align: center;
-	color: var(--clr-green-400);
 }
 
 .form {

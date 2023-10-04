@@ -1,5 +1,5 @@
 import React from "react";
-import SpinnerGif from "../assets/img/spinner.gif";
+import SpinnerGif from "../../assets/img/spinner.gif";
 import styles from "./Spinner.module.scss";
 
 const Spinner: React.FC = () => {

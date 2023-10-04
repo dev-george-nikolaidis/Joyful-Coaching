@@ -16,6 +16,7 @@
 
 	--clr-body-bg: #ffff;
 	--clr-section-bg: #faf8f6;
+	--clr-section-bg: #faf8f6;
 	--clr-body-text: #0c111d;
 
 	// --fs-900: 20rem;
@@ -223,4 +224,8 @@ select {
 		grid-template-columns: [full-start] minmax(1rem, auto) [col-start] repeat(12, minmax(2rem, 12rem)) minmax(1rem, auto) [full-end];
 		grid-column-gap: 1rem;
 	}
+}
+
+@mixin bg-gradient() {
+	background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(176, 229, 208, 1) 42%, rgba(92, 202, 238, 0.41) 93.6%);
 }

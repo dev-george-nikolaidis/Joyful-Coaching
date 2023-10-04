@@ -11,8 +11,8 @@ export default function AboutText({}: Props) {
 		body: { text_1, text_2, text_3, text_4, text_5, text_6, text_7, text_8 },
 	} = aboutStory;
 	return (
-		<div className={s.aboutText}>
-			<div className={s.aboutTextWrapper}>
+		<div className={`${s.aboutText} col-12`}>
+			<div className={`${s.aboutTextWrapper} `}>
 				<div className={s.aboutTextContainer}>
 					<HeaderH3 className={s.title}>{title}</HeaderH3>
 					<Paragraph500 className={s.paragraphText}> {text_1} </Paragraph500>

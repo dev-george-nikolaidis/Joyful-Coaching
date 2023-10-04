@@ -1,5 +1,5 @@
 export enum ActionTypes {
-	TEST = "TEST",
+	GET_SELF = "GET_SELF",
 	OPEN_CLOSE_MODAL = "OPEN_CLOSE_MODAL",
 }
 

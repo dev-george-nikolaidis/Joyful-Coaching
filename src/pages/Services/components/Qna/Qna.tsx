@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../../../components/Button/Button";
 import HeaderH4 from "../../../../components/HeadingH4/HeadingH4";
 import Paragraph400 from "../../../../components/Paragraph400/Paragraph400";
@@ -16,11 +17,11 @@ export default function Qna({}: Props) {
 		<div className={s.qna}>
 			<SectionTitle>Frequently questions asked</SectionTitle>
 			<div className={s.qnaCardContainer}>{displayQuestions}</div>
-			<div className={s.contactWrapper}>
+			<Link to="/contact" className={s.contactWrapper}>
 				<HeaderH4>Still have questions ?</HeaderH4>
 				<Paragraph400 className={s.contactText}>Can’t find the answer you’re looking for? Please contact to our friendly team.</Paragraph400>
 				<Button className={s.btnContact}>Contact us</Button>
-			</div>
+			</Link>
 		</div>
 	);
 }

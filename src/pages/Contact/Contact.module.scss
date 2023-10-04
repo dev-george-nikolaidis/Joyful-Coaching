@@ -1,4 +1,4 @@
-.register {
+.contact {
 	background-color: #fff;
 	width: 30%;
 	min-height: 60rem;
@@ -7,19 +7,12 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 1;
 }
 
 .logoImg {
 	margin: 0 auto;
 	width: 4rem;
 	margin-top: 2rem;
-}
-
-.successMessage {
-	margin-top: 1rem;
-	text-align: center;
-	color: var(--clr-green-400);
 }
 
 .form {
@@ -60,27 +53,18 @@
 	right: 1rem;
 	top: 0.5rem;
 	cursor: pointer;
-	font-size: 2.5rem;
 }
 
-.eyeShow:hover {
-	color: var(--clr-green-400) !important;
-}
-
-.eyeHide {
-	color: red !important;
+.textarea {
+	display: block;
+	width: 100%;
+	height: 10rem;
+	resize: none;
+	border-radius: 0.5rem;
 }
 
 .error {
 	color: var(--clr-red-1);
-}
-
-.linkContainer {
-	text-align: center;
-}
-
-.linkText {
-	color: blue;
 }
 
 .linkClose {
