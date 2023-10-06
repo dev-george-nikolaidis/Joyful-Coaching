@@ -11,12 +11,14 @@
 	--clr-green-400: #20ad96;
 	--clr-green-300: #2ad2b6;
 
+	--clr-background: #b0e5d0;
+
 	--clr-green-2-400: #5a837d;
 	--clr-purple-200: #483d8b;
 
 	--clr-body-bg: #ffff;
-	--clr-section-bg: #faf8f6;
-	--clr-section-bg: #faf8f6;
+	--clr-section-bg: #faf6f6;
+
 	--clr-body-text: #0c111d;
 
 	// --fs-900: 20rem;
@@ -31,6 +33,11 @@
 	--section-mt: 18rem;
 	--box-shadow-1: 0 3px 8px rgba(0, 0, 0, 0.1);
 	--ff-normal: "Kumbh Sans", sans-serif;
+
+	[data-theme="dark"] {
+		--clr-green-400: #20ad96;
+		--clr-background: #0c0c0c;
+	}
 }
 
 /*****************         Resets             **************************/

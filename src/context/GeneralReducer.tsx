@@ -15,6 +15,12 @@ export const reducer: ReducerType = (state, action) => {
 				...state,
 				isModalOpen: !state.isModalOpen,
 			};
+		case ActionTypes.TOGGLE_THEME:
+			const theme = localStorage.getItem("theme") || "light";
+			return {
+				...state,
+				theme: theme,
+			};
 
 		default:
 			return state;

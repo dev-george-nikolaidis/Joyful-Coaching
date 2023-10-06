@@ -4,6 +4,7 @@ export interface GeneralContextState {
 	backendApiDevelopmentUrl: string;
 	backendApiProductionUrl: string;
 	self: Self;
+	theme: string;
 }
 
 export const initialState: GeneralContextState = {
@@ -12,6 +13,7 @@ export const initialState: GeneralContextState = {
 	backendApiDevelopmentUrl: "http://localhost:3001/api/v1",
 	backendApiProductionUrl: "https://joyful-coaching-api.onrender.com",
 	self: null,
+	theme: localStorage.getItem("theme") || "dark",
 };
 
 type Self = {

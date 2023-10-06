@@ -22,7 +22,7 @@ export const useFetch = (url: string, options: any = null, dependencies: any) =>
 			}
 		};
 		asyncFetch();
-	}, [dependencies]);
+	}, [dependencies, url]);
 
 	return { data, error, loading };
 };

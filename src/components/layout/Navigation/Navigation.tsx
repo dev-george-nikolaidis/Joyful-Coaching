@@ -1,9 +1,21 @@
 import { NavLink } from "react-router-dom";
 
+import { ActionTypes } from "../../../context/Actions";
+import { useGeneralContext } from "../../../context/GeneralContext";
 import s from "./Navigation.module.scss";
 type Props = {};
 
 export default function Navigation({}: Props) {
+	const {
+		state: { theme },
+		dispatch,
+	} = useGeneralContext();
+
+	const handlerTheme = () => {
+		localStorage.setItem("theme", theme === "light" ? "dark" : "light");
+		dispatch({ type: ActionTypes.TOGGLE_THEME, payload: theme === "light" ? "dark" : "light" });
+	};
+
 	return (
 		<header className={s.header}>
 			<nav className={s.nav}>
@@ -11,7 +23,9 @@ export default function Navigation({}: Props) {
 					<img src="http://127.0.0.1:5173/assets/logo.svg" alt="" />
 					<span className={s.logoText}>Joyful Coaching</span>
 				</NavLink>
+
 				<ul className={s.navList}>
+					<li onClick={handlerTheme}> {theme}</li>
 					<li>
 						<NavLink to="/" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link} `)}>
 							<span> Home</span>
@@ -23,7 +37,7 @@ export default function Navigation({}: Props) {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/my-book" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+						<NavLink to="/booking" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
 							<span>Book Session</span>
 						</NavLink>
 					</li>

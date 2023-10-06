@@ -11,7 +11,7 @@ export default function ServicesLayout({}: Props) {
 
 	return (
 		<section className={s.services}>
-			<SectionTitle>My Services</SectionTitle>
+			<SectionTitle>My Services.</SectionTitle>
 			<div className={s.servicesWrapper}>{displayServices}</div>
 		</section>
 	);

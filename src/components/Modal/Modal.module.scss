@@ -4,6 +4,5 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	// background-color: rgba($color: #000000, $alpha: 0.9);
-	background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(176, 229, 208, 1) 42%, rgba(92, 202, 238, 0.41) 93.6%);
+	background-color: var(--clr-background);
 }

@@ -17,7 +17,7 @@ type Props = {};
 
 type UserSubmitForm = {
 	name: string;
-	email: string;
+	subject: string;
 	textarea: string;
 };
 
@@ -60,15 +60,21 @@ export default function Contact({}: Props) {
 
 					<div className={s.formControl}>
 						<label htmlFor="Name">Name*</label>
-						<input type="email" {...register("email")} />
+						<input type="email" {...register("name")} />
 					</div>
 					{errors.name ? <span className={s.error}>{errors.name.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
 					<div className={s.formControl}>
+						<label htmlFor="Subject">Subject*</label>
+						<input type="email" {...register("subject")} />
+					</div>
+					{errors.subject ? <span className={s.error}>{errors.subject.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
+
+					{/* <div className={s.formControl}>
 						<label htmlFor="Email">Email address*</label>
 						<input type="email" {...register("email")} />
 					</div>
-					{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
+					{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>} */}
 
 					<div className={s.formControl}>
 						<label htmlFor="Message">Message*</label>

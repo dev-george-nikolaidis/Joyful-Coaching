@@ -3,7 +3,6 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import { testimonials } from "../../data/data";
 import Paragraph400 from "../Paragraph400/Paragraph400";
 import s from "./ImageSlider.module.scss";
-
 type Props = {};
 
 export default function ImageSlider({}: Props) {
@@ -23,7 +22,7 @@ export default function ImageSlider({}: Props) {
 	};
 
 	let displayTheDots = testimonials.map((t, i) => {
-		return <div key={t.id + i} onClick={() => goToSlide(i)} className={s.dot}></div>;
+		return <div key={t.id + i} onClick={() => goToSlide(i)} className={` ${s.dot} `}></div>;
 	});
 
 	return (

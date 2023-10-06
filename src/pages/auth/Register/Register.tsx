@@ -77,7 +77,7 @@ export default function Register({}: Props) {
 					console.log(data.message);
 					// dispatch({type:ActionTypes.TOGGLE_LOADING ,payload:false})
 					// let message = data.error.message.includes("Email") ? data.error.message :"Username is already taken"
-					// setIsError(true)
+					setIsloading(false);
 					setIsBackendError(true);
 					setErrorMessageBackend("Email is already taken.");
 					return;

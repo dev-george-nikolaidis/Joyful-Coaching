@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import Button from "../../../../components/Button/Button";
-import HeaderH3 from "../../../../components/HeadingH3/HeadingH3";
 import HeaderH4 from "../../../../components/HeadingH4/HeadingH4";
 import Paragraph400 from "../../../../components/Paragraph400/Paragraph400";
+import SectionTitle from "../../../../components/SectionTitle/SectionTitle";
 import { blogs } from "../../../../data/data";
 import s from "./HomeBlog.module.scss";
 
@@ -27,7 +27,7 @@ export default function HomeBlog({}: Props) {
 
 	return (
 		<section className={s.blog}>
-			<HeaderH3 className={s.testimonialTitle}>Stay Motivated, read the weekly blog articles.</HeaderH3>
+			<SectionTitle className={s.testimonialTitle}>Stay Motivated, read the weekly blog articles.</SectionTitle>
 			<div className={s.blogsWrapper}>{displayBlogs}</div>
 			<NavLink to="/blog" end className={s.blogLink}>
 				<Button className={s.btnBlog}>Go to articles</Button>

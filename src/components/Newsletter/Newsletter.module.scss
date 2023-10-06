@@ -1,10 +1,9 @@
 .newsletter {
 	grid-column: 1 / -1;
 	margin-top: var(--section-mt);
-	background-color: var(--clr-section-bg);
 	height: 18rem;
 	align-content: center;
-	background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(176, 229, 208, 1) 42%, rgba(92, 202, 238, 0.41) 93.6%);
+	background-color: var(--clr-background);
 }
 
 .textWrapper {
