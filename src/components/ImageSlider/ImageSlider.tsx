@@ -9,7 +9,7 @@ export default function ImageSlider({}: Props) {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const { name, text, urlImg } = testimonials[currentIndex];
 
-	const goToSlide = (slideIndex: number) => {
+	const goToSlide = (e: React.MouseEvent<HTMLDivElement>, slideIndex: number) => {
 		setCurrentIndex(slideIndex);
 	};
 
@@ -22,7 +22,7 @@ export default function ImageSlider({}: Props) {
 	};
 
 	let displayTheDots = testimonials.map((t, i) => {
-		return <div key={t.id + i} onClick={() => goToSlide(i)} className={` ${s.dot} `}></div>;
+		return <div key={t.id + i} onClick={(e: React.MouseEvent<HTMLDivElement>) => goToSlide(e, i)} className={` ${s.dot} `}></div>;
 	});
 
 	return (

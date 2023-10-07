@@ -26,7 +26,7 @@ export const testimonials = [
 	{
 		id: 0,
 		name: "Petr",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/petr.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/testimonials/petr.png",
 		job: "Photographer",
 		text:
 			"My experience with my live coach has been transformative. Their expert guidance and unwavering support have empowered me to overcome obstacles and achieve my goals. Their compassionate and insightful approach truly made a difference in my life. I am grateful for their wisdom and encouragement, which have been instrumental in my personal growth journey.",
@@ -35,7 +35,7 @@ export const testimonials = [
 	{
 		id: 0,
 		name: "Olivia",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/olivia.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/testimonials/olivia.png",
 		job: "Photographer",
 		text:
 			"I have had the privilege of experiencing live coaching sessions and I must say, it has been an incredibly transformative and empowering journey. The guidance and support provided by the live coach have been nothing short of exceptional. Their expertise and ability to ask thought-provoking questions have helped me gain valuable insights and clarity in various aspects of my life. ",
@@ -45,7 +45,7 @@ export const testimonials = [
 	{
 		id: 0,
 		name: "Hana",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/tsu.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/testimonials/tsu.png",
 		job: "Photographer",
 		text:
 			"Natalia has been a game-changer in my life! Her coaching has empowered me to overcome obstacles, set clear goals, and tap into my full potential. Her unwavering support and guidance have transformed my mindset and life trajectory. Natalia is a true catalyst for personal growth and success!",
@@ -54,7 +54,7 @@ export const testimonials = [
 	{
 		id: 0,
 		name: "Hazel",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/hazel.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/testimonials/hazel.png",
 		job: "Doctor",
 		text:
 			"I am incredibly grateful for the opportunity to work with Natalia as my live coach. Her expertise, empathy, and unwavering support have been instrumental in my personal and professional growth. Natalia's ability to ask thought-provoking questions and provide insightful guidance has helped me gain clarity, overcome challenges, and achieve my goals. Her genuine care for my well-being and success shines through in every session.",
@@ -63,7 +63,7 @@ export const testimonials = [
 	{
 		id: 0,
 		name: "James",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/james.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/testimonials/james.png",
 		job: "Photographer",
 		text:
 			"My live coach has been a true catalyst for my personal and professional growth. Their guidance and expertise have empowered me to overcome obstacles and achieve my goals. Their unwavering support and wisdom have been instrumental in my journey towards success and fulfillment.",
@@ -72,7 +72,7 @@ export const testimonials = [
 	{
 		id: 0,
 		name: "David",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/david.jpg",
+		urlImg: "http://127.0.0.1:5173/assets/testimonials/david.png",
 		job: "Photographer",
 		text:
 			"Natalia has been an incredible live coach, guiding me with unwavering support and invaluable insights. Her empathetic approach and deep understanding helped me navigate challenges and discover my true potential. With her guidance, I've achieved remarkable personal growth and newfound confidence.",

@@ -1,13 +1,11 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MdOutlineClose } from "react-icons/md";
-import { useNavigate } from "react-router-dom";
 
-import Logo from "../../assets/img/logo.svg";
-
+import Close from "../../components/Close/Close";
 import HeaderH4 from "../../components/HeadingH4/HeadingH4";
 import LoginButton from "../../components/LoginButton/LoginButton";
+import Logo from "../../components/Logo/Logo";
 import Modal from "../../components/Modal/Modal";
 import { useGeneralContext } from "../../context/GeneralContext";
 import { contactSchema } from "../../utils/helpers";
@@ -25,7 +23,7 @@ export default function Contact({}: Props) {
 	const [isLoading, setIsloading] = useState(false);
 	const [isBackendError, setIsBackendError] = useState(false);
 	const [errorMessageBackend, setErrorMessageBackend] = useState("");
-	let navigate = useNavigate();
+
 	const {
 		state: {},
 		dispatch,
@@ -47,17 +45,12 @@ export default function Contact({}: Props) {
 	// Handle onSubmit
 	const onSubmit = (formData: UserSubmitForm) => {};
 
-	const redirectToHome = () => {
-		navigate("/");
-	};
-
 	return (
 		<Modal>
 			<section className={s.contact}>
-				<img src={Logo} alt="" className={s.logoImg} />
+				<Logo className={s.logoImg} />
 				<form action="#" className={s.form} onSubmit={handleSubmit(onSubmit)}>
 					<HeaderH4>Contact us</HeaderH4>
-
 					<div className={s.formControl}>
 						<label htmlFor="Name">Name*</label>
 						<input type="email" {...register("name")} />
@@ -85,9 +78,7 @@ export default function Contact({}: Props) {
 					<LoginButton>Send message</LoginButton>
 				</form>
 
-				<span className={s.linkClose} onClick={redirectToHome}>
-					<MdOutlineClose className={s.linkIconClose} />
-				</span>
+				<Close />
 			</section>
 		</Modal>
 	);

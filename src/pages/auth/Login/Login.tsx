@@ -1,11 +1,13 @@
-import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MdOutlineClose, MdRemoveRedEye } from "react-icons/md";
+import { MdRemoveRedEye } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
-import Logo from "../../../assets/img/logo.svg";
+
+import { yupResolver } from "@hookform/resolvers/yup";
+import Close from "../../../components/Close/Close";
 import HeaderH4 from "../../../components/HeadingH4/HeadingH4";
 import LoginButton from "../../../components/LoginButton/LoginButton";
+import Logo from "../../../components/Logo/Logo";
 import Modal from "../../../components/Modal/Modal";
 import Spinner from "../../../components/Spinner/Spinner";
 import { ActionTypes } from "../../../context/Actions";
@@ -26,7 +28,6 @@ export default function Login({}: Props) {
 	const [errorMessageBackend, setErrorMessageBackend] = useState("");
 	const [showPassword, setShowPassword] = useState(false);
 	let navigate = useNavigate();
-
 	const {
 		state: { backendApiDevelopmentUrl },
 		dispatch,
@@ -75,11 +76,12 @@ export default function Login({}: Props) {
 				}
 
 				if (data && data.name !== "ZodError") {
-					dispatch({ type: ActionTypes.GET_SELF, payload: data });
 					localStorage.setItem("self", JSON.stringify(data));
+					dispatch({ type: ActionTypes.GET_SELF, payload: data });
 					setIsBackendError(false);
 					setIsloading(false);
 					setErrorMessageBackend("");
+					navigate("/");
 				}
 			} catch (err: any) {
 				setIsloading(false);
@@ -94,16 +96,11 @@ export default function Login({}: Props) {
 		postData();
 	};
 
-	const redirectToHome = () => {
-		navigate("/");
-	};
-
 	return (
 		<Modal>
 			{isLoading && <Spinner />}
 			<section className={s.login}>
-				<img src={Logo} alt="" className={s.logoImg} />
-
+				<Logo className={s.logoImg} />
 				<form action="#" className={s.form} onSubmit={handleSubmit(onSubmit)}>
 					<HeaderH4>Login</HeaderH4>
 					<div className={s.formControl}>
@@ -125,7 +122,7 @@ export default function Login({}: Props) {
 					</div>
 					{errors.password ? <span className={s.error}>{errors.password.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-					<LoginButton>Create an account</LoginButton>
+					<LoginButton>Login</LoginButton>
 				</form>
 				<div className={s.linkContainer}>
 					<span className={s.spanLinkText}>Need an account? </span>
@@ -133,9 +130,7 @@ export default function Login({}: Props) {
 						Sign Up
 					</Link>
 				</div>
-				<span className={s.linkClose} onClick={redirectToHome}>
-					<MdOutlineClose className={s.linkIconClose} />
-				</span>
+				<Close />
 			</section>
 		</Modal>
 	);

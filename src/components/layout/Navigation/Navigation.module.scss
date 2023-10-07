@@ -10,6 +10,34 @@
 	background-color: #fff;
 }
 
+.toggleThemeContainer {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	background-color: var(--clr-green-2-400);
+	padding: 0.1rem 1rem;
+}
+
+.toggleThemeContainer:hover {
+	background-color: var(--clr-green-400) !important;
+}
+
+.themeIcon {
+	font-size: 3rem;
+}
+
+.themeLight {
+	color: var(--clr-background) !important;
+}
+.themeDark {
+	color: var(--clr-background) !important;
+}
+
+.themeText {
+	margin-left: 0.2rem;
+	color: #fff;
+}
+
 .logoText {
 	font-weight: 700;
 }
@@ -23,12 +51,13 @@
 
 .navList {
 	display: flex;
+	align-items: center;
 	gap: 1.2rem;
 }
 
 .link {
 	transition: 0.5s all ease-in-out;
-	padding: 0.6rem 1rem;
+	padding: 0.8rem 1rem;
 	background-color: var(--clr-green-2-400);
 	color: #fff;
 	font-weight: 600;
@@ -38,8 +67,82 @@ link:visited {
 	color: orange;
 }
 
+.link:hover {
+	background-color: var(--clr-green-400) !important;
+}
+
 .active {
-	padding: 0.6rem 1rem;
+	padding: 0.8rem 1rem;
 	background-color: var(--clr-green-400);
 	color: #fff;
+}
+
+.accountContainer {
+	position: relative;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	cursor: pointer;
+	background-color: var(--clr-green-2-400);
+	padding: 0.2rem 0.5rem;
+}
+.accountContainer:hover {
+	background-color: var(--clr-green-400) !important;
+}
+
+.accountIconUser {
+	font-size: 3rem;
+	color: var(--clr-background) !important;
+}
+.accountIconArrow {
+	font-size: 2.5rem;
+	color: var(--clr-background) !important;
+}
+
+.accountText {
+	color: #fff;
+}
+
+.accountListModal {
+	position: absolute;
+	width: 25rem;
+	background-color: #fff;
+	right: 0;
+	top: 5.5rem;
+	z-index: 4;
+	padding: 2rem;
+	box-shadow: var(--box-shadow-1);
+	border-radius: 1rem;
+}
+
+.accountLink {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 0.5s all ease-in-out;
+	margin-bottom: 1.5rem;
+	padding: 1rem;
+}
+
+.accountLink:hover {
+	background-color: var(--clr-green-400);
+}
+
+.accountLinkLogout:hover {
+	background-color: var(--clr-red-1);
+}
+
+.accountSettingIcon {
+	font-size: 2.5rem;
+	// color: var(--clr-background) !important;
+}
+.accountModalText {
+	color: #000;
+	font-size: 1.6rem;
+	font-weight: 500;
+}
+
+.modalLine {
+	margin: 1.5rem 0;
+	border-top: 1px dotted #000;
 }

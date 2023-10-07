@@ -6,9 +6,18 @@ type ReducerType = (state: GeneralContextState, action: Action) => GeneralContex
 export const reducer: ReducerType = (state, action) => {
 	switch (action.type) {
 		case ActionTypes.GET_SELF:
+			const user = localStorage.getItem("self");
+			const parsedUser = JSON.parse(user as string);
+
 			return {
 				...state,
-				self: action.payload,
+				self: parsedUser,
+			};
+		case ActionTypes.LOGOUT:
+			localStorage.clear();
+			return {
+				...state,
+				self: null,
 			};
 		case ActionTypes.OPEN_CLOSE_MODAL:
 			return {
@@ -16,7 +25,7 @@ export const reducer: ReducerType = (state, action) => {
 				isModalOpen: !state.isModalOpen,
 			};
 		case ActionTypes.TOGGLE_THEME:
-			const theme = localStorage.getItem("theme") || "light";
+			const theme = localStorage.getItem("theme") || "Light";
 			return {
 				...state,
 				theme: theme,

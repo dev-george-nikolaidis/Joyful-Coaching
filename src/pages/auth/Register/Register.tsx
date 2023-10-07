@@ -1,12 +1,13 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { MdOutlineClose, MdRemoveRedEye } from "react-icons/md";
-import { Link, useNavigate } from "react-router-dom";
+import { MdRemoveRedEye } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-import Logo from "../../../assets/img/logo.svg";
+import Close from "../../../components/Close/Close";
 import HeaderH3 from "../../../components/HeadingH3/HeadingH3";
 import HeaderH4 from "../../../components/HeadingH4/HeadingH4";
+import Logo from "../../../components/Logo/Logo";
 import Modal from "../../../components/Modal/Modal";
 import RegisterButton from "../../../components/RegisterButton/RegisterButton";
 import Spinner from "../../../components/Spinner/Spinner";
@@ -29,8 +30,6 @@ export default function Register({}: Props) {
 	const [showPassword, setShowPassword] = useState(false);
 	const [showPasswordRepeat, setShowPasswordRepeat] = useState(false);
 	const [isUserCreated, setIsUserCreated] = useState(false);
-
-	let navigate = useNavigate();
 
 	const {
 		state: { backendApiDevelopmentUrl },
@@ -74,7 +73,6 @@ export default function Register({}: Props) {
 
 				// Error handling
 				if (data.message) {
-					console.log(data.message);
 					// dispatch({type:ActionTypes.TOGGLE_LOADING ,payload:false})
 					// let message = data.error.message.includes("Email") ? data.error.message :"Username is already taken"
 					setIsloading(false);
@@ -99,23 +97,11 @@ export default function Register({}: Props) {
 		postData();
 	};
 
-	const handlerPasswordClick = (type: string) => {
-		if (type === "password") {
-			setShowPassword(!showPassword);
-			return;
-		}
-		setShowPasswordRepeat(!showPasswordRepeat);
-	};
-
-	const redirectToHome = () => {
-		navigate("/");
-	};
-
 	return (
 		<Modal>
 			{isLoading && <Spinner />}
 			<section className={s.register}>
-				<img src={Logo} alt="" className={s.logoImg} />
+				<Logo className={s.logoImg} />
 				{isUserCreated && <HeaderH3 className={s.successMessage}>Your account has been created successfully!</HeaderH3>}
 				<form action="#" className={s.form} onSubmit={handleSubmit(onSubmit)}>
 					<HeaderH4>Sign Up</HeaderH4>
@@ -160,9 +146,7 @@ export default function Register({}: Props) {
 						Login
 					</Link>
 				</div>
-				<span className={s.linkClose} onClick={redirectToHome}>
-					<MdOutlineClose className={s.linkIconClose} />
-				</span>
+				<Close />
 			</section>
 		</Modal>
 	);

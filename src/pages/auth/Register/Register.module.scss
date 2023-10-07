@@ -82,20 +82,3 @@
 .linkText {
 	color: blue;
 }
-
-.linkClose {
-	position: absolute;
-	top: 2rem;
-	right: 2rem;
-}
-
-.linkIconClose {
-	font-size: 3rem;
-	padding: 0.4rem;
-	transition: 0.5s all ease-in-out;
-	border-radius: 50%;
-}
-.linkIconClose:hover {
-	background-color: var(--clr-red-1);
-	color: #fff !important;
-}

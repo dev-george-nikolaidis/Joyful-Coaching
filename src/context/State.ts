@@ -1,3 +1,6 @@
+const user = localStorage.getItem("self");
+const parsedUser = JSON.parse(user as string);
+
 export interface GeneralContextState {
 	test: string;
 	isModalOpen: boolean;
@@ -12,12 +15,10 @@ export const initialState: GeneralContextState = {
 	isModalOpen: false,
 	backendApiDevelopmentUrl: "http://localhost:3001/api/v1",
 	backendApiProductionUrl: "https://joyful-coaching-api.onrender.com",
-	self: null,
-	theme: localStorage.getItem("theme") || "dark",
+	self: parsedUser,
+	theme: localStorage.getItem("theme") || "Dark",
 };
 
 type Self = {
-	id: number;
-	email: string;
 	token: string;
-} | null;
+};
