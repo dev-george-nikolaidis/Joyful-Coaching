@@ -31,15 +31,6 @@ export default function Navigation({}: Props) {
 				</NavLink>
 
 				<ul className={s.navList}>
-					<li onClick={toggleTheme} className={s.toggleThemeContainer}>
-						{theme === "Dark" ? <MdToggleOn className={`${s.themeLight} ${s.themeIcon}`} /> : <MdToggleOff className={`${s.themeLight} ${s.themeIcon}`} />}
-						<span className={s.themeText}>{theme}</span>
-					</li>
-					<li>
-						<NavLink to="/" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link} `)}>
-							<span> Home</span>
-						</NavLink>
-					</li>
 					<li>
 						<NavLink to="/services" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
 							<span>Buy Session</span>
@@ -48,6 +39,27 @@ export default function Navigation({}: Props) {
 					<li>
 						<NavLink to="/booking" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
 							<span>Book Session</span>
+						</NavLink>
+					</li>
+
+					{!self && (
+						<>
+							<li>
+								<NavLink to="/user/login" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+									<span>Login</span>
+								</NavLink>
+							</li>
+							<li>
+								<NavLink to="/user/register" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+									<span>Register</span>
+								</NavLink>
+							</li>
+						</>
+					)}
+
+					<li>
+						<NavLink to="/" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link} `)}>
+							<span> Home</span>
 						</NavLink>
 					</li>
 
@@ -66,20 +78,8 @@ export default function Navigation({}: Props) {
 							<span>Contact</span>
 						</NavLink>
 					</li>
-					{!self ? (
-						<>
-							<li>
-								<NavLink to="/user/login" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
-									<span>Login</span>
-								</NavLink>
-							</li>
-							<li>
-								<NavLink to="/user/register" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
-									<span>Register</span>
-								</NavLink>
-							</li>
-						</>
-					) : (
+
+					{self && (
 						<>
 							<li className={s.accountContainer} onClick={() => setShowAccountModal(!showAccountModal)}>
 								<MdAccountCircle className={s.accountIconUser} />
@@ -109,6 +109,10 @@ export default function Navigation({}: Props) {
 							</li>
 						</>
 					)}
+					<li onClick={toggleTheme} className={s.toggleThemeContainer}>
+						{theme === "Dark" ? <MdToggleOn className={`${s.themeLight} ${s.themeIcon}`} /> : <MdToggleOff className={`${s.themeLight} ${s.themeIcon}`} />}
+						<span className={s.themeText}>{theme}</span>
+					</li>
 				</ul>
 			</nav>
 		</header>

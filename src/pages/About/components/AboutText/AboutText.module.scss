@@ -1,6 +1,6 @@
 .aboutText {
 	grid-column: 1 / -1;
-	background-color: var(--clr-background);
+	background-color: var(--bg-section-400);
 }
 
 .aboutTextWrapper {
@@ -16,12 +16,6 @@
 	padding: 2rem;
 }
 
-.container {
-}
-
-.title {
-}
-
 .paragraphText {
 	margin: 1rem;
 	width: 80%;
@@ -31,7 +25,4 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: baseline;
-}
-
-.img {
 }

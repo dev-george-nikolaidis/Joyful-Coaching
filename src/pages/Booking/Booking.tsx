@@ -14,6 +14,7 @@ type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 export default function Booking({}: Props) {
+	console.log("hi");
 	const [appointmentDate, setAppointmentDateDate] = useState<Value>(new Date());
 	useEffect(() => {}, []);
 	console.log(new Date(`${appointmentDate}`).getDay());

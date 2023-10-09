@@ -1,11 +1,8 @@
 .testimonialsContainer {
-	margin-top: var(--section-mt);
+	margin-top: var(--mt-section-400);
 	grid-column: 1 / -1;
 	padding: 10rem 0;
-	background-color: var(--clr-background);
-}
-
-.testimonialWrapper {
+	background-color: var(--bg-section-400);
 }
 
 .testimonialTitle {

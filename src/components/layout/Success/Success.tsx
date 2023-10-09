@@ -4,6 +4,7 @@ import s from "./Success.module.scss";
 type Props = {};
 
 export default function Success({}: Props) {
+	// todo: If I will use it ,I must fix the theme variables.
 	return (
 		<div className={s.successContainer}>
 			<div className={s.successWrapper}>

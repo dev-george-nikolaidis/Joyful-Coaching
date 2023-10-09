@@ -1,25 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;300;400;500;600;700&family=Poppins:wght@300;400;500&display=swap");
+
 :root {
-	/* Colors */
-	--clr-red-1: #fc4747;
+	/* Requirements for a naming convention
+	1 ) It should scale well for small-to-large themes.
+	2 ) Variables should be semantic in all theme instances
+	3 ) It should support colors, fonts and brands
 
-	--clr-purple-500: #483d8b;
-	--clr-purple-400: #7567ca;
-	--clr-purple-300: #c0b9ec;
+	Example solution
+	-- what is it? is it a color,background-color / - then what component is? is a paragraph or title  ? /- the contrast 400 is the  base
+	--c-title-400: #000   , c = color  title = some title component or H1-6  , 400 = base contrast.
+ */
 
-	--clr-green-500: rgb(24, 137, 118);
-	--clr-green-400: #20ad96;
-	--clr-green-300: #2ad2b6;
+	// forms
+	--bg-form-400: #fff;
 
-	--clr-background: #b0e5d0;
+	//links
+	--c-text-link-400: #0c111d;
+	--bg-link-hover-400: #20ad96;
+	--c-link-hover-400: #fff;
+	--c-link-active-400: #fff;
+	--bg-link-active-400: #20ad96;
 
-	--clr-green-2-400: #5a837d;
-	--clr-purple-200: #483d8b;
+	// titles
+	--c-title-400: #13203f;
+	--c-section-title-400: #333461;
 
-	--clr-body-bg: #ffff;
-	--clr-section-bg: #faf6f6;
+	// paragraphs
+	--c-text-400: #4a556c;
 
-	--clr-body-text: #0c111d;
+	//body
+	--c-body-text-400: #0c111d;
+	--bg-body-400: #ffff;
+
+	//Errors
+	--c-error-400: #fc4747;
+
+	// Buttons
+	--bg-btn-cta-400: #20ad96;
+	--c-cta-button-hover-400: #2ad2b6;
+
+	--bg-btn-form-400: #20ad96;
+	--b-btn-form-400: #20ad96;
+	--c-btn-form-400: #000;
+	--c-btn-form-hover-400: #fff;
+
+	// Sections
+	--bg-section-400: #b0e5d0;
+
+	//Modals
+	--bg-modal-400: #b0e5d0;
+
+	// Shadows
+	--box-shadow-400: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+	// Margins
+	--mt-section-400: 18rem;
+
+	// Fonts
+	--ff-body-400: "Kumbh Sans", sans-serif;
 
 	// --fs-900: 20rem;
 	--fs-800: 3.2rem;
@@ -28,15 +66,32 @@
 	--fs-500: 1.8rem;
 	--fs-400: 1.5rem;
 	--fs-300: 1.3rem;
-	// --fs-200: 1.5rem;
+	// --fs-200: 1.2rem;
 
-	--section-mt: 18rem;
-	--box-shadow-1: 0 3px 8px rgba(0, 0, 0, 0.1);
-	--ff-normal: "Kumbh Sans", sans-serif;
+	// Colors  -> Primary = p ,Secondary = s
 
+	// primary
+	--c-p-500: rgb(24, 137, 118);
+	--c-p-400: #20ad96;
+	--c-p-300: #2ad2b6;
+
+	// primary light
+
+	// primary dark
+	--c-p-d-400: #5a837d;
+
+	// --c-p-l-400: #20ad96;
+	// --c-p-d-400: #20ad96;
+
+	// secondary
+	--c-s-500: #483d8b;
+	--c-s-400: #7567ca;
+	--c-s-300: #c0b9ec;
+
+	// Theme
 	[data-theme="Dark"] {
-		--clr-green-400: #20ad96;
-		--clr-background: #0c0c0c;
+		--c-p-400: #20ad96;
+		--bg-section-400: #0c0c0c;
 	}
 }
 
@@ -55,13 +110,13 @@ html {
 }
 
 body {
-	font-family: var(--ff-normal);
+	font-family: var(--ff-body-400);
 	font-size: var(--fs-400);
 	min-height: 100vh;
-	background-color: var(--clr-body-bg);
+	background-color: var(--bg-body-400);
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;
-	color: var(--clr-body-text);
+	color: var(--c-body-text-400);
 }
 
 // This is for react root div element
@@ -154,12 +209,6 @@ select {
 	white-space: nowrap;
 	border: 0;
 }
-
-/*****************        Colors            **************************/
-
-/*****************        Typography            **************************/
-
-/*****************      Components            **************************/
 
 /*****************      Media queries            **************************/
 

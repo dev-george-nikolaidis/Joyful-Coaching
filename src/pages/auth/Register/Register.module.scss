@@ -1,5 +1,5 @@
 .register {
-	background-color: #fff;
+	background-color: var(--bg-form-400);
 	width: 30%;
 	min-height: 60rem;
 	border-radius: 2rem;
@@ -19,7 +19,7 @@
 .successMessage {
 	margin-top: 1rem;
 	text-align: center;
-	color: var(--clr-green-400);
+	color: var(--c-p-400);
 }
 
 .form {
@@ -64,7 +64,7 @@
 }
 
 .eyeShow:hover {
-	color: var(--clr-green-400) !important;
+	color: var(--c-p-400) !important;
 }
 
 .eyeHide {
@@ -72,7 +72,7 @@
 }
 
 .error {
-	color: var(--clr-red-1);
+	color: var(--c-error-400);
 }
 
 .linkContainer {

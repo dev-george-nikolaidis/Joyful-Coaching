@@ -1,6 +1,6 @@
 .blog {
 	grid-column: 2 / 14;
-	margin-top: var(--section-mt);
+	margin-top: var(--mt-section-400);
 }
 
 .blogWrapper {
@@ -24,7 +24,7 @@
 }
 
 .blogCardWrapper:hover {
-	background-color: var(--clr-purple-300);
+	background-color: var(--c-s-300);
 }
 
 .blogHeader {

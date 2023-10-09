@@ -1,5 +1,5 @@
 .contact {
-	background-color: #fff;
+	background-color: var(--bg-form-400);
 	width: 30%;
 	min-height: 60rem;
 	border-radius: 2rem;
@@ -64,5 +64,5 @@
 }
 
 .error {
-	color: var(--clr-red-1);
+	color: var(--c-error-400);
 }

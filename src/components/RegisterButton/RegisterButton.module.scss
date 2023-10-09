@@ -3,10 +3,10 @@
 	position: relative;
 	cursor: pointer;
 	background: none;
-	border: 1px solid var(--clr-green-400);
+	border: 1px solid var(--b-btn-form-400);
 	width: 100%;
 	padding: 0.8rem 0;
-	color: #000;
+	color: var(--c-btn-form-400);
 	transition: all 0.4s ease-in-out;
 	margin-top: 2rem;
 	height: 4.8rem;
@@ -22,7 +22,7 @@
 	position: absolute;
 	width: 25%;
 	height: 100%;
-	background-color: var(--clr-green-400);
+	background-color: var(--bg-btn-form-400);
 	z-index: -1;
 	transition: all 0.5s;
 }
@@ -65,5 +65,5 @@
 }
 
 .btn:hover {
-	color: #fff;
+	color: var(--c-btn-form-hover-400);
 }

@@ -1,5 +1,5 @@
 .login {
-	background-color: #fff;
+	background-color: var(--bg-form-400);
 	width: 30%;
 	min-height: 60rem;
 	border-radius: 2rem;
@@ -19,9 +19,6 @@
 	padding: 2.5rem;
 }
 
-.formControl {
-}
-
 .form label {
 	font-weight: 500;
 	padding: 1rem 0 0.5rem 0;
@@ -34,7 +31,6 @@
 	background-color: transparent;
 	color: #000;
 	height: 3.7rem;
-	// border: 1px solid #000;
 	width: 100%;
 	padding: 1.6rem;
 }
@@ -57,7 +53,7 @@
 }
 
 .eyeShow:hover {
-	color: var(--clr-green-400) !important;
+	color: var(--c-p-400) !important;
 }
 
 .eyeHide {
@@ -65,7 +61,7 @@
 }
 
 .error {
-	color: var(--clr-red-1);
+	color: var(--c-error-400);
 }
 
 .linkContainer {

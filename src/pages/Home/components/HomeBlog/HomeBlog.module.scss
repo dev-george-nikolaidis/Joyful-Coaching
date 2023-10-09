@@ -1,7 +1,6 @@
 .blog {
-	margin-top: var(--section-mt);
+	margin-top: var(--mt-section-400);
 	grid-column: 2 / 14;
-
 	display: flex;
 	flex-direction: column;
 }
@@ -24,7 +23,7 @@
 }
 
 .btnBlog {
-	background-color: var(--clr-purple-400);
+	background-color: var(--c-s-400);
 	text-transform: none;
 	margin-top: 4rem;
 	width: fit-content;
@@ -44,11 +43,11 @@
 }
 
 .blogCardWrapper:hover {
-	background-color: var(--clr-purple-300);
+	background-color: var(--c-s-300);
 }
 
 .blogHeader {
-	// color: var(--clr-green-500);
+	// color: var(--c-p-500);
 	height: 6rem;
 }
 
