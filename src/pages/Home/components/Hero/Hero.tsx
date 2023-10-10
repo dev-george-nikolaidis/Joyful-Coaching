@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import HeroImg from "../../../../assets/img/home-hero.png";
 import SuccessImg from "../../../../assets/img/success.svg";
 import Button from "../../../../components/Button/Button";
@@ -15,7 +16,9 @@ export default function Hero({}: Props) {
 					I help people to discover their true potential and live a fulfilling life.Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin
 					using backed by science. Wanna transform your life?
 				</Paragraph500>
-				<Button>Book your session</Button>
+				<Link to="/booking">
+					<Button>Book your session</Button>
+				</Link>
 			</section>
 			<figure className={s.heroImgWrapper}>
 				<img src={HeroImg} alt="Natalia life Coach" className={s.heroImg} />

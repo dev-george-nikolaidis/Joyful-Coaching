@@ -30,7 +30,7 @@
 }
 
 .themeIcon {
-	font-size: 3rem;
+	font-size: 2rem;
 	color: #000 !important;
 }
 
@@ -93,7 +93,7 @@
 }
 
 .accountIconUser {
-	font-size: 3rem;
+	font-size: 2.5rem;
 }
 .accountIconArrow {
 	font-size: 2.5rem;
@@ -109,7 +109,7 @@
 	background-color: var(--bg-body-400);
 	right: 0;
 	top: 5.5rem;
-	z-index: 4;
+	z-index: 3;
 	padding: 2rem;
 	box-shadow: var(--box-shadow-400);
 	border-radius: 1rem;
@@ -134,6 +134,7 @@
 
 .accountSettingIcon {
 	font-size: 2.5rem;
+	color: var(--c-icon-400);
 	// color: var(--bg-section-400) !important;
 }
 .accountModalText {

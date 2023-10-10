@@ -1,18 +1,21 @@
 import { useState } from "react";
-import { MdAccountCircle, MdArrowDropDown, MdManageAccounts, MdOutlineLogout, MdToggleOff, MdToggleOn } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { MdAccountCircle, MdArrowDropDown, MdHouse, MdManageAccounts, MdOutlineBrush, MdOutlineLogout } from "react-icons/md";
+import { Link, NavLink } from "react-router-dom";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
+import ThemeModal from "../ThemeModal/ThemeModal";
 import s from "./Navigation.module.scss";
 
 type Props = {};
 
 export default function Navigation({}: Props) {
 	const [showAccountModal, setShowAccountModal] = useState(false);
+
 	const {
-		state: { theme, self },
+		state: { theme, self, isModalOpen },
 		dispatch,
 	} = useGeneralContext();
+
 	const toggleTheme = () => {
 		localStorage.setItem("theme", theme === "Light" ? "Dark" : "Light");
 		dispatch({ type: ActionTypes.TOGGLE_THEME, payload: theme === "Light" ? "Dark" : "Light" });
@@ -88,17 +91,16 @@ export default function Navigation({}: Props) {
 								{showAccountModal && (
 									<ul className={s.accountListModal}>
 										<li className={s.accountLink}>
-											<MdManageAccounts className={s.accountSettingIcon} />
-											<span className={s.accountModalText}>Settings</span>
+											<MdHouse className={s.accountSettingIcon} />
+											<span className={s.accountModalText}>Session room</span>
 										</li>
-										<li className={s.accountLink}>
-											<MdManageAccounts className={s.accountSettingIcon} />
-											<span className={s.accountModalText}>Settings</span>
+										<li>
+											<Link to="/account-settings" className={s.accountLink}>
+												<MdManageAccounts className={s.accountSettingIcon} />
+												<span className={s.accountModalText}>Settings</span>
+											</Link>
 										</li>
-										<li className={s.accountLink}>
-											<MdManageAccounts className={s.accountSettingIcon} />
-											<span className={s.accountModalText}>Settings</span>
-										</li>
+
 										<hr className={s.modalLine} />
 										<li className={`${s.accountLinkLogout} ${s.accountLink}`} onClick={logout}>
 											<MdOutlineLogout className={s.accountSettingIcon} />
@@ -109,12 +111,18 @@ export default function Navigation({}: Props) {
 							</li>
 						</>
 					)}
-					<li onClick={toggleTheme} className={s.toggleThemeContainer}>
+					{/* <li onClick={toggleTheme} className={s.toggleThemeContainer}>
 						{theme === "Dark" ? <MdToggleOn className={`${s.themeLight} ${s.themeIcon}`} /> : <MdToggleOff className={`${s.themeLight} ${s.themeIcon}`} />}
+						<span className={s.themeText}>{theme}</span>
+					</li> */}
+					<li onClick={toggleTheme} className={s.toggleThemeContainer}>
+						{/* {theme === "Dark" ? <MdToggleOn className={`${s.themeLight} ${s.themeIcon}`} /> : <MdToggleOff className={`${s.themeLight} ${s.themeIcon}`} />} */}
+						<MdOutlineBrush className={`${s.themeLight} ${s.themeIcon}`} />
 						<span className={s.themeText}>{theme}</span>
 					</li>
 				</ul>
 			</nav>
+			{isModalOpen && <ThemeModal />}
 		</header>
 	);
 }

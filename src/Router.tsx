@@ -2,6 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 import About from "./pages/About/About";
+import Account from "./pages/Account/Account";
 import Blog from "./pages/Blog/Blog";
 import Booking from "./pages/Booking/Booking";
 import BookSession from "./pages/Booking/components/BookSession/BookSession";
@@ -25,6 +26,7 @@ const Router: React.FC = () => {
 					<Route path="/contact" element={<Contact />} />
 					<Route element={<ProtectedRoutes path="/user/login" />}>
 						<Route path="/booking" element={<Booking />} />
+						<Route path="/account-settings" element={<Account />} />
 						<Route path="/booking/check-date" element={<BookSession />} />
 					</Route>
 

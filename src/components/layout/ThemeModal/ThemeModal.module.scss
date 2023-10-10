@@ -1,0 +1,47 @@
+.themeModal {
+	background-color: rgba($color: #000000, $alpha: 0.8);
+	z-index: 3;
+}
+
+.themeContainer {
+	background-color: var(--bg-form-400);
+	width: 40%;
+	min-height: 30rem;
+	border-radius: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.themeModalTitle {
+	text-align: center;
+	margin-top: 3rem;
+}
+
+.themeWrapper {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	min-height: 20rem;
+}
+
+.theme1Container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.theme1Container:hover {
+}
+
+.theme1Name {
+	font-size: 2.5rem;
+}
+.theme1Radio {
+	accent-color: red;
+	width: 3rem;
+	height: 3rem;
+	cursor: pointer;
+}

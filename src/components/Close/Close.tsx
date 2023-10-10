@@ -2,11 +2,17 @@ import { MdOutlineClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import s from "./Close.module.scss";
 
-type Props = {};
+type Props = {
+	redirect?: boolean;
+	path?: string;
+};
 
-export default function Close({}: Props) {
+export default function Close({ redirect, path }: Props) {
 	const redirectToHome = () => {
-		navigate("/");
+		if (redirect === false) {
+			return;
+		}
+		navigate(path ? path : "/");
 	};
 	let navigate = useNavigate();
 	return (

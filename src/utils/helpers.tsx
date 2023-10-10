@@ -1,3 +1,4 @@
+import axios from "axios";
 import * as yup from "yup";
 
 export const registerUserSchema = yup.object().shape({
@@ -22,6 +23,16 @@ export const registerUserSchema = yup.object().shape({
 	// question: yup.string().required("Question is required"),
 });
 
+export const updatePasswordSchema = yup.object().shape({
+	password: yup
+		.string()
+		.required("Please enter a password.")
+		.matches(
+			/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+			"Password must be min 6 characters and contain one uppercase, one lowercase, one number and one special case character."
+		),
+});
+
 export const loginUserSchema = yup.object().shape({
 	email: yup.string().min(2, "Email is required").required("Email is required"),
 	password: yup.string().required("Password is required"),
@@ -33,3 +44,25 @@ export const contactSchema = yup.object().shape({
 	// email: yup.string().min(2, "Email is required").required("Email is required"),
 	textarea: yup.string().min(20, "Message must be at list 20 characters long.").required("Message is required"),
 });
+
+export const fetchAxios = async (url: string, method = "get", data?: any, token?: string): Promise<any> => {
+	return await axios({
+		method: method,
+		url: url,
+		data: data,
+		headers: {
+			Authorization: `Bearer  ${token}`,
+		},
+	})
+		.then((response) => {
+			return {
+				data: response.data,
+			};
+		})
+		.catch((error) => {
+			return {
+				status: error.status,
+				data: error.response,
+			};
+		});
+};
