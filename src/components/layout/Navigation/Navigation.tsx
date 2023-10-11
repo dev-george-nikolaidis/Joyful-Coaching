@@ -3,7 +3,6 @@ import { MdAccountCircle, MdArrowDropDown, MdHouse, MdManageAccounts, MdOutlineB
 import { Link, NavLink } from "react-router-dom";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
-import ThemeModal from "../ThemeModal/ThemeModal";
 import s from "./Navigation.module.scss";
 
 type Props = {};
@@ -122,7 +121,7 @@ export default function Navigation({}: Props) {
 					</li>
 				</ul>
 			</nav>
-			{isModalOpen && <ThemeModal />}
+			{/* {isModalOpen && <ThemeModal />} */}
 		</header>
 	);
 }

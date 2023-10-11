@@ -1,6 +1,5 @@
 import { useState } from "react";
-import SwapMinus from "../../../../../assets/img/swap-minus.svg";
-import SwapPlus from "../../../../../assets/img/swap-plus.svg";
+import { MdOutlineControlPoint, MdSettingsBackupRestore } from "react-icons/md";
 import Paragraph400 from "../../../../../components/Paragraph400/Paragraph400";
 import Paragraph500 from "../../../../../components/Paragraph500/Paragraph500";
 import s from "./QnaCard.module.scss";
@@ -18,7 +17,8 @@ export default function QnaCard({ question }: Props) {
 		setIsPressed(!isPressed);
 	};
 
-	let displayIcon = isPressed ? <img src={SwapMinus} className={s.icon} alt="" onClick={handlerClick} /> : <img src={SwapPlus} alt="" onClick={handlerClick} className={s.icon} />;
+	// let displayIcon = isPressed ? <img src={SwapMinus} className={s.icon} alt="" onClick={handlerClick} /> : <img src={SwapPlus} alt="" onClick={handlerClick} className={s.icon} />;
+	let displayIcon = isPressed ? <MdSettingsBackupRestore className={s.icon} onClick={handlerClick} /> : <MdOutlineControlPoint className={s.icon} onClick={handlerClick} />;
 
 	return (
 		<div className={s.qnaCard}>

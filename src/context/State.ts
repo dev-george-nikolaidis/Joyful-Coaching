@@ -11,6 +11,7 @@ export interface GeneralContextState {
 	theme: string;
 	displayThemeModal: boolean;
 	showPopupWindow: boolean;
+	processingPayment: boolean;
 }
 
 export const initialState: GeneralContextState = {
@@ -22,6 +23,7 @@ export const initialState: GeneralContextState = {
 	theme: localStorage.getItem("theme") || "Dark",
 	displayThemeModal: false,
 	showPopupWindow: false,
+	processingPayment: false,
 };
 
 type Self = {

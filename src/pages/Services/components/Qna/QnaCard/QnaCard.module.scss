@@ -7,7 +7,12 @@
 	justify-content: space-between;
 }
 .icon {
+	font-size: 3rem;
 	cursor: pointer;
+	color: var(--c-icon-400);
+}
+.icon:hover {
+	color: var(--c-icon-hover-400);
 }
 .question {
 	font-weight: 600;

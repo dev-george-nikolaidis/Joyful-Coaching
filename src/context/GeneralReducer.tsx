@@ -33,6 +33,11 @@ export const reducer: ReducerType = (state, action) => {
 				...state,
 				isModalOpen: !state.isModalOpen,
 			};
+		case ActionTypes.PROCESSING_PAYMENT:
+			return {
+				...state,
+				processingPayment: true,
+			};
 		case ActionTypes.TOGGLE_POPUP_MODAL:
 			return {
 				...state,

@@ -55,6 +55,7 @@ export const fetchAxios = async (url: string, method = "get", data?: any, token?
 		},
 	})
 		.then((response) => {
+			console.log(response);
 			return {
 				data: response.data,
 			};

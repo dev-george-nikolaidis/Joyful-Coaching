@@ -11,6 +11,9 @@ import Home from "./pages/Home/Home";
 import Services from "./pages/Services/Services";
 import Login from "./pages/auth/Login/Login";
 import Register from "./pages/auth/Register/Register";
+import Stripe from "./pages/auth/Stripe/Stripe";
+import StripeSuccess from "./pages/auth/StripeSuccess/StripeSuccess";
+
 const Router: React.FC = () => {
 	return (
 		<>
@@ -24,10 +27,15 @@ const Router: React.FC = () => {
 					<Route path="/user/register" element={<Register />} />
 					<Route path="/user/login" element={<Login />} />
 					<Route path="/contact" element={<Contact />} />
+					<Route element={<ProtectedRoutes path="/" withPayment={true} />}>
+						<Route path="/checkout-success/" element={<StripeSuccess />} />
+					</Route>
 					<Route element={<ProtectedRoutes path="/user/login" />}>
 						<Route path="/booking" element={<Booking />} />
 						<Route path="/account-settings" element={<Account />} />
 						<Route path="/booking/check-date" element={<BookSession />} />
+						<Route path="/appointment-buy" element={<Stripe />} />
+						<Route path="/checkout-success/" element={<StripeSuccess />} />
 					</Route>
 
 					<Route path="*" element={<div>Error</div>} />
