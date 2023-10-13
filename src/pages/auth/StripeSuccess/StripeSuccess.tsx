@@ -8,14 +8,35 @@ type Props = {};
 
 export default function StripeSuccess({}: Props) {
 	const [searchParams] = useSearchParams();
-	// const [isLoading, setIsLoading] = useState(false);
 
 	const {
 		state: { backendApiDevelopmentUrl, self },
 	} = useGeneralContext();
 	const url = `${backendApiDevelopmentUrl}/appointments/confirm`;
 	const session_id = localStorage.getItem("session_id");
-	const { response, error, isLoading } = useFetchAxios(url, "POST", { session_id: JSON.parse(session_id as string) }, self.token, session_id);
+
+	const { response, error, isLoading } = useFetchAxios(url, "POST", { session_id: JSON.parse(session_id as string) }, self.token);
+	if (response === "Update was a success!") {
+		localStorage.removeItem("session_id");
+	}
+	//
+	// useEffect(() => {
+
+	// 	return () => {
+	// 		setIsLoading(true);
+	// 		const session_id = localStorage.getItem("session_id");
+
+	// 		fetchAxios(url, "Post", { session_id: JSON.parse(session_id as string) }, self.token)
+	// 			.then((r) => {
+	// 				setIsLoading(false);
+	// 				console.log(r);
+	// 				localStorage.removeItem("session_id");
+	// 			})
+	// 			.catch((e) => {
+	// 				setIsLoading(false);
+	// 			});
+	// 	};
+	// }, []);
 
 	return (
 		<div className={s.test}>

@@ -33,10 +33,18 @@ export const reducer: ReducerType = (state, action) => {
 				...state,
 				isModalOpen: !state.isModalOpen,
 			};
+
+		case ActionTypes.CHECK_APPOINTMENTS:
+			return {
+				...state,
+				pickedDate: action.payload.pickedDate,
+				appointments: action.payload.dataPayload,
+			};
+
 		case ActionTypes.PROCESSING_PAYMENT:
 			return {
 				...state,
-				processingPayment: true,
+				sessionPacket: action.payload,
 			};
 		case ActionTypes.TOGGLE_POPUP_MODAL:
 			return {

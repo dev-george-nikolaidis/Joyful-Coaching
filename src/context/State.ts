@@ -12,6 +12,9 @@ export interface GeneralContextState {
 	displayThemeModal: boolean;
 	showPopupWindow: boolean;
 	processingPayment: boolean;
+	sessionPacket: SessionProductT | null;
+	pickedDate: Date;
+	appointments: number[];
 }
 
 export const initialState: GeneralContextState = {
@@ -24,8 +27,19 @@ export const initialState: GeneralContextState = {
 	displayThemeModal: false,
 	showPopupWindow: false,
 	processingPayment: false,
+	sessionPacket: null,
+	appointments: [],
+	pickedDate: new Date(),
 };
 
 type Self = {
 	token: string;
+};
+
+type SessionProductT = {
+	level: string;
+	price: string;
+	service: string;
+	cost: number;
+	amount: number;
 };

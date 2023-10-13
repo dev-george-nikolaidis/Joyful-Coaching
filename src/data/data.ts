@@ -1,3 +1,5 @@
+import { calculateAppointmentTime } from "../utils/helpers";
+
 export const myServices = [
 	{
 		id: 0,
@@ -330,16 +332,22 @@ export const prices = [
 		level: "Basic",
 		price: "45 €",
 		service: `/For 1 session 60’ `,
+		cost: 45,
+		amount: 1,
 	},
 	{
 		level: "Standard",
 		price: "80 €",
 		service: `/For 2 sessions  60’ each`,
+		cost: 80,
+		amount: 2,
 	},
 	{
 		level: "Premium",
 		price: "140 €",
 		service: `/For 4 sessions  60’ each `,
+		cost: 140,
+		amount: 3,
 	},
 ];
 
@@ -396,3 +404,46 @@ export const aboutStory = {
 		text_8: `In the world of life coaching, Natalia's story reminds us that our own experiences and transformations can become powerful tools for helping others realize their dreams and aspirations. Their journey exemplifies the beautiful fusion of personal growth and professional purpose, inspiring us all to embark on our own paths of self-discovery and, perhaps, one day guide others toward their own transformative journeys.`,
 	},
 };
+
+export const maxAvailableAppointments = [
+	{
+		id: 1,
+		timeStart: "07:00",
+		timeEnd: "08:00",
+		appointmentTime: calculateAppointmentTime("07", "00"),
+	},
+
+	{
+		id: 2,
+		timeStart: "08:30",
+		timeEnd: "09:30",
+		appointmentTime: calculateAppointmentTime("08", "30"),
+	},
+	{
+		id: 3,
+		timeStart: "10:00",
+		timeEnd: "11:00",
+		appointmentTime: calculateAppointmentTime("10", "00"),
+	},
+	{
+		id: 4,
+		timeStart: "11:30",
+		timeEnd: "12:30",
+		appointmentTime: calculateAppointmentTime("11", "30"),
+	},
+	{
+		id: 5,
+		timeStart: "13:00",
+		timeEnd: "14:00",
+		appointmentTime: calculateAppointmentTime("13", "00"),
+	},
+	{
+		id: 6,
+		timeStart: "16:00",
+		timeEnd: "17:00",
+		appointmentTime: calculateAppointmentTime("16", "00"),
+	},
+];
+
+export const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+export const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

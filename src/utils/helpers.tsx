@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 
 export const registerUserSchema = yup.object().shape({
@@ -55,7 +56,6 @@ export const fetchAxios = async (url: string, method = "get", data?: any, token?
 		},
 	})
 		.then((response) => {
-			console.log(response);
 			return {
 				data: response.data,
 			};
@@ -67,3 +67,29 @@ export const fetchAxios = async (url: string, method = "get", data?: any, token?
 			};
 		});
 };
+
+export const redirect = (path: string) => {
+	const navigate = useNavigate();
+	navigate(path);
+};
+
+export function calculateAppointmentTime(hour: string, minutes: string) {
+	const date = new Date();
+	const day = date.getDate().toString();
+	const month = (date.getMonth() + 1).toString();
+	const year = date.getFullYear().toString();
+
+	// The string format should be: YYYY-MM-DDTHH:mm:ss.sssZ,
+	const customDate = new Date(`${year}-${month}-${day} ${hour}:${minutes}`);
+	return customDate;
+	// return customDate;
+}
+
+export function formatDateAccuracy(date: Date, hour: string, minutes: string) {
+	const day = date.getDate().toString();
+	const month = (date.getMonth() + 1).toString();
+	const year = date.getFullYear().toString();
+	const customDate = new Date(`${year}-${month}-${day} ${hour}:${minutes}`);
+	console.log(customDate);
+	return customDate;
+}

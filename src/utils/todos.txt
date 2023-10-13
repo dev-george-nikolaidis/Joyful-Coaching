@@ -1,0 +1,7 @@
+
+1) checkAvailability at backend ,maybe we need timestamp and not date type
+
+
+3) add available appoints at user info
+
+4) work on the success page workflow.

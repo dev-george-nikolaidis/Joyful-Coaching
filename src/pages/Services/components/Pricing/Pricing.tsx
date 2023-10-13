@@ -7,7 +7,11 @@ type Props = {};
 
 export default function Pricing({}: Props) {
 	let displayPricingCards = prices.map((p, i) => {
-		return <PriceCard pricePacket={p} key={i} />;
+		return (
+			<span key={i}>
+				<PriceCard pricePacket={p} />;
+			</span>
+		);
 	});
 	return (
 		<section className={`col-12  ${s.pricing} `}>

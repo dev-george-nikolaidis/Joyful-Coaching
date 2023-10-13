@@ -1,0 +1,127 @@
+.session {
+	background-color: var(--bg-form-400);
+	width: 30%;
+	min-height: 60rem;
+	border-radius: 2rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.sessionContainer {
+	padding: 1.5rem;
+	height: 100%;
+	text-align: center;
+}
+.textHeader {
+	display: flex;
+	align-items: center;
+	gap: 6rem;
+	// justify-content: center;
+}
+
+.title {
+	// justify-content: start;
+}
+.iconTextContainer {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.errorMessage {
+	text-align: center;
+	width: 80%;
+	color: var(--c-error-400);
+	margin: 2rem 0;
+}
+
+.iconText {
+	// font-size: 2.5rem;
+}
+
+.iconBack {
+	font-size: 4.5rem;
+	color: var(--c-icon-400);
+	transition: 0.5s ease-in;
+	cursor: pointer;
+}
+
+.iconBack:hover {
+	color: var(--c-icon-hover-400);
+}
+
+.btnWrapper {
+	margin-top: 2rem;
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 30rem;
+}
+
+.mapContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.btn {
+	height: 3.7rem;
+	width: 80%;
+	cursor: pointer;
+	transition: 0.5s all ease-in-out;
+}
+
+.btn:hover {
+	background-color: var(--c-cta-button-hover-400);
+	// border: 1px solid var(--c-p-400);
+	color: #fff;
+}
+
+.active {
+	// border: 1px solid var(--c-p-400);
+	background-color: var(--c-cta-button-hover-400);
+	color: #fff;
+}
+
+.btnBookWrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.btnBook {
+	width: 80%;
+}
+
+.noAppointmentsError {
+	color: var(--c-error-400);
+	width: 80%;
+	// text-align: center;
+	margin: 5rem auto;
+}
+
+.modalContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	// height: 100%;
+	min-height: 30rem;
+}
+
+.popupTitle {
+	color: var(--c-success-400);
+}
+
+.popupWrapper {
+	display: flex;
+	width: 100%;
+}
+
+.popupBtn {
+	margin: 4rem auto 0 auto;
+	width: 50%;
+}

@@ -33,16 +33,20 @@ export default function Navigation({}: Props) {
 				</NavLink>
 
 				<ul className={s.navList}>
-					<li>
-						<NavLink to="/services" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
-							<span>Buy Session</span>
-						</NavLink>
-					</li>
-					<li>
-						<NavLink to="/booking" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
-							<span>Book Session</span>
-						</NavLink>
-					</li>
+					{self && (
+						<>
+							<li>
+								<NavLink to="/services" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+									<span>Buy Session</span>
+								</NavLink>
+							</li>
+							<li>
+								<NavLink to="/booking" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+									<span>Book Session</span>
+								</NavLink>
+							</li>
+						</>
+					)}
 
 					{!self && (
 						<>

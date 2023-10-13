@@ -26,14 +26,21 @@
 
 .bookTitle {
 	align-self: flex-start;
-	margin: 0 0 4rem 6rem;
+	margin: 0 0 0 6rem;
 }
 
 .calender {
 }
 
-.btnCalender {
+.btnWrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
 	margin: 2rem 0;
+}
+
+.btnCalender {
+	width: 80%;
 }
 .note {
 }
