@@ -1,9 +1,10 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { MdRemoveRedEye } from "react-icons/md";
 import { Link } from "react-router-dom";
 
+import ReCAPTCHA from "react-google-recaptcha";
 import Close from "../../../components/Close/Close";
 import HeaderH3 from "../../../components/HeadingH3/HeadingH3";
 import HeaderH4 from "../../../components/HeadingH4/HeadingH4";
@@ -28,9 +29,9 @@ export default function Register({}: Props) {
 	const [isBackendError, setIsBackendError] = useState(false);
 	const [errorMessageBackend, setErrorMessageBackend] = useState("");
 	const [showPassword, setShowPassword] = useState(false);
-	const [showPasswordRepeat, setShowPasswordRepeat] = useState(false);
+	const [errorReCaptcha, setErrorReCaptcha] = useState(false);
 	const [isUserCreated, setIsUserCreated] = useState(false);
-
+	const captchaRef = useRef<any>(null);
 	const {
 		state: { backendApiDevelopmentUrl },
 		dispatch,
@@ -40,10 +41,6 @@ export default function Register({}: Props) {
 		register,
 		handleSubmit,
 		reset,
-		getFieldState,
-		getValues,
-		setError,
-		watch,
 		formState: { errors },
 	} = useForm<RegisterUserT>({
 		resolver: yupResolver(registerUserSchema),
@@ -52,9 +49,11 @@ export default function Register({}: Props) {
 	// Handle onSubmit
 	const onSubmit = (formData: RegisterUserT) => {
 		const postData = async () => {
+			const token = captchaRef.current.getValue();
 			const registerUserPayload = {
 				email: formData.email,
 				password: formData.password,
+				token: token,
 			};
 
 			const request = {
@@ -71,22 +70,33 @@ export default function Register({}: Props) {
 				const res = await fetch(`${backendApiDevelopmentUrl}/users/register`, request);
 				const data = await res.json();
 
+				setIsloading(false);
+				if (data.name === "ZodError") {
+					//Todo handle zodErrors
+					setErrorReCaptcha(true);
+					return;
+				}
+
+				if (data.name === "fail") {
+					setErrorReCaptcha(true);
+					return;
+				}
+
 				// Error handling
 				if (data.message) {
-					// dispatch({type:ActionTypes.TOGGLE_LOADING ,payload:false})
-					// let message = data.error.message.includes("Email") ? data.error.message :"Username is already taken"
-					setIsloading(false);
-					setIsBackendError(true);
 					setErrorMessageBackend("Email is already taken.");
 					return;
 				}
 
-				if (data && !data.message) {
+				if (data && !data.message && data !== "fail") {
 					setIsUserCreated(true);
 					setIsBackendError(false);
 					setIsloading(false);
+					setErrorReCaptcha(false);
+					captchaRef.current.reset();
 					setErrorMessageBackend("");
 					reset();
+					return;
 				}
 			} catch (err: any) {
 				setIsloading(false);
@@ -137,7 +147,10 @@ export default function Register({}: Props) {
 						</div>
 					</div>
 					{errors.password_repeat ? <span className={s.error}>{errors.password_repeat.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>} */}
-
+					<div className={s.reCaptchaWrapper}>
+						<ReCAPTCHA ref={captchaRef} sitekey="6Ld5E58oAAAAAF2oplor2tX0v8uzezWzXIMjbEfd" />
+					</div>
+					{errorReCaptcha && <span className={s.error}>Please check the reCAPTCHA</span>}
 					<RegisterButton>Create an account</RegisterButton>
 				</form>
 				<div className={s.linkContainer}>

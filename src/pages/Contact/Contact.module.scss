@@ -1,7 +1,7 @@
 .contact {
 	background-color: var(--bg-form-400);
 	width: 30%;
-	min-height: 60rem;
+	min-height: 62rem;
 	border-radius: 2rem;
 	position: absolute;
 	top: 50%;
@@ -61,8 +61,22 @@
 	height: 10rem;
 	resize: none;
 	border-radius: 0.5rem;
+	padding: 1rem;
 }
 
 .error {
 	color: var(--c-error-400);
+}
+
+.successMessage {
+	margin-top: 1rem;
+	text-align: center;
+	color: var(--c-success-400);
+}
+
+.reCaptchaWrapper {
+	margin: 1rem 0;
+	display: flex;
+
+	justify-content: center;
 }

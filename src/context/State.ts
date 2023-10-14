@@ -15,6 +15,8 @@ export interface GeneralContextState {
 	sessionPacket: SessionProductT | null;
 	pickedDate: Date;
 	appointments: number[];
+	rerenderAccount: boolean;
+	accountInfoPayload: AccountPayload | null;
 }
 
 export const initialState: GeneralContextState = {
@@ -30,6 +32,8 @@ export const initialState: GeneralContextState = {
 	sessionPacket: null,
 	appointments: [],
 	pickedDate: new Date(),
+	accountInfoPayload: null,
+	rerenderAccount: false,
 };
 
 type Self = {
@@ -43,3 +47,25 @@ type SessionProductT = {
 	cost: number;
 	amount: number;
 };
+
+export interface AccountPayload {
+	userTable: UserTable;
+	appointmentsTable: AppointmentsTable[];
+}
+
+export interface UserTable {
+	id: number;
+	email: string;
+	password: string;
+	role: string;
+	appointments: number;
+	created_on: string;
+	updated_on: string;
+}
+
+export interface AppointmentsTable {
+	id: number;
+	date: string;
+	appointment: number;
+	user_id: number;
+}

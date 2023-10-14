@@ -22,7 +22,7 @@ export default function StripeProducts({}: Props) {
 		if (!sessionPacket) {
 			setInterval(() => {
 				navigate("/");
-			}, 2);
+			}, 4);
 		}
 	});
 

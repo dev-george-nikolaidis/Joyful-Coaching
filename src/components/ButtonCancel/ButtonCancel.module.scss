@@ -3,15 +3,17 @@
 	transition: 0.5s all ease-in-out;
 	font-weight: 600;
 	border: none;
-	background-color: var(--bg-btn-cta-400);
 	color: #fff;
-	border-radius: 0.5rem;
-	padding: 0.8rem 1rem;
+	border-radius: 0.6rem;
+	padding: 0.8rem 0;
+	height: 4.8rem;
 	cursor: pointer;
+	width: 100%;
+	background-color: var(--c-error-hover-400);
 	box-shadow: var(--box-shadow-400);
 }
 
 .btn:hover {
-	background-color: var(--c-cta-button-hover-400);
+	background-color: var(--c-error-400);
 	// color: #000;
 }

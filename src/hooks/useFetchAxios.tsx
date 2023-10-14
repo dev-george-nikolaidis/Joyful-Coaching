@@ -10,7 +10,7 @@ export default function useFetchAxios<T>(url: string, method = "get", data?: any
 	useEffect(() => {
 		return () => {
 			const fetchData = async () => {
-				console.log("useFetchAxios fetching");
+				("useFetchAxios fetching");
 				try {
 					const res = await axios_obj({
 						method: method,

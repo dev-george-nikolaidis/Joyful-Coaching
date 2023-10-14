@@ -1,8 +1,8 @@
-import { useSearchParams } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import Spinner from "../../../components/Spinner/Spinner";
 import { useGeneralContext } from "../../../context/GeneralContext";
 import useFetchAxios from "../../../hooks/useFetchAxios";
-import s from "./StripeSuccess.module.scss";
+import style from "./StripeSuccess.module.scss";
 
 type Props = {};
 
@@ -12,6 +12,7 @@ export default function StripeSuccess({}: Props) {
 	const {
 		state: { backendApiDevelopmentUrl, self },
 	} = useGeneralContext();
+
 	const url = `${backendApiDevelopmentUrl}/appointments/confirm`;
 	const session_id = localStorage.getItem("session_id");
 
@@ -19,29 +20,19 @@ export default function StripeSuccess({}: Props) {
 	if (response === "Update was a success!") {
 		localStorage.removeItem("session_id");
 	}
-	//
-	// useEffect(() => {
-
-	// 	return () => {
-	// 		setIsLoading(true);
-	// 		const session_id = localStorage.getItem("session_id");
-
-	// 		fetchAxios(url, "Post", { session_id: JSON.parse(session_id as string) }, self.token)
-	// 			.then((r) => {
-	// 				setIsLoading(false);
-	// 				console.log(r);
-	// 				localStorage.removeItem("session_id");
-	// 			})
-	// 			.catch((e) => {
-	// 				setIsLoading(false);
-	// 			});
-	// 	};
-	// }, []);
 
 	return (
-		<div className={s.test}>
+		<div className={style.successPage}>
 			{isLoading && <Spinner />}
-			Payment was a success
+			<div className={style.successContainer}>
+				<div className={style.successContent}>
+					<h1 className={style.successTitle}>Thank You!</h1>
+					<p className={style.successMessage}>Your purchase was successful.</p>
+					<Link to="/" className={style.backToHomeLink}>
+						Continue
+					</Link>
+				</div>
+			</div>
 		</div>
 	);
 }

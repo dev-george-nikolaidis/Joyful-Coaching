@@ -35,7 +35,7 @@ export default function AccountPasswordChange({}: Props) {
 			.then((val) => {
 				setErrorMessage("");
 				setIsLoading(true);
-				fetchAxios(`${backendApiDevelopmentUrl}/users/password-update`, "Post", { password: password }, self.token)
+				fetchAxios(`${backendApiDevelopmentUrl}/users/password-update`, "PUT", { password: password }, self.token)
 					.then((r) => {
 						const self = {
 							token: r.data,

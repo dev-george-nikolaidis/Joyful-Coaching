@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Calendar from "react-calendar";
-
 import "react-calendar/dist/Calendar.css";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
@@ -13,30 +12,32 @@ import Spinner from "../../components/Spinner/Spinner";
 import { ActionTypes } from "../../context/Actions";
 import { useGeneralContext } from "../../context/GeneralContext";
 import { fetchAxios, formatDateAccuracy } from "../../utils/helpers";
-import s from "./Booking.module.scss";
+import s from "./CheckBookings.module.scss";
+
 type Props = {};
 type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
-export default function Booking({}: Props) {
+export default function CheckBookings({}: Props) {
 	const [appointmentDate, setAppointmentDateDate] = useState<Value>(new Date());
 	const [isLoading, setIsLoading] = useState(false);
 	const navigate = useNavigate();
 	const {
-		state: { backendApiDevelopmentUrl, self, pickedDate },
+		state: { backendApiDevelopmentUrl, self },
 		dispatch,
 	} = useGeneralContext();
 
 	useEffect(() => {}, []);
 
 	const date = new Date(`${appointmentDate}`);
+
 	const handlerClick = async () => {
 		if (date.getDay() === 6 || date.getDay() === 0) {
 			return;
 		}
 		const url = `${backendApiDevelopmentUrl}/appointments/check-availability`;
 		setIsLoading(true);
-		fetchAxios(url, "POST", { data: date }, self.token)
+		fetchAxios(url, "POST", { data: formatDateAccuracy(date, "04", "00") }, self.token)
 			.then((r) => {
 				if (r.data) {
 					dispatch({ type: ActionTypes.CHECK_APPOINTMENTS, payload: { pickedDate: formatDateAccuracy(date, "04", "00"), dataPayload: r.data } });

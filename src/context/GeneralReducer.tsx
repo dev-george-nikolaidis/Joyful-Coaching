@@ -40,6 +40,16 @@ export const reducer: ReducerType = (state, action) => {
 				pickedDate: action.payload.pickedDate,
 				appointments: action.payload.dataPayload,
 			};
+		case ActionTypes.FETCH_ACCOUNT_PAYLOAD:
+			return {
+				...state,
+				accountInfoPayload: action.payload,
+			};
+		case ActionTypes.RERENDER_ACCOUNT:
+			return {
+				...state,
+				accountInfoPayload: action.payload,
+			};
 
 		case ActionTypes.PROCESSING_PAYMENT:
 			return {

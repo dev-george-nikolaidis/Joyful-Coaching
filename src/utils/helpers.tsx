@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 
 export const registerUserSchema = yup.object().shape({
-	// username: yup.string().min(2, "Username must be at least 2 characters").required("Username is required"),
 	email: yup.string().email("Please insert a valid email address").required("Email is required"),
 	password: yup
 		.string()
@@ -12,6 +11,7 @@ export const registerUserSchema = yup.object().shape({
 			/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
 			"Password must be min 6 characters and contain one uppercase, one lowercase, one number and one special case character."
 		),
+	// token: yup.string().required(),
 	// .oneOf([yup.ref("password_repeat"), ""], "Passwords must match"),
 	// password_repeat: yup
 	// 	.string()
@@ -42,7 +42,7 @@ export const loginUserSchema = yup.object().shape({
 export const contactSchema = yup.object().shape({
 	name: yup.string().min(2, "Name must be at list 2 characters long.").required("Name is required"),
 	subject: yup.string().min(2, "Subject must be at list 2 characters long.").required("Subject is required"),
-	// email: yup.string().min(2, "Email is required").required("Email is required"),
+	email: yup.string().min(2, "Email is required").required("Email is required"),
 	textarea: yup.string().min(20, "Message must be at list 20 characters long.").required("Message is required"),
 });
 
@@ -85,11 +85,40 @@ export function calculateAppointmentTime(hour: string, minutes: string) {
 	// return customDate;
 }
 
-export function formatDateAccuracy(date: Date, hour: string, minutes: string) {
+export function formatDateAccuracy(date: Date, hour?: string, minutes?: string) {
 	const day = date.getDate().toString();
 	const month = (date.getMonth() + 1).toString();
 	const year = date.getFullYear().toString();
 	const customDate = new Date(`${year}-${month}-${day} ${hour}:${minutes}`);
-	console.log(customDate);
+	customDate;
 	return customDate;
 }
+
+// export function
+
+export const convertAppointmentNumberToStringTime = (num: number) => {
+	let appointment = "";
+	switch (num) {
+		case 1:
+			appointment = "07:00-08:00";
+			break;
+		case 2:
+			appointment = "08:30-09:30";
+			break;
+		case 3:
+			appointment = "10:00-11:00";
+			break;
+		case 4:
+			appointment = "11:30-12:30";
+			break;
+		case 5:
+			appointment = "13:00-14:00";
+			break;
+
+		default:
+			appointment = "16:00-17:00";
+			break;
+	}
+
+	return appointment;
+};

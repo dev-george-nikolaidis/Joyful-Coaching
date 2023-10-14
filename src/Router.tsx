@@ -1,12 +1,13 @@
 // libraries
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Error404 from "./components/Error404/Error404";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 import SandboxApp from "./components/Sandbox/SandboxApp";
 import About from "./pages/About/About";
 import Account from "./pages/Account/Account";
 import Blog from "./pages/Blog/Blog";
 import BookSession from "./pages/BookSession/BookSession";
-import Booking from "./pages/Booking/Booking";
+import CheckBookings from "./pages/CheckBookings/CheckBookings";
 import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
 import Services from "./pages/Services/Services";
@@ -39,13 +40,13 @@ const Router: React.FC = () => {
 						<Route path="/booking/appointments" element={<BookSession />} />
 					</Route>
 					<Route element={<ProtectedRoutes path="/user/login" />}>
-						<Route path="/booking" element={<Booking />} />
+						<Route path="/booking" element={<CheckBookings />} />
 						<Route path="/account-settings" element={<Account />} />
 						<Route path="/appointment-buy" element={<Stripe />} />
-						<Route path="/checkout-success/" element={<StripeSuccess />} />
+						<Route path="/checkout-success" element={<StripeSuccess />} />
 					</Route>
 					{/* Error */}
-					<Route path="*" element={<div>Error</div>} />
+					<Route path="*" element={<Error404 />} />
 				</Routes>
 			</BrowserRouter>
 		</>

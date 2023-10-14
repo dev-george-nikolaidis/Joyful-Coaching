@@ -28,6 +28,8 @@ export default function BookSession({}: Props) {
 	} = useGeneralContext();
 	const navigate = useNavigate();
 	const date = `${days[pickedDate.getDay()]} ${pickedDate.getDate()} ${months[pickedDate.getMonth()]} ${pickedDate.getFullYear()}`;
+	date;
+
 	const handlerBook = () => {
 		if (appointment === 0) {
 			setErrorMessage("Please select  a session date.");
@@ -92,7 +94,6 @@ export default function BookSession({}: Props) {
 			);
 		});
 
-	console.log();
 	return (
 		<Modal>
 			{isLoading && <Spinner />}
@@ -121,7 +122,7 @@ export default function BookSession({}: Props) {
 				</span>
 			</section>
 			{showPopupWindow && (
-				<PopupModal>
+				<PopupModal popupModal={true}>
 					<div className={s.modalContainer}>
 						<HeaderH3 className={s.popupTitle}>Your booking was successful! </HeaderH3>
 						<span className={s.popupWrapper} onClick={handlerBackPopupModal}>

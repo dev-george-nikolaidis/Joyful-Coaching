@@ -1,0 +1,30 @@
+.appointmentsTitle {
+	margin-bottom: 2rem;
+}
+
+.dateContainer {
+	display: flex;
+	align-items: center;
+	height: 8rem;
+	background-color: var(--bg-section-400);
+	margin-bottom: 2rem;
+}
+
+.infoPlaceholder {
+	font-size: 2rem;
+	font-weight: 600;
+	margin-right: 2rem;
+}
+.dateText {
+	width: 15em;
+	margin: 0 4rem 0 0rem;
+}
+
+.dateSpan {
+	font-weight: 600;
+}
+
+.btnWrapper {
+	width: 10%;
+	margin-left: auto;
+}

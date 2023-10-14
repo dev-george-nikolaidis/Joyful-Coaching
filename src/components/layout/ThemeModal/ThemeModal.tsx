@@ -17,7 +17,7 @@ export default function ThemeModal({}: Props) {
 	} = useGeneralContext();
 
 	const handlerChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		// console.log(e.currentTarget.value);
+		//   (e.currentTarget.value);
 	};
 	const closeModal = () => {
 		document.body.style.overflow = "auto";
