@@ -38,6 +38,18 @@ export const loginUserSchema = yup.object().shape({
 	email: yup.string().min(2, "Email is required").required("Email is required"),
 	password: yup.string().required("Password is required"),
 });
+export const passwordResetSchema = yup.object().shape({
+	email: yup.string().min(2, "Email is required").required("Email is required"),
+});
+export const passwordResetLoginSchema = yup.object().shape({
+	password: yup
+		.string()
+		.required("Please enter a password.")
+		.matches(
+			/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
+			"Password must be min 6 characters and contain one uppercase, one lowercase, one number and one special case character."
+		),
+});
 
 export const contactSchema = yup.object().shape({
 	name: yup.string().min(2, "Name must be at list 2 characters long.").required("Name is required"),
@@ -60,10 +72,10 @@ export const fetchAxios = async (url: string, method = "get", data?: any, token?
 				data: response.data,
 			};
 		})
-		.catch((error) => {
+		.catch((errorMessage) => {
 			return {
-				status: error.status,
-				data: error.response,
+				status: errorMessage.status,
+				data: errorMessage.response,
 			};
 		});
 };

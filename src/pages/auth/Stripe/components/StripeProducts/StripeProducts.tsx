@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import sessionPacketImg from "../../../../../assets/img/session-packet.png";
+import ButtonCancel from "../../../../../components/ButtonCancel/ButtonCancel";
 import HeaderH3 from "../../../../../components/HeadingH3/HeadingH3";
 import HeaderH4 from "../../../../../components/HeadingH4/HeadingH4";
 import LoginButton from "../../../../../components/LoginButton/LoginButton";
@@ -20,11 +21,13 @@ export default function StripeProducts({}: Props) {
 
 	useEffect(() => {
 		if (!sessionPacket) {
-			setInterval(() => {
-				navigate("/");
-			}, 4);
+			navigate("/");
 		}
 	});
+
+	function handlerClickCancel() {
+		navigate("/");
+	}
 
 	const handlerClick = (e: React.MouseEvent<HTMLSpanElement>) => {
 		e.preventDefault();
@@ -52,6 +55,9 @@ export default function StripeProducts({}: Props) {
 				</div>
 				<span onClick={(e) => handlerClick(e)}>
 					<LoginButton>Checkout</LoginButton>
+				</span>
+				<span onClick={handlerClickCancel} className={s.btnCancelWrapper}>
+					<ButtonCancel>Cancel</ButtonCancel>
 				</span>
 			</section>
 		</Modal>

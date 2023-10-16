@@ -54,7 +54,7 @@ export default function AccountInfo({}: Props) {
 			<div className={s.infoContainer}>
 				<span className={s.infoWrapper}>
 					<span className={s.infoPlaceholder}>Password: </span>
-					<input type={"password"} value={accountInfoPayload?.userTable.password || ""} className={s.inputPassword} disabled />
+					<input type="password" value={accountInfoPayload?.userTable.password || ""} className={s.inputPassword} disabled />
 					<span className={s.modifierText} onClick={handlerPasswordChange}>
 						Change
 					</span>

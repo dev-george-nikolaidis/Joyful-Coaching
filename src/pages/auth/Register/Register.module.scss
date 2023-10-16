@@ -26,65 +26,26 @@
 	padding: 2.5rem;
 }
 
-.formControl {
-}
-
-.form label {
-	font-weight: 500;
-	padding: 1rem 0 0.5rem 0;
-	display: block;
-}
-
-.form input {
-	outline: none;
-	font-weight: 500;
-	background-color: transparent;
-	color: #000;
-	height: 3.7rem;
-	// border: 1px solid #000;
-	width: 100%;
-	padding: 1.6rem;
-}
-
-.form input:active,
-.form input:focus {
-	border: 1px solid #000;
-	outline: auto;
-}
-
-.inputPasswordContainer {
-	position: relative;
-}
-.eyeIcon {
-	position: absolute;
-	right: 1rem;
-	top: 0.5rem;
-	cursor: pointer;
-	font-size: 2.5rem;
-}
-
-.eyeShow:hover {
-	color: var(--c-p-400) !important;
-}
-
-.eyeHide {
-	color: red !important;
-}
-
-.error {
-	color: var(--c-error-400);
-}
-
 .linkContainer {
 	text-align: center;
 }
 
 .linkText {
 	color: blue;
+	font-weight: 600;
+}
+
+.spanLinkText {
+	margin-right: 0.5rem;
+	color: var(--c-text-400);
 }
 
 .reCaptchaWrapper {
 	margin: 1rem 0;
 	display: flex;
 	justify-content: center;
+}
+
+.error {
+	color: var(--c-error-400);
 }

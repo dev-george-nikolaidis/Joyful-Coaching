@@ -11,29 +11,28 @@
 	--c-title-400: #000   , c = color  title = some title component or H1-6  , 400 = base contrast.
  */
 	// icons
-	--c-icon-400: #20ad96;
-	--c-icon-hover-400: #2ad2b6;
+	--c-icon-400: var(--c-a-400);
+	--c-icon-hover-400: var(--c-a-400);
 
 	// forms
-	--bg-form-400: #fff;
+	--bg-form-400: var(--c-p-400);
 
 	//links
-	--c-text-link-400: #0c111d;
-	--bg-link-hover-400: #64deca;
-	--c-link-hover-400: #fff;
+	--c-text-link-400: var(--c-text-400);
+	--bg-link-hover-400: var(--c-a-300);
+
 	--c-link-active-400: #fff;
-	--bg-link-active-400: #20ad96;
+	--bg-link-active-400: var(--c-a-500);
 
 	// titles
-	--c-title-400: #13203f;
-	--c-section-title-400: #333461;
+	--c-title-400: var(--c-text-400);
+	--c-section-title-400: var(--c-text-400);
 
 	// paragraphs
-	--c-text-400: #4a556c;
+	--c-text-400: var(--c-text-400);
 
 	//body
-	--c-body-text-400: #0c111d;
-	--bg-body-400: #ffff;
+	--c-body-text-400: var(--c-text-400);
 
 	//Success
 	--c-success-400: #5cb85c;
@@ -42,28 +41,31 @@
 	--c-error-hover-400: #d43030;
 
 	// Buttons
-	--bg-btn-cta-400: #20ad96;
-	--c-cta-button-hover-400: #2ad2b6;
+	--bg-btn-cta-400: var(--c-a-400);
+	--c-cta-button-hover-400: var(--c-a-300);
 
-	--bg-btn-form-400: #20ad96;
-	--b-btn-form-400: #20ad96;
-	--c-btn-form-400: #000;
+	//-- special buttons
+	--bg-btn-form-400: var(--c-a-400);
+	--b-btn-form-400: var(--c-a-500);
+
+	--bg-btn-form-hover-400: var(--c-a-300);
+	--c-btn-form-400: var(--c-text-400);
 	--c-btn-form-hover-400: #fff;
 
 	// Sections
-	--bg-section-400: #b0e5d0;
+	--bg-section-400: var(--c-p-400);
 
 	//Modals
-	--bg-modal-400: #b0e5d0;
+	--bg-modal-400: var(--bg-body-400);
 
 	// Shadows
 	--box-shadow-400: 0 3px 8px rgba(0, 0, 0, 0.1);
 
-	// Margins
-	--mt-section-400: 18rem;
-
 	// Fonts
 	--ff-body-400: "Kumbh Sans", sans-serif;
+
+	// Margins
+	--mt-section-400: 18rem;
 
 	// --fs-900: 20rem;
 	--fs-800: 3.2rem;
@@ -74,30 +76,107 @@
 	--fs-300: 1.3rem;
 	// --fs-200: 1.2rem;
 
-	// Colors  -> Primary = p ,Secondary = s
+	// main
+	--c-text-400: #111d1c;
+	--bg-body-400: #ffff;
+
+	// Colors  -> Primary = p ,Secondary = s  , a = accent
+
+	// accent
+	--c-a-500: #167364;
+	--c-a-400: #20ad96;
+	--c-a-300: #2fdcbf;
 
 	// primary
-	--c-p-500: rgb(24, 137, 118);
-	--c-p-400: #20ad96;
-	--c-p-300: #2ad2b6;
+	--c-p-500: rgb(61, 131, 130) 7e;
+	--c-p-400: rgb(174, 224, 223);
+	--c-p-300: rgba(104, 234, 232, 0.494);
+
+	// secondary
+	--c-s-500: #c1c1c1;
+	--c-s-400: #e6e6e6;
+	--c-s-300: #f1f0f0;
 
 	// primary light
 
 	// primary dark
-	--c-p-d-400: #5a837d;
+	// --c-p-d-400: #5a837d;
 
 	// --c-p-l-400: #20ad96;
 	// --c-p-d-400: #20ad96;
 
-	// secondary
-	--c-s-500: #483d8b;
-	--c-s-400: #7567ca;
-	--c-s-300: #c0b9ec;
-
 	// Theme
 	[data-theme="Dark"] {
-		--c-p-400: #20ad96;
-		--bg-section-400: #0c0c0c;
+		// icons
+		--c-icon-400: var(--c-a-500);
+		--c-icon-hover-400: var(--c-a-300);
+
+		// forms
+		--bg-form-400: var(--c-p-400);
+
+		//links
+		--c-text-link-400: var(--c-text-400);
+		--bg-link-hover-400: var(--c-a-300);
+
+		--c-link-active-400: #fff;
+		--bg-link-active-400: var(--c-a-500);
+
+		// titles
+		--c-title-400: var(--c-text-400);
+		--c-section-title-400: var(--c-text-400);
+
+		// paragraphs
+		--c-text-400: var(--c-text-400);
+
+		//body
+		--c-body-text-400: var(--c-text-400);
+
+		//Success
+		--c-success-400: #5cb85c;
+		//Errors
+		--c-error-400: #fc4747;
+		--c-error-hover-400: #d43030;
+
+		// Buttons
+		--bg-btn-cta-400: var(--c-a-400);
+		--c-cta-button-hover-400: var(--c-a-300);
+
+		//-- special buttons
+		--bg-btn-form-400: var(--c-a-400);
+		--b-btn-form-400: var(--c-a-500);
+
+		--bg-btn-form-hover-400: var(--c-a-300);
+		--c-btn-form-400: var(--c-text-400);
+		--c-btn-form-hover-400: #fff;
+
+		// Sections
+		--bg-section-400: var(--c-p-400);
+
+		//Modals
+		--bg-modal-400: var(--bg-body-400);
+
+		// Shadows
+		--box-shadow-400: 0 3px 8px rgba(255, 255, 255, 0.1);
+		// main
+		--c-text-400: #e2eeed;
+		--bg-body-400: #000000;
+
+		// Colors  -> Primary = p ,Secondary = s  , a = accent
+
+		// accent
+		--c-a-500: #45bda9;
+		--c-a-400: #53dfc8;
+		--c-a-300: #28f4d2;
+
+		// primary
+		--c-p-500: rgb(61, 131, 130) 7e;
+		--c-p-400: rgb(31, 81, 81);
+		--c-p-300: rgba(104, 234, 232, 0.494);
+
+		// secondary
+		--c-s-500: #c1c1c1;
+		--c-s-400: #1a1a1a;
+		--c-s-300: #f1f0f0;
 	}
 }
 

@@ -5,7 +5,7 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background-image: linear-gradient(91deg, rgba(72, 154, 78, 1) 5.2%, rgba(251, 206, 70, 1) 95.9%);
+	background-color: var(--bg-body-400);
 }
 
 .errorContainer {
@@ -14,8 +14,8 @@
 	align-items: center;
 	max-width: 800px;
 	width: 90%;
-	background-color: #fff;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	background-color: var(--c-p-400);
+	box-shadow: var(--box-shadow-400);
 	border-radius: 8px;
 	padding: 20px;
 }
@@ -29,26 +29,21 @@
 .errorTitle {
 	font-size: 4rem;
 	margin: 0;
-	color: #e74c3c;
+	color: var(--c-error-400);
 }
 
 .errorMessage {
 	font-size: 1.5rem;
-	color: #333;
+	color: var(--c-text-400);
 }
 
 .backLink {
-	display: inline-block;
-	padding: 10px 20px;
-	color: #fff;
-	text-decoration: none;
-	border-radius: 5px;
-	margin-top: 20px;
-	background: linear-gradient(to bottom right, #c0392b, #2980b9);
+	display: flex;
+	justify-content: center;
+}
 
-	&:hover {
-		background-image: linear-gradient(91deg, rgba(72, 154, 78, 1) 5.2%, rgba(251, 206, 70, 1) 95.9%);
-	}
+.btn {
+	width: 50% !important;
 }
 
 .errorImage {

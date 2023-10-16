@@ -9,7 +9,7 @@ import s from "./HomeBlog.module.scss";
 type Props = {};
 
 export default function HomeBlog({}: Props) {
-	let displayBlogs = blogs.slice(0, 3).map((b, i) => {
+	let displayBlogs = blogs.slice(0, 4).map((b, i) => {
 		return (
 			<NavLink to={`/blog/${b.id}`} className={s.blogLink} key={i}>
 				<div className={s.blogCardWrapper}>

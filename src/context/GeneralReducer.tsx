@@ -66,7 +66,6 @@ export const reducer: ReducerType = (state, action) => {
 			return {
 				...state,
 				theme: theme,
-				isModalOpen: !state.isModalOpen,
 			};
 
 		default:

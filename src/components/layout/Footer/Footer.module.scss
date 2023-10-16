@@ -1,25 +1,69 @@
 .footer {
 	grid-column: 2 / 14;
+	margin-top: var(--mt-section-400);
+	margin-bottom: 6rem;
 }
 
+.footerWrapper {
+	display: flex;
+	justify-content: space-between;
+}
 .logoContainer {
+}
+
+.navLogoWrapper {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.logoText {
+	color: var(--c-text-400);
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+.socialsContainer {
+	display: flex;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+
+.socialIcon {
+	width: 5rem;
+	cursor: pointer;
+}
+
+.linksContainer {
+	display: flex;
+	gap: 8rem;
+}
+
+.line {
+	margin: 5rem 0 2rem 0;
+}
+
+.subFooter {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .copyrightContainer {
-	display: flex;
-	justify-content: center;
-	margin: 5rem 0;
+	color: var(--c-text-400);
+}
+.copySymbol {
+	font-size: 2rem;
 }
 
-.footerLogo {
-	width: 2.5rem;
-}
-.footerContent {
+.paymentContainer {
 	display: flex;
-	justify-content: center;
-	gap: 8rem;
-	margin: 6rem 0;
+	align-items: center;
+
+	gap: 2rem;
+}
+
+.paymentIcon {
+	width: 5rem;
 }

@@ -9,8 +9,9 @@
 	padding: 0.4rem;
 	transition: 0.5s all ease-in-out;
 	border-radius: 50%;
+	color: var(--c-text-400);
 }
 .linkIconClose:hover {
 	background-color: var(--c-error-400);
-	color: #fff !important;
+	color: var(--bg-body-400);
 }

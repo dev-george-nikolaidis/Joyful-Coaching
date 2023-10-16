@@ -1,8 +1,9 @@
 import { Link, useSearchParams } from "react-router-dom";
+import LoginButton from "../../../components/LoginButton/LoginButton";
 import Spinner from "../../../components/Spinner/Spinner";
 import { useGeneralContext } from "../../../context/GeneralContext";
 import useFetchAxios from "../../../hooks/useFetchAxios";
-import style from "./StripeSuccess.module.scss";
+import s from "./StripeSuccess.module.scss";
 
 type Props = {};
 
@@ -22,14 +23,14 @@ export default function StripeSuccess({}: Props) {
 	}
 
 	return (
-		<div className={style.successPage}>
+		<div className={s.successPage}>
 			{isLoading && <Spinner />}
-			<div className={style.successContainer}>
-				<div className={style.successContent}>
-					<h1 className={style.successTitle}>Thank You!</h1>
-					<p className={style.successMessage}>Your purchase was successful.</p>
-					<Link to="/" className={style.backToHomeLink}>
-						Continue
+			<div className={s.successContainer}>
+				<div className={s.successContent}>
+					<h1 className={s.successTitle}>Thank You!</h1>
+					<p className={s.successMessage}>Your purchase was successful.</p>
+					<Link to="/" className={s.backToHomeLink}>
+						<LoginButton className={s.btn}>Continue</LoginButton>
 					</Link>
 				</div>
 			</div>

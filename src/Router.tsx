@@ -2,7 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Error404 from "./components/Error404/Error404";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
-import SandboxApp from "./components/Sandbox/SandboxApp";
+import Sandbox from "./components/Sandbox/Sandbox";
 import About from "./pages/About/About";
 import Account from "./pages/Account/Account";
 import Blog from "./pages/Blog/Blog";
@@ -12,6 +12,8 @@ import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
 import Services from "./pages/Services/Services";
 import Login from "./pages/auth/Login/Login";
+import PasswordReset from "./pages/auth/PasswordReset/PasswordReset";
+import PasswordResetLink from "./pages/auth/PasswordResetLink/PasswordResetLink";
 import Register from "./pages/auth/Register/Register";
 import Stripe from "./pages/auth/Stripe/Stripe";
 import StripeSuccess from "./pages/auth/StripeSuccess/StripeSuccess";
@@ -30,7 +32,9 @@ const Router: React.FC = () => {
 					<Route path="/user/register" element={<Register />} />
 					<Route path="/user/login" element={<Login />} />
 					<Route path="/contact" element={<Contact />} />
-					<Route path="/sandbox" element={<SandboxApp />} />
+					<Route path="/sandbox" element={<Sandbox />} />
+					<Route path="/user/password-rest" element={<PasswordReset />} />
+					<Route path="/user/enter-new-password" element={<PasswordResetLink />} />
 
 					{/* Protected */}
 					<Route element={<ProtectedRoutes path="/" withPayment={true} />}>

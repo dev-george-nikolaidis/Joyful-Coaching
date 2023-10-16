@@ -1,19 +1,28 @@
-.spinnerImage{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% ,-50%);    
-    z-index: 6;    
-    width: 15rem;
-    
+.spinnerImage {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 6;
+	// width: 15rem;
+	animation: spin 1.5s linear infinite;
 }
 
-.spinnerModal{
-    position: absolute;
-    background-color:rgba(0, 0, 0, 0.5);
-    z-index: 5;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.spinnerModal {
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 5;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }

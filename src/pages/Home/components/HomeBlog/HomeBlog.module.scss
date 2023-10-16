@@ -23,7 +23,7 @@
 }
 
 .btnBlog {
-	background-color: var(--c-s-400);
+	background-color: var(--c-a-400);
 	text-transform: none;
 	margin-top: 4rem;
 	width: fit-content;
@@ -35,26 +35,26 @@
 
 .blogImg {
 	width: 100%;
-	max-height: 30rem;
+	max-height: 22rem;
 }
 .blogCardWrapper {
-	max-width: 45rem;
+	max-width: 35rem;
 	padding: 1rem;
 }
 
 .blogCardWrapper:hover {
-	background-color: var(--c-s-300);
+	background-color: var(--c-s-400);
 }
 
 .blogHeader {
 	// color: var(--c-p-500);
-	height: 6rem;
+	height: 10rem;
 }
 
 .textWrapper {
 	display: -webkit-box;
 	-webkit-line-clamp: 6;
-	max-height: 40rem;
+	max-height: 46rem;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	margin-top: 2rem;

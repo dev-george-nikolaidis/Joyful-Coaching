@@ -15,14 +15,17 @@
 	font-size: 2rem;
 	font-weight: 600;
 	margin-right: 2rem;
+	color: var(--c-text-400);
 }
 
 .infoEmailText {
+	color: var(--c-a-400);
 	font-size: 2rem;
 }
 
 .inputPassword {
 	border: none;
+	color: var(--c-a-400);
 	background-color: transparent;
 	// width: 20%;
 }

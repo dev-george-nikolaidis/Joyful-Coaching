@@ -5,17 +5,18 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: linear-gradient(to bottom right, #2ecc71, #3498db);
+	background-color: var(--bg-body-400);
 }
 
 .successContainer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	max-width: 800px;
+	max-width: 80rem;
 	width: 90%;
-	background-color: #fff;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+	background-color: var(--c-p-400);
+	box-shadow: var(--box-shadow-400);
 	border-radius: 8px;
 	padding: 20px;
 }
@@ -29,27 +30,12 @@
 .successTitle {
 	font-size: 4rem;
 	margin: 0;
-	color: #2ecc71;
+	color: var(--c-success-400);
 }
 
 .successMessage {
 	font-size: 1.5rem;
-	color: #333;
-}
-
-.backToHomeLink {
-	display: inline-block;
-	padding: 10px 20px;
-	background: linear-gradient(to bottom right, #3498db, #2ecc71);
-	color: #fff;
-	text-decoration: none;
-	border-radius: 5px;
-	transition: background 0.3s;
-	margin-top: 20px;
-
-	&:hover {
-		background: linear-gradient(to bottom right, #2980b9, #27ae60);
-	}
+	color: var(--c-text-400);
 }
 
 .successImage {
@@ -60,4 +46,8 @@
 		max-width: 100%;
 		height: auto;
 	}
+}
+
+.btn {
+	width: 50% !important;
 }

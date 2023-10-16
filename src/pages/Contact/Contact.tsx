@@ -6,6 +6,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import Close from "../../components/Close/Close";
 import HeaderH3 from "../../components/HeadingH3/HeadingH3";
 import HeaderH4 from "../../components/HeadingH4/HeadingH4";
+import Input from "../../components/Input/Input";
 import LoginButton from "../../components/LoginButton/LoginButton";
 import Logo from "../../components/Logo/Logo";
 import Modal from "../../components/Modal/Modal";
@@ -89,26 +90,19 @@ export default function Contact({}: Props) {
 				{success && <HeaderH3 className={s.successMessage}>Your message was successfully delivered!</HeaderH3>}
 				<form action="#" className={s.form} onSubmit={handleSubmit(onSubmit)}>
 					<HeaderH4>Contact us</HeaderH4>
-					<div className={s.formControl}>
-						<label htmlFor="Name">Name*</label>
-						<input type="text" {...register("name")} />
-					</div>
+					<Input label="Name*" type="text" propFunc={...register("name") as any} />
 					{errors.name ? <span className={s.error}>{errors.name.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-					<div className={s.formControl}>
-						<label htmlFor="Subject">Subject*</label>
-						<input type="text" {...register("subject")} />
-					</div>
+					<Input label="Subject*" type="text" propFunc={...register("subject") as any} />
 					{errors.subject ? <span className={s.error}>{errors.subject.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-					<div className={s.formControl}>
-						<label htmlFor="email">Email*</label>
-						<input type="email" {...register("email")} />
-					</div>
+					<Input label="Email" type="email" propFunc={...register("email") as any} />
 					{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
 					<div className={s.formControl}>
-						<label htmlFor="Message">Message*</label>
+						<label htmlFor="Message" className={s.textareaLabel}>
+							Message*
+						</label>
 						<textarea {...register("textarea")} className={s.textarea} />
 					</div>
 					{errors.textarea ? <span className={s.error}>{errors.textarea.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}

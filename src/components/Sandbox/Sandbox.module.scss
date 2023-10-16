@@ -1,67 +1,48 @@
-/* PriceCard.module.scss */
+/* BenefitSection.module.scss */
 
-.price-cards-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background-color: #f0f0f0;
-	padding: 20px;
+.benefitSection {
+	background: #f9f9f9;
+	padding: 60px 0;
+	text-align: center;
 }
 
-.price-card {
-	background-color: #ffffff;
-	border: 1px solid #e0e0e0;
-	border-radius: 8px;
-	padding: 20px;
+.benefitContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.benefitItem {
+	flex: 1;
+	max-width: 30%;
+	margin: 20px;
 	text-align: center;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 8px;
 	transition: transform 0.3s;
-	cursor: pointer;
-	margin: 10px;
-	width: 300px; /* Adjust the width as needed */
 
 	&:hover {
-		transform: scale(1.05);
-	}
-
-	&.selected {
-		background-color: #007bff;
-		color: #fff;
+		transform: translateY(-10px);
 	}
 }
 
-.price-title {
-	font-size: 24px;
+.benefitIcon {
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.benefitTitle {
+	font-size: 1.5rem;
+	margin: 10px 0;
 	color: #333;
 }
 
-.price-amount {
-	font-size: 36px;
-	color: #007bff;
-	margin: 10px 0;
-}
-
-.price-features {
-	list-style: none;
-	padding: 0;
-	color: #666;
-
-	li {
-		margin: 10px 0;
-	}
-}
-
-.price-button {
-	background-color: #007bff;
-	color: #fff;
-	border: none;
-	border-radius: 5px;
-	padding: 10px 20px;
-	transition: background-color 0.3s;
-	margin-top: 20px;
-	width: 100%;
-
-	&:hover {
-		background-color: #0056b3;
-	}
+.benefitDescription {
+	font-size: 1rem;
+	color: #777;
 }

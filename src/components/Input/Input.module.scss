@@ -1,0 +1,47 @@
+.formControl {
+}
+
+.label {
+	font-weight: 500;
+	padding: 1rem 0 0.5rem 0;
+	display: block;
+	color: var(--c-text-400);
+}
+
+.input {
+	outline: none;
+	font-weight: 500;
+
+	height: 3.7rem;
+	width: 100%;
+	padding: 1.6rem;
+}
+
+.input:active,
+.input:focus {
+	outline: none;
+}
+
+.inputPasswordContainer {
+	position: relative;
+}
+
+.eyeIcon {
+	position: absolute;
+	right: 1rem;
+	top: 0.5rem;
+	cursor: pointer;
+	font-size: 2.5rem;
+}
+
+.eyeShow:hover {
+	color: var(--c-p-400) !important;
+}
+
+.eyeHide {
+	color: red !important;
+}
+
+.error {
+	color: var(--c-error-400);
+}

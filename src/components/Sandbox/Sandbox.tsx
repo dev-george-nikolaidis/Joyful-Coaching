@@ -1,29 +1,37 @@
-// PriceCard.tsx
+// HeroSection.tsx
 
-import React from "react";
-import styles from "./Sandbox.module.scss";
+import style from "./Sandbox.module.scss";
 
-interface PriceCardProps {
-	title: string;
-	price: string;
-	features: string[];
-	selected: boolean;
-	onSelect: () => void;
-}
+export default function Sandbox() {
+	const benefits = [
+		{
+			icon: "icon-1.png", // Replace with the actual icon filename or URL
+			title: "Personalized Coaching",
+			description: "Tailored coaching to meet your individual needs.",
+		},
+		{
+			icon: "icon-2.png", // Replace with the actual icon filename or URL
+			title: "Professional Guidance",
+			description: "Expert guidance from certified life coaches.",
+		},
+		{
+			icon: "icon-3.png", // Replace with the actual icon filename or URL
+			title: "Goal Achievement",
+			description: "Empowering you to reach your life goals.",
+		},
+	];
 
-const Sandbox: React.FC<PriceCardProps> = ({ title, price, features, selected, onSelect }) => {
 	return (
-		<div className={`${styles["price-card"]} ${selected ? styles.selected : ""}`} onClick={onSelect}>
-			<h2 className={styles["price-title"]}>{title}</h2>
-			<p className={styles["price-amount"]}>{price}</p>
-			<ul className={styles["price-features"]}>
-				{features.map((feature, index) => (
-					<li key={index}>{feature}</li>
+		<section className={style.benefitSection}>
+			<div className={style.benefitContainer}>
+				{benefits.map((benefit, index) => (
+					<div key={index} className={style.benefitItem}>
+						<img src={benefit.icon} alt={`Icon ${index + 1}`} className={style.benefitIcon} />
+						<h3 className={style.benefitTitle}>{benefit.title}</h3>
+						<p className={style.benefitDescription}>{benefit.description}</p>
+					</div>
 				))}
-			</ul>
-			<button className={styles["price-button"]}>Choose Plan</button>
-		</div>
+			</div>
+		</section>
 	);
-};
-
-export default Sandbox;
+}

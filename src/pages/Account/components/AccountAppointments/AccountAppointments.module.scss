@@ -1,5 +1,9 @@
+.infoContainer {
+	background-color: var(--bg-body-400);
+}
 .appointmentsTitle {
 	margin-bottom: 2rem;
+	color: var(--c-text-400);
 }
 
 .dateContainer {
@@ -22,6 +26,7 @@
 
 .dateSpan {
 	font-weight: 600;
+	color: var(--c-a-400);
 }
 
 .btnWrapper {
