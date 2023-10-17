@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Error404 from "./components/Error404/Error404";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 import Sandbox from "./components/Sandbox/Sandbox";
+import Sandbox2 from "./components/Sandbox2/Sandbox2";
 import About from "./pages/About/About";
 import Account from "./pages/Account/Account";
 import Blog from "./pages/Blog/Blog";
@@ -33,6 +34,7 @@ const Router: React.FC = () => {
 					<Route path="/user/login" element={<Login />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/sandbox" element={<Sandbox />} />
+					<Route path="/sandbox2" element={<Sandbox2 />} />
 					<Route path="/user/password-rest" element={<PasswordReset />} />
 					<Route path="/user/enter-new-password" element={<PasswordResetLink />} />
 

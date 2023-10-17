@@ -1,0 +1,47 @@
+/* FeatureSection.module.scss */
+
+.featureSection {
+	background: #f9f9f9;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.featureContainer {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.featureItem {
+	flex: 1;
+	max-width: calc(50% - 20px);
+	margin: 20px 0;
+	padding: 20px;
+	background: #fff;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	transition: transform 0.3s;
+
+	&:hover {
+		transform: translateY(-10px);
+	}
+}
+
+.featureIcon {
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+}
+
+.featureTitle {
+	font-size: 1.5rem;
+	margin: 10px 0;
+	color: #333;
+}
+
+.featureDescription {
+	font-size: 1rem;
+	color: #777;
+}

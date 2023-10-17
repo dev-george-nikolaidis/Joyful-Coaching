@@ -3,13 +3,14 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
 import { yupResolver } from "@hookform/resolvers/yup";
-import Close from "../../../components/Close/Close";
 import HeaderH4 from "../../../components/HeadingH4/HeadingH4";
 import Input from "../../../components/Input/Input";
 import LoginButton from "../../../components/LoginButton/LoginButton";
 import Logo from "../../../components/Logo/Logo";
 import Modal from "../../../components/Modal/Modal";
 import Spinner from "../../../components/Spinner/Spinner";
+import Footer from "../../../components/layout/Footer/Footer";
+import Navigation from "../../../components/layout/Navigation/Navigation";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
 import { fetchAxios, loginUserSchema } from "../../../utils/helpers";
@@ -31,7 +32,6 @@ export default function Login({}: Props) {
 		state: { backendApiDevelopmentUrl },
 		dispatch,
 	} = useGeneralContext();
-
 	const {
 		register,
 		handleSubmit,
@@ -46,12 +46,13 @@ export default function Login({}: Props) {
 			email: formData.email,
 			password: formData.password,
 		};
-
+		setIsloading(true);
+		dispatch({ type: ActionTypes.OPEN_CLOSE_MODAL });
 		const url = `${backendApiDevelopmentUrl}/users/login`;
 		fetchAxios(url, "POST", loginUserPayload)
 			.then((p) => {
 				const { data } = p;
-
+				dispatch({ type: ActionTypes.OPEN_CLOSE_MODAL });
 				setIsloading(false);
 				if (data.zodErrors) {
 					setIsBackendError(true);
@@ -69,13 +70,13 @@ export default function Login({}: Props) {
 					localStorage.setItem("self", JSON.stringify(data));
 					dispatch({ type: ActionTypes.GET_SELF, payload: data });
 					setIsBackendError(false);
-					setIsloading(false);
 					setErrorMessageBackend("");
 					navigate("/");
 				}
 			})
 			.catch((r) => {
 				setIsloading(false);
+				dispatch({ type: ActionTypes.OPEN_CLOSE_MODAL });
 				setIsBackendError(true);
 				if (r.message === "Failed to fetch") {
 					setErrorMessageBackend("Server is not responding, please try again");
@@ -86,35 +87,39 @@ export default function Login({}: Props) {
 	};
 
 	return (
-		<Modal>
-			{isLoading && <Spinner />}
-			<section className={s.login}>
-				<Logo className={s.logoImg} />
-				<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
-					<HeaderH4>Login</HeaderH4>
+		<Modal className={s.loginModal}>
+			<div className={` ${s.loginWrapper} col-12`}>
+				<Navigation />
+				{isLoading && <Spinner />}
+				<section className={s.login}>
+					<Logo className={s.logoImg} />
+					<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
+						<HeaderH4>Login</HeaderH4>
 
-					<Input label="Email" type="email" propFunc={...register("email") as any} />
-					{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
+						<Input label="Email" type="email" propFunc={...register("email") as any} />
+						{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-					<Input label="Password" propFunc={{ ...(register("password") as any) }} withShow={true} type="password" />
-					{errors.password ? <span className={s.error}>{errors.password.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
+						<Input label="Password" propFunc={{ ...(register("password") as any) }} withShow={true} type="password" />
+						{errors.password ? <span className={s.error}>{errors.password.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-					<LoginButton>Login</LoginButton>
-				</form>
-				<div className={s.linkContainer}>
-					<span className={s.spanLinkText}>Need an account ?</span>
-					<Link to="/user/register" className={s.linkText}>
-						Sign Up
-					</Link>
-				</div>
-				<div className={s.linkContainer}>
-					<span className={s.spanLinkText}> Forgot your password ?</span>
-					<Link to="/user/password-rest" className={s.linkText}>
-						Reset password
-					</Link>
-				</div>
-				<Close />
-			</section>
+						<LoginButton>Login</LoginButton>
+					</form>
+					<div className={s.linkContainer}>
+						<span className={s.spanLinkText}>Need an account ?</span>
+						<Link to="/user/register" className={s.linkText}>
+							Sign Up
+						</Link>
+					</div>
+					<div className={s.linkContainer}>
+						<span className={s.spanLinkText}> Forgot your password ?</span>
+						<Link to="/user/password-rest" className={s.linkText}>
+							Reset password
+						</Link>
+					</div>
+					{/* <Close /> */}
+				</section>
+				<Footer />
+			</div>
 		</Modal>
 	);
 }

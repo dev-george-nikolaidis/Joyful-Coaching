@@ -15,77 +15,79 @@ type Props = {};
 
 export default function Footer({}: Props) {
 	return (
-		<footer className={s.footer}>
+		<footer className={`${s.footer} col-12 `}>
 			<div className={s.footerWrapper}>
-				<div className={s.logoContainer}>
-					<div className={s.navLogoWrapper}>
-						<img src="http://127.0.0.1:5173/assets/logo.svg" alt="" />
-						<span className={s.logoText}>Joyful Coaching</span>
+				<div className={s.subFooterContainer}>
+					<div className={s.logoContainer}>
+						<div className={s.navLogoWrapper}>
+							<img src="http://127.0.0.1:5173/assets/logo.svg" alt="" />
+							<span className={s.logoText}>Joyful Coaching</span>
+						</div>
+						<Paragraph500>Address: 18, Süßenbrunner Straße, Vienna 1220</Paragraph500>
+						<div className={s.socialsContainer}>
+							<img src={FacebookIcon} alt="facebook icon" className={s.socialIcon} />
+							<img src={InstagramIcon} alt="facebook icon" className={s.socialIcon} />
+							<img src={XIcon} alt="facebook icon" className={s.socialIcon} />
+							<img src={LinkedinIcon} alt="facebook icon" className={s.socialIcon} />
+						</div>
 					</div>
-					<Paragraph500>Address: 18, Süßenbrunner Straße, Vienna 1220</Paragraph500>
-					<div className={s.socialsContainer}>
-						<img src={FacebookIcon} alt="facebook icon" className={s.socialIcon} />
-						<img src={InstagramIcon} alt="facebook icon" className={s.socialIcon} />
-						<img src={XIcon} alt="facebook icon" className={s.socialIcon} />
-						<img src={LinkedinIcon} alt="facebook icon" className={s.socialIcon} />
+					<div className={s.linksContainer}>
+						<div>
+							<Paragraph400>Articles</Paragraph400>
+							<ul className={s.pages}>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<Paragraph400>Pages</Paragraph400>
+							<ul className={s.pages}>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+								<li>
+									<Link to="/">Account</Link>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div className={s.linksContainer}>
-					<div>
-						<Paragraph400>Articles</Paragraph400>
-						<ul className={s.pages}>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-						</ul>
+				<hr className={s.line} />
+				<div className={s.subFooter}>
+					<div className={s.copyrightContainer}>
+						<span className={s.copyRightsText}>
+							<span className={s.copySymbol}>&copy;</span>
+							{new Date().getFullYear()} Joyful Coaching .All rights reserved.{" "}
+						</span>
 					</div>
-					<div>
-						<Paragraph400>Pages</Paragraph400>
-						<ul className={s.pages}>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-							<li>
-								<Link to="/">Account</Link>
-							</li>
-						</ul>
+					<div className={s.paymentContainer}>
+						<img src={VisaIcon} alt="visa icon" className={s.paymentIcon} />
+						<img src={ExpressIcon} alt="express" className={s.paymentIcon} />
+						<img src={MastercardIcon} alt="mastercard" className={s.paymentIcon} />
+						<img src={StripeIcon} alt="payment by stripe" className={s.paymentIcon} />
 					</div>
-				</div>
-			</div>
-			<hr className={s.line} />
-			<div className={s.subFooter}>
-				<div className={s.copyrightContainer}>
-					<span className={s.copyRightsText}>
-						<span className={s.copySymbol}>&copy;</span>
-						{new Date().getFullYear()} Joyful Coaching .All rights reserved.{" "}
-					</span>
-				</div>
-				<div className={s.paymentContainer}>
-					<img src={VisaIcon} alt="visa icon" className={s.paymentIcon} />
-					<img src={ExpressIcon} alt="express" className={s.paymentIcon} />
-					<img src={MastercardIcon} alt="mastercard" className={s.paymentIcon} />
-					<img src={StripeIcon} alt="payment by stripe" className={s.paymentIcon} />
 				</div>
 			</div>
 		</footer>

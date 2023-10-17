@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import ReCAPTCHA from "react-google-recaptcha";
-import Close from "../../components/Close/Close";
 import HeaderH3 from "../../components/HeadingH3/HeadingH3";
 import HeaderH4 from "../../components/HeadingH4/HeadingH4";
 import Input from "../../components/Input/Input";
@@ -11,6 +10,8 @@ import LoginButton from "../../components/LoginButton/LoginButton";
 import Logo from "../../components/Logo/Logo";
 import Modal from "../../components/Modal/Modal";
 import Spinner from "../../components/Spinner/Spinner";
+import Footer from "../../components/layout/Footer/Footer";
+import Navigation from "../../components/layout/Navigation/Navigation";
 import { useGeneralContext } from "../../context/GeneralContext";
 import { contactSchema, fetchAxios } from "../../utils/helpers";
 import s from "./Contact.module.scss";
@@ -83,38 +84,41 @@ export default function Contact({}: Props) {
 	};
 
 	return (
-		<Modal>
-			{isLoading && <Spinner />}
-			<section className={s.contact}>
-				<Logo className={s.logoImg} />
-				{success && <HeaderH3 className={s.successMessage}>Your message was successfully delivered!</HeaderH3>}
-				<form action="#" className={s.form} onSubmit={handleSubmit(onSubmit)}>
-					<HeaderH4>Contact us</HeaderH4>
-					<Input label="Name*" type="text" propFunc={...register("name") as any} />
-					{errors.name ? <span className={s.error}>{errors.name.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
+		<Modal className={s.contactModal}>
+			<div className={`${s.contactWrapper} col-12`}>
+				<Navigation />
+				{isLoading && <Spinner />}
+				<section className={s.contact}>
+					<Logo className={s.logoImg} />
+					{success && <HeaderH3 className={s.successMessage}>Your message was successfully delivered!</HeaderH3>}
+					<form action="#" className={s.form} onSubmit={handleSubmit(onSubmit)}>
+						<HeaderH4>Contact us</HeaderH4>
+						<Input label="Name*" type="text" propFunc={...register("name") as any} />
+						{errors.name ? <span className={s.error}>{errors.name.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-					<Input label="Subject*" type="text" propFunc={...register("subject") as any} />
-					{errors.subject ? <span className={s.error}>{errors.subject.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
+						<Input label="Subject*" type="text" propFunc={...register("subject") as any} />
+						{errors.subject ? <span className={s.error}>{errors.subject.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-					<Input label="Email" type="email" propFunc={...register("email") as any} />
-					{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
+						<Input label="Email" type="email" propFunc={...register("email") as any} />
+						{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-					<div className={s.formControl}>
-						<label htmlFor="Message" className={s.textareaLabel}>
-							Message*
-						</label>
-						<textarea {...register("textarea")} className={s.textarea} />
-					</div>
-					{errors.textarea ? <span className={s.error}>{errors.textarea.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
-					<div className={s.reCaptchaWrapper}>
-						<ReCAPTCHA ref={captchaRef} sitekey="6Ld5E58oAAAAAF2oplor2tX0v8uzezWzXIMjbEfd" />
-					</div>
-					{errorReCaptcha && <span className={s.error}>Please check the reCAPTCHA</span>}
-					<LoginButton>Send message</LoginButton>
-				</form>
-
-				<Close />
-			</section>
+						<div className={s.formControl}>
+							<label htmlFor="Message" className={s.textareaLabel}>
+								Message*
+							</label>
+							<textarea {...register("textarea")} className={s.textarea} />
+						</div>
+						{errors.textarea ? <span className={s.error}>{errors.textarea.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
+						<div className={s.reCaptchaWrapper}>
+							<ReCAPTCHA ref={captchaRef} sitekey="6Ld5E58oAAAAAF2oplor2tX0v8uzezWzXIMjbEfd" />
+						</div>
+						{errorReCaptcha && <span className={s.error}>Please check the reCAPTCHA</span>}
+						<LoginButton>Send message</LoginButton>
+					</form>
+					{/* <Close /> */}
+				</section>
+				<Footer />
+			</div>
 		</Modal>
 	);
 }

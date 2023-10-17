@@ -1,10 +1,15 @@
 .footer {
-	grid-column: 2 / 14;
+	grid-column: 1 / -1;
 	margin-top: var(--mt-section-400);
-	margin-bottom: 6rem;
+	background-color: var(--bg-body-400);
 }
 
 .footerWrapper {
+	grid-column: 2 / 14;
+	margin-bottom: 6rem;
+}
+
+.subFooterContainer {
 	display: flex;
 	justify-content: space-between;
 }
