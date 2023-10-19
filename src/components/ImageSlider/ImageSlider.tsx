@@ -27,9 +27,9 @@ export default function ImageSlider({}: Props) {
 
 	return (
 		<div className={s.testimonialContainer}>
+			<Paragraph400 className={s.testimonialText}>{text}</Paragraph400>
 			<img src={urlImg} alt={` The ${name} `} className={s.testimonialImg} />
 			<span className={s.nameText}>{name}</span>
-			<Paragraph400 className={s.testimonialText}>{text}</Paragraph400>
 			<div className={s.dotsWrapper}>{displayTheDots}</div>
 			<MdArrowBack className={`${s.arrow} ${s.arrowLeft}`} onClick={() => arrowClicked("left")} />
 			<MdArrowForward className={`${s.arrow} ${s.arrowRight}`} onClick={() => arrowClicked("right")} />

@@ -9,7 +9,6 @@ import LoginButton from "../../../components/LoginButton/LoginButton";
 import Logo from "../../../components/Logo/Logo";
 import Modal from "../../../components/Modal/Modal";
 import Spinner from "../../../components/Spinner/Spinner";
-import Footer from "../../../components/layout/Footer/Footer";
 import Navigation from "../../../components/layout/Navigation/Navigation";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
@@ -87,7 +86,7 @@ export default function Login({}: Props) {
 	};
 
 	return (
-		<Modal className={s.loginModal}>
+		<Modal>
 			<div className={` ${s.loginWrapper} col-12`}>
 				<Navigation />
 				{isLoading && <Spinner />}
@@ -118,7 +117,6 @@ export default function Login({}: Props) {
 					</div>
 					{/* <Close /> */}
 				</section>
-				<Footer />
 			</div>
 		</Modal>
 	);

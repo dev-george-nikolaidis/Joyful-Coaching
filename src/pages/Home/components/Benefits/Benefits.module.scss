@@ -1,0 +1,26 @@
+.benefits {
+	grid-column: 2 / 14;
+	margin-top: var(--mt-section-400);
+}
+
+.title {
+	margin-bottom: 4rem;
+}
+
+.benefitsContainer {
+	display: grid;
+	// grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.benefitsControl {
+	min-height: 20rem;
+	background-color: var(--c-p-400);
+	padding: 2rem;
+}
+
+.controlTitle {
+	font-weight: 600;
+	margin-bottom: 2rem;
+}

@@ -1,4 +1,3 @@
-import Newsletter from "../../components/Newsletter/Newsletter";
 import Companies from "../../components/layout/Companies/Companies";
 import Footer from "../../components/layout/Footer/Footer";
 import Navigation from "../../components/layout/Navigation/Navigation";
@@ -18,7 +17,6 @@ export default function Services({}: Props) {
 			<Pricing />
 			<Companies />
 			<Qna />
-			<Newsletter />
 			<Footer />
 		</div>
 	);

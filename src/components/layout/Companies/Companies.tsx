@@ -10,7 +10,7 @@ export default function Companies({}: Props) {
 	});
 	return (
 		<section className={s.companiesContainer}>
-			<Paragraph500 className={s.para}>Our clients are from startups to the world’s largest companies.</Paragraph500>
+			<Paragraph500 className={s.title}>Our clients are from startups to the world’s largest companies.</Paragraph500>
 			<div className={s.companiesWrapper}>{displayCompanies}</div>
 		</section>
 	);

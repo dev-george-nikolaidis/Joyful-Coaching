@@ -86,27 +86,28 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
 
 ## Roadmap
 
-- Frontend roadmap
+- <strong>Frontend </strong>roadmap
 
-- [x] Online
-- [x] User register/Login
-- [x] User register/Login client validation
-- [x] User password reset
-- [x] Working Contact form
-- [x] Contact form validation
-- [x] impletion reCAPTCHA V2 for contact,register forms.
-- [x] Appointment booking functionality.
-- [x] Appointment dates availability check.
-- [x] Stripe payment.
-- [x] Dark theme support
-- [x] Images optimization at webp format
-- [x] Responsive Design
-- [ ] Accessibility
-- [ ] Search Engine Optimization (SEO)
-- [ ] Multi-language Support
-- [ ] Unit Testing
+  - [x] Online
+  - [x] User register/Login
+  - [x] User register/Login client validation
+  - [x] User password reset
+  - [x] Working Contact form
+  - [x] Contact form validation
+  - [x] impletion reCAPTCHA V2 for contact,register forms.
+  - [x] Appointment booking functionality.
+  - [x] Appointment dates availability check.
+  - [x] Stripe payment.
+  - [x] Dark theme support
+  - [x] Images optimization at webp format
+  - [x] Responsive Design
+  - [ ] Accessibility
+  - [ ] Search Engine Optimization (SEO)
+  - [ ] Multi-language Support
+  - [ ] Unit Testing
 
-- Backend roadmap
+- <strong>Backend </strong>roadmap
+
 - [x] Online
 - [x] User register/Login functionality
 - [x] User register/Login backend validation
@@ -114,6 +115,10 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
 - [x] Working Contact form functionality
 - [ ] Multi-language Support
 - [ ] Unit Testing
+
+## App Current Version
+
+-- 0.30.0
 
 ## License
 

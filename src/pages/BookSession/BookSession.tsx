@@ -76,9 +76,12 @@ export default function BookSession({}: Props) {
 		.filter((item) => {
 			const { id, timeEnd, timeStart, appointmentTime } = item;
 			const currentTime = new Date();
+
 			if (appointmentTime.getDate() === pickedDate.getDate()) {
-				if (appointmentTime.getHours() < currentTime.getHours()) {
+				if (appointmentTime.getHours() < currentTime.getHours() || appointmentTime.getHours() === currentTime.getHours()) {
 					return null;
+				} else {
+					return item;
 				}
 			} else {
 				return item;

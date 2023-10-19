@@ -10,7 +10,6 @@ import LoginButton from "../../components/LoginButton/LoginButton";
 import Logo from "../../components/Logo/Logo";
 import Modal from "../../components/Modal/Modal";
 import Spinner from "../../components/Spinner/Spinner";
-import Footer from "../../components/layout/Footer/Footer";
 import Navigation from "../../components/layout/Navigation/Navigation";
 import { useGeneralContext } from "../../context/GeneralContext";
 import { contactSchema, fetchAxios } from "../../utils/helpers";
@@ -84,8 +83,8 @@ export default function Contact({}: Props) {
 	};
 
 	return (
-		<Modal className={s.contactModal}>
-			<div className={`${s.contactWrapper} col-12`}>
+		<Modal>
+			<div className={`col-12`}>
 				<Navigation />
 				{isLoading && <Spinner />}
 				<section className={s.contact}>
@@ -117,7 +116,6 @@ export default function Contact({}: Props) {
 					</form>
 					{/* <Close /> */}
 				</section>
-				<Footer />
 			</div>
 		</Modal>
 	);

@@ -27,7 +27,7 @@ export default function HomeBlog({}: Props) {
 
 	return (
 		<section className={s.blog}>
-			<SectionTitle className={s.testimonialTitle}>Stay Motivated, read the weekly blog articles.</SectionTitle>
+			<SectionTitle className={s.testimonialTitle}>Stay Motivated, read the weekly blog articles</SectionTitle>
 			<div className={s.blogsWrapper}>{displayBlogs}</div>
 			<NavLink to="/blog" end className={s.blogLink}>
 				<Button className={s.btnBlog}>Go to articles</Button>

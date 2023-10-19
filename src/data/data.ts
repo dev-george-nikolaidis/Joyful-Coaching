@@ -1,5 +1,95 @@
 import { calculateAppointmentTime } from "../utils/helpers";
 
+export const benefits = [
+	{
+		title: "Clarity and Goal Setting",
+		body: " Life coaching helps clients gain clarity about their life purpose, values, and goals. Coaches guide clients in setting clear and achievable objectives.",
+		// icon:<GoGoal/>
+	},
+	{
+		title: "Personal Growth",
+		body:
+			" Clients experience personal development, increased self-awareness, and improved self-confidence. They learn to overcome self-limiting beliefs and develop a growth mindset.",
+		// icon:<GoGoal/>
+	},
+	{
+		title: "Accountability",
+		body: "Coaches provide a structure for accountability, helping clients stay on track and take consistent action towards their goals.",
+		// icon:<GoGoal/>
+	},
+	{
+		title: "Enhanced Communication",
+		body: " Life coaching can improve communication skills, helping clients build better relationships with family, friends, and colleagues.",
+		// icon:<GoGoal/>
+	},
+	{
+		title: "Stress Management:",
+		body: "Clients learn effective stress management techniques, reducing anxiety and enhancing their overall well-being. ",
+		// icon:<GoGoal/>
+	},
+	{
+		title: "Balanced Life",
+		body: "Life coaches assist in creating a work-life balance, reducing burnout, and helping clients lead a fulfilling life. ",
+		// icon:<GoGoal/>
+	},
+];
+
+export const services = [
+	{
+		title: "Personalized Guidance",
+		body: "I offer highly personalized coaching sessions tailored to your unique needs and goals, ensuring you receive guidance designed specifically for your situation.",
+	},
+	{
+		title: "Goal Achievement",
+		body:
+			"My coaching services are aimed at helping you set and achieve your goals, whether they relate to personal growth, career development, or life transitions. I understand that defining and working toward your objectives can be challenging, and I'm here to help you stay on track.",
+	},
+	{
+		title: "Overcoming Self-Limiting Beliefs",
+		body:
+			"Many individuals struggle with self-doubt and limiting beliefs. My coaching approach focuses on identifying and overcoming these barriers, empowering you to build self-confidence and a positive self-image.",
+	},
+	{
+		title: "Enhanced Work-Life Balance",
+		body: `I work with you to create a healthy work-life balance, reducing stress and burnout. My guidance will help you improve your time management skills and prioritize self-care.
+		`,
+	},
+	{
+		title: "Improved Communication and Relationships",
+		body: `My coaching often leads to improved communication skills, aiding you in building better relationships with family, friends, and colleagues. This can be especially valuable if you're facing relationship challenges or interpersonal conflicts.
+		`,
+	},
+	{
+		title: "Career Advancement",
+		body: `My services can benefit individuals seeking career growth or transition. I offer strategies for advancing in your current job, making successful career changes, or even pursuing entrepreneurship.
+		`,
+	},
+	{
+		title: "Stress Management",
+		body: `Many clients struggle with stress and anxiety. I'll equip you with effective stress management techniques, helping you reduce anxiety and improve your overall well-being.
+		`,
+	},
+	{
+		title: "Positive Mindset and Resilience",
+		body: `My coaching emphasizes positive psychology principles, fostering a more optimistic outlook and building resilience in the face of life's challenges.
+		`,
+	},
+	{
+		title: "Accountability and Consistency",
+		body: `You can count on me for accountability and consistency in your pursuit of personal development and goal achievement. My structured approach will keep you motivated and on track.
+		`,
+	},
+	{
+		title: "Increased Self-Awareness",
+		body: `Through my coaching, you'll develop a deeper understanding of yourself, your values, and your life purpose, leading to greater self-awareness and self-discovery.
+		`,
+	},
+	{
+		title: "Optimized Decision-Making",
+		body: `My guidance improves your decision-making skills, enabling you to make more informed and positive life choices.`,
+	},
+];
+
 export const myServices = [
 	{
 		id: 0,

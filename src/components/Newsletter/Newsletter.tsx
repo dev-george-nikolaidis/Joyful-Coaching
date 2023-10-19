@@ -8,13 +8,15 @@ type Props = {};
 export default function Newsletter({}: Props) {
 	return (
 		<section className={`col-12 ${s.newsletter}`}>
-			<div className={s.textWrapper}>
-				<HeaderH4>Get notified when I publish new articles.</HeaderH4>
-				<Paragraph400>Stay up to date with the latest news, announcements, and articles.</Paragraph400>
-			</div>
-			<div className={s.inputWrapper}>
-				<input type="email" placeholder="Enter your email" className={s.inputNewsletter} />
-				<Button className={s.btnNewsletter}>Subscribe</Button>
+			<div className={s.newsLetterWrapper}>
+				<div className={s.textWrapper}>
+					<HeaderH4>Get notified when I publish new articles.</HeaderH4>
+					<Paragraph400>Stay up to date with the latest news, announcements, and articles.</Paragraph400>
+				</div>
+				<div className={s.inputWrapper}>
+					<input type="email" placeholder="Enter your email" className={s.inputNewsletter} />
+					<Button className={s.btnNewsletter}>Subscribe</Button>
+				</div>
 			</div>
 		</section>
 	);

@@ -11,7 +11,9 @@ export default function Hero({}: Props) {
 	return (
 		<div className={`col-12 ${s.hero}`}>
 			<section className={s.heroTextWrapper}>
-				<HeadingH1>Live life at the full potential.</HeadingH1>
+				<HeadingH1>
+					Live life at the <span className={s.titleText}>full</span> potential.
+				</HeadingH1>
 				<Paragraph500 className={s.para}>
 					I help people to discover their true potential and live a fulfilling life.Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin
 					using backed by science. Wanna transform your life?

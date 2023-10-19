@@ -11,7 +11,6 @@ import Logo from "../../../components/Logo/Logo";
 import Modal from "../../../components/Modal/Modal";
 import RegisterButton from "../../../components/RegisterButton/RegisterButton";
 import Spinner from "../../../components/Spinner/Spinner";
-import Footer from "../../../components/layout/Footer/Footer";
 import Navigation from "../../../components/layout/Navigation/Navigation";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
@@ -45,7 +44,6 @@ export default function Register({}: Props) {
 	} = useForm<RegisterUserT>({
 		resolver: yupResolver(registerUserSchema),
 	});
-	console.log(`line isModalOpen   ${isModalOpen}`);
 
 	// Handle onSubmit
 	const onSubmit = (formData: RegisterUserT) => {
@@ -100,7 +98,7 @@ export default function Register({}: Props) {
 	};
 
 	return (
-		<Modal className={s.registerModal}>
+		<Modal>
 			<div className={` ${s.registerWrapper} col-12`}>
 				{isLoading && <Spinner />}
 				<Navigation />
@@ -129,7 +127,6 @@ export default function Register({}: Props) {
 					</div>
 					{/* <Close /> */}
 				</section>
-				<Footer />
 			</div>
 		</Modal>
 	);

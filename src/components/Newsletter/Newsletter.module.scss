@@ -6,12 +6,10 @@
 	background-color: var(--bg-section-400);
 }
 
-.textWrapper {
-	grid-column: 2 / 9;
-}
-
-.inputWrapper {
-	grid-column: 9 / 14;
+.newsLetterWrapper {
+	grid-column: 2 / 14;
+	display: flex;
+	justify-content: space-between;
 }
 
 .inputNewsletter {

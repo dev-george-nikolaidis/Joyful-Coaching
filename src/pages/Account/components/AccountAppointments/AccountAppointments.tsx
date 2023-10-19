@@ -15,17 +15,19 @@ export default function AccountAppointments({ setRefetch, setIsLoading }: Props)
 	const {
 		state: { backendApiDevelopmentUrl, self, accountInfoPayload },
 	} = useGeneralContext();
+	const todayDate = new Date();
+	const todayTimestamp = new Date(todayDate);
+	const tomorrowTimestamp = todayTimestamp.setDate(todayDate.getDate() + 1);
+	const tomorrowDate = new Date(tomorrowTimestamp);
 
 	function handlerCancel(appointment: number, date: Date) {
-		const todayDate = new Date();
-		const todayTimestamp = new Date(todayDate);
-		const tomorrowTimestamp = todayTimestamp.setDate(todayDate.getDate() + 1);
-		const tomorrowDate = new Date(tomorrowTimestamp);
-
 		// check if it  is 1 day before
-		if (tomorrowDate > date) {
+		// console.log(`line   tomorrowDate ${tomorrowDate}`);
+		// console.log(`line   date ${date}`);
+		if (tomorrowDate.getDate() > date.getDate()) {
 			return;
 		}
+
 		const prompt = confirm("Are you sure you want to do cancel your appointment?");
 		if (prompt) {
 			const url = `${backendApiDevelopmentUrl}/appointments/cancel`;
@@ -47,15 +49,17 @@ export default function AccountAppointments({ setRefetch, setIsLoading }: Props)
 		const stringDate = `${days[date.getDay()]} ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
 		return (
 			<div className={s.dateContainer} key={i}>
-				<Paragraph500 className={s.dateText}>
-					<span className={s.dateSpan}>Date: </span>
-					{stringDate}
-				</Paragraph500>
-				<Paragraph500 className={s.timeText}>
-					<span className={s.dateSpan}>Time: </span> {convertAppointmentNumberToStringTime(appointment)}
-				</Paragraph500>
+				<div className={s.textWrapper}>
+					<Paragraph500 className={s.dateText}>
+						<span className={s.dateSpan}>Date: </span>
+						{stringDate}
+					</Paragraph500>
+					<Paragraph500 className={s.timeText}>
+						<span className={s.dateSpan}>Time: </span> {convertAppointmentNumberToStringTime(appointment)}
+					</Paragraph500>
+				</div>
 				<span className={s.btnWrapper} onClick={() => handlerCancel(appointment, date)}>
-					<ButtonCancel>Cancel</ButtonCancel>
+					<ButtonCancel className={tomorrowDate.getDate() > date.getDate() ? `${s.btnDisable}` : ""}>Cancel</ButtonCancel>
 				</span>
 			</div>
 		);
