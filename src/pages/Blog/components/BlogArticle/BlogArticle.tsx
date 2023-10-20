@@ -14,6 +14,7 @@ export default function BlogArticle({}: Props) {
 
 	const handlerClick = (id: number) => {
 		setCurrentBlog(id);
+		window.scrollTo(0, 0);
 	};
 
 	useEffect(() => {

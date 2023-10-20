@@ -10,9 +10,9 @@
 
 .pricingCardContainer {
 	margin-top: 8rem;
-	grid-column: 1 / 14;
+	grid-column: 1 / -1;
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	gap: 4rem;
-	justify-content: center;
 }

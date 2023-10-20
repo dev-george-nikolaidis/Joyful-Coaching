@@ -1,5 +1,5 @@
+import HeaderH1 from "../../../../components/HeadingH1/HeadingH1";
 import Paragraph500 from "../../../../components/Paragraph500/Paragraph500";
-import SectionTitle from "../../../../components/SectionTitle/SectionTitle";
 import s from "./Article.module.scss";
 
 type Props = {
@@ -15,11 +15,11 @@ export default function Article({ blog }: Props) {
 	const { id, title, urlImg, text } = blog;
 	return (
 		<div className={s.articleContainer}>
-			<SectionTitle className={s.title}>{title}</SectionTitle>
+			<HeaderH1 className={s.title}>{title}</HeaderH1>
 			<figure>
 				<img src={urlImg} alt={title} className={s.blogImg} />
 			</figure>
-			<Paragraph500 className={s.text}>{text}</Paragraph500>
+			<Paragraph500 className={s.text}>{text.split(/(?:\r?\n)+/)}</Paragraph500>
 		</div>
 	);
 }

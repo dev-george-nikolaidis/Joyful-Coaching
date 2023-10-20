@@ -7,6 +7,17 @@
 	margin-bottom: 4rem;
 }
 
+.titleIconContainer {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	margin-bottom: 2rem;
+}
+
+.benefitsIcon {
+	color: var(--c-icon-400);
+	font-size: 3.4rem;
+}
 .benefitsContainer {
 	display: grid;
 	// grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
@@ -22,5 +33,8 @@
 
 .controlTitle {
 	font-weight: 600;
-	margin-bottom: 2rem;
+}
+
+.titleSpanText {
+	color: var(--c-a-400);
 }

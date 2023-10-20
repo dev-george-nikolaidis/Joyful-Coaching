@@ -72,3 +72,9 @@
 .paymentIcon {
 	width: 5rem;
 }
+
+.pages {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}

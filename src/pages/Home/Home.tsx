@@ -1,8 +1,8 @@
 import Newsletter from "../../components/Newsletter/Newsletter";
 import Footer from "../../components/layout/Footer/Footer";
 import Navigation from "../../components/layout/Navigation/Navigation";
-import ServicesLayout from "../../components/layout/ServicesLayout/ServicesLayout";
 import Testimonial from "../../components/layout/Testimonial/Testimonial";
+import { useScrollToTop } from "../../hooks/useScrollToTop";
 import s from "./Home.module.scss";
 import Benefits from "./components/Benefits/Benefits";
 import Hero from "./components/Hero/Hero";
@@ -12,6 +12,7 @@ import ServicesHome from "./components/ServicesHome/ServicesHome";
 type Props = {};
 
 export default function Home({}: Props) {
+	useScrollToTop();
 	return (
 		<section className={` ${s.home} col-12`}>
 			<Navigation />
@@ -19,7 +20,7 @@ export default function Home({}: Props) {
 			{/* <Companies /> */}
 			<Benefits />
 			<ServicesHome />
-			<ServicesLayout />
+			{/* <ServicesLayout /> */}
 			<Testimonial />
 			<HomeBlog />
 			<Newsletter />

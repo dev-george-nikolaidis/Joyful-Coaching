@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MdAccountCircle, MdArrowDropDown, MdHouse, MdManageAccounts, MdOutlineBrush, MdOutlineLogout } from "react-icons/md";
+import { MdAccountCircle, MdArrowDropDown, MdManageAccounts, MdOutlineBrush, MdOutlineLogout } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
@@ -36,11 +36,6 @@ export default function Navigation({}: Props) {
 					{self && (
 						<>
 							<li>
-								<NavLink to="/services" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
-									<span>Buy Session</span>
-								</NavLink>
-							</li>
-							<li>
 								<NavLink to="/booking" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
 									<span>Book Session</span>
 								</NavLink>
@@ -62,6 +57,11 @@ export default function Navigation({}: Props) {
 							</li>
 						</>
 					)}
+					<li>
+						<NavLink to="/services" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link}`)}>
+							<span>Service</span>
+						</NavLink>
+					</li>
 
 					<li>
 						<NavLink to="/" end className={({ isActive }) => (isActive ? ` ${s.active} ${s.link} ` : `  ${s.inactive} ${s.link} `)}>
@@ -93,14 +93,14 @@ export default function Navigation({}: Props) {
 								<MdArrowDropDown className={s.accountIconArrow} />
 								{showAccountModal && (
 									<ul className={s.accountListModal}>
-										<li className={s.accountLink}>
+										{/* <li className={s.accountLink}>
 											<MdHouse className={s.accountSettingIcon} />
 											<span className={s.accountModalText}>Session room</span>
-										</li>
+										</li> */}
 										<li>
 											<Link to="/account-settings" className={s.accountLink}>
 												<MdManageAccounts className={s.accountSettingIcon} />
-												<span className={s.accountModalText}>Settings</span>
+												<span className={s.accountModalText}>Dashboard</span>
 											</Link>
 										</li>
 

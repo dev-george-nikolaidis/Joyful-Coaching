@@ -21,9 +21,6 @@ export default function AccountAppointments({ setRefetch, setIsLoading }: Props)
 	const tomorrowDate = new Date(tomorrowTimestamp);
 
 	function handlerCancel(appointment: number, date: Date) {
-		// check if it  is 1 day before
-		// console.log(`line   tomorrowDate ${tomorrowDate}`);
-		// console.log(`line   date ${date}`);
 		if (tomorrowDate.getDate() > date.getDate()) {
 			return;
 		}
@@ -33,11 +30,12 @@ export default function AccountAppointments({ setRefetch, setIsLoading }: Props)
 			const url = `${backendApiDevelopmentUrl}/appointments/cancel`;
 			setIsLoading(true);
 			fetchAxios(url, "DELETE", { appointmentId: appointment, appointmentDate: formatDateAccuracy(date, "04", "00") }, self.token)
-				.then((payload) => {
+				.then((p) => {
 					setRefetch(true);
 					setIsLoading(false);
 				})
 				.catch((error) => {
+					console.log(error);
 					setIsLoading(false);
 				});
 		}

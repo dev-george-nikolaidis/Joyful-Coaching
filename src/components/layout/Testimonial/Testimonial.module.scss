@@ -12,8 +12,11 @@
 
 .sliderWrapper {
 	grid-column: 2 / 14;
-	margin-top: 8rem;
 	display: flex;
 	justify-content: center;
 	position: relative;
+}
+
+.titleSpanText {
+	color: var(--c-a-400);
 }

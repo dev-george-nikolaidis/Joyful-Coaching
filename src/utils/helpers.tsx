@@ -11,17 +11,6 @@ export const registerUserSchema = yup.object().shape({
 			/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
 			"Password must be min 6 characters and contain one uppercase, one lowercase, one number and one special case character."
 		),
-	// token: yup.string().required(),
-	// .oneOf([yup.ref("password_repeat"), ""], "Passwords must match"),
-	// password_repeat: yup
-	// 	.string()
-	// 	.required("Please enter password repeat ")
-	// 	.matches(
-	// 		/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-	// 		"Password repeat  must be min 6   characters and contain one uppercase, one lowercase, one Number and one Special case character"
-	// 	)
-	// 	.oneOf([yup.ref("password"), ""], "Passwords must match"),
-	// question: yup.string().required("Question is required"),
 });
 
 export const updatePasswordSchema = yup.object().shape({
@@ -94,7 +83,6 @@ export function calculateAppointmentTime(hour: string, minutes: string) {
 	// The string format should be: YYYY-MM-DDTHH:mm:ss.sssZ,
 	const customDate = new Date(`${year}-${month}-${day} ${hour}:${minutes}`);
 	return customDate;
-	// return customDate;
 }
 
 export function formatDateAccuracy(date: Date, hour?: string, minutes?: string) {
@@ -105,8 +93,6 @@ export function formatDateAccuracy(date: Date, hour?: string, minutes?: string) 
 	customDate;
 	return customDate;
 }
-
-// export function
 
 export const convertAppointmentNumberToStringTime = (num: number) => {
 	let appointment = "";

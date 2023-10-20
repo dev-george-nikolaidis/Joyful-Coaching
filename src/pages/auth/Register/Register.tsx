@@ -62,6 +62,7 @@ export default function Register({}: Props) {
 				const { data } = p;
 				setIsloading(false);
 				dispatch({ type: ActionTypes.OPEN_CLOSE_MODAL });
+				// document.body.style.overflow = "auto";
 				if (data.failToken) {
 					setErrorReCaptcha(true);
 					return;

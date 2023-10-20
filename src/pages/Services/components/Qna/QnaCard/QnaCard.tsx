@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdOutlineControlPoint, MdSettingsBackupRestore } from "react-icons/md";
+import HeaderH4 from "../../../../../components/HeadingH4/HeadingH4";
 import Paragraph400 from "../../../../../components/Paragraph400/Paragraph400";
-import Paragraph500 from "../../../../../components/Paragraph500/Paragraph500";
 import s from "./QnaCard.module.scss";
 type Props = {
 	question: {
@@ -23,7 +23,7 @@ export default function QnaCard({ question }: Props) {
 	return (
 		<div className={s.qnaCard}>
 			<div className={s.questionWrapper}>
-				<Paragraph500 className={s.question}>{question.question}</Paragraph500>
+				<HeaderH4 className={s.question}>{question.question}</HeaderH4>
 				{displayIcon}
 			</div>
 			{isPressed && <Paragraph400 className={s.para}> {question.answer} </Paragraph400>}

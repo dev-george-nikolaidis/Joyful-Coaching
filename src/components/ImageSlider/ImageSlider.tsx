@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 import { testimonials } from "../../data/data";
-import Paragraph400 from "../Paragraph400/Paragraph400";
+import Paragraph500 from "../Paragraph500/Paragraph500";
 import s from "./ImageSlider.module.scss";
 type Props = {};
 
@@ -27,7 +27,7 @@ export default function ImageSlider({}: Props) {
 
 	return (
 		<div className={s.testimonialContainer}>
-			<Paragraph400 className={s.testimonialText}>{text}</Paragraph400>
+			<Paragraph500 className={s.testimonialText}>{text}</Paragraph500>
 			<img src={urlImg} alt={` The ${name} `} className={s.testimonialImg} />
 			<span className={s.nameText}>{name}</span>
 			<div className={s.dotsWrapper}>{displayTheDots}</div>

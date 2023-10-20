@@ -1,0 +1,51 @@
+.aboutHeader {
+	grid-column: 1 / -1;
+	background-color: var(--bg-section-400);
+}
+
+.aboutTextWrapper {
+	grid-column: 2 / 14;
+	position: relative;
+	// display: flex;
+}
+
+.aboutTextContainer {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2rem;
+	padding: 2rem;
+	// margin: auto 0;
+	margin-top: 16rem;
+}
+
+.title {
+	width: 80%;
+}
+
+.textTitleSpan {
+	color: var(--c-a-400);
+	margin-bottom: 1rem;
+}
+
+.paragraphText {
+	margin: 1rem 0 10rem 0;
+	width: 60%;
+}
+
+.imgWrapper {
+	position: absolute;
+	top: 5%;
+	right: 0;
+}
+
+.aboutHederImg {
+	height: 40rem;
+}
+
+.subTitle {
+	font-weight: 600;
+}
+
+.subParagraphText {
+	margin-bottom: 6rem;
+}

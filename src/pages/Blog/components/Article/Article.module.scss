@@ -1,21 +1,23 @@
 .articleContainer {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-content: center;
+	width: 80%;
 }
 
 .title {
-	max-width: 100rem;
+	// max-width: 100rem;
+	margin-top: 2rem;
+	text-align: left;
 }
 
 .blogImg {
-	width: 50rem;
-	object-fit: fill;
-	max-height: 30rem;
 	margin: 4rem 0;
+	width: 100%;
+	height: 60rem;
 }
 .text {
 	letter-spacing: 5%;
 	line-height: 4rem;
-	width: 90%;
+	// width: 90%;
 }

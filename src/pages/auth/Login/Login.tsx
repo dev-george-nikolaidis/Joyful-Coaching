@@ -47,6 +47,7 @@ export default function Login({}: Props) {
 		};
 		setIsloading(true);
 		dispatch({ type: ActionTypes.OPEN_CLOSE_MODAL });
+
 		const url = `${backendApiDevelopmentUrl}/users/login`;
 		fetchAxios(url, "POST", loginUserPayload)
 			.then((p) => {
@@ -66,8 +67,9 @@ export default function Login({}: Props) {
 				}
 
 				if (data.token) {
+					document.body.style.overflow = "auto";
 					localStorage.setItem("self", JSON.stringify(data));
-					dispatch({ type: ActionTypes.GET_SELF, payload: data });
+					dispatch({ type: ActionTypes.GET_SELF });
 					setIsBackendError(false);
 					setErrorMessageBackend("");
 					navigate("/");

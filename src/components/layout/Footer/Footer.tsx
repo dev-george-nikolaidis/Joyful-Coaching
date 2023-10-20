@@ -3,7 +3,6 @@ import FacebookIcon from "../../../assets/img/socials/facebook.svg";
 import InstagramIcon from "../../../assets/img/socials/instagram.svg";
 import LinkedinIcon from "../../../assets/img/socials/linkedin.svg";
 import XIcon from "../../../assets/img/socials/x.svg";
-import Paragraph400 from "../../Paragraph400/Paragraph400";
 import Paragraph500 from "../../Paragraph500/Paragraph500";
 import s from "./Footer.module.scss";
 
@@ -11,9 +10,19 @@ import ExpressIcon from "../../../assets/img/payment/american-express.svg";
 import MastercardIcon from "../../../assets/img/payment/master-card.svg";
 import StripeIcon from "../../../assets/img/payment/stripe.svg";
 import VisaIcon from "../../../assets/img/payment/visa.svg";
+import { blogs } from "../../../data/data";
+import HeaderH4 from "../../HeadingH4/HeadingH4";
 type Props = {};
 
 export default function Footer({}: Props) {
+	const displayPopularArticles = blogs.map((a, i) => {
+		return (
+			<Link to={`/blog/${a.id}`} key={i}>
+				<li>{a.title}</li>
+			</Link>
+		);
+	});
+
 	return (
 		<footer className={`${s.footer} col-12 `}>
 			<div className={s.footerWrapper}>
@@ -33,48 +42,33 @@ export default function Footer({}: Props) {
 					</div>
 					<div className={s.linksContainer}>
 						<div>
-							<Paragraph400>Articles</Paragraph400>
-							<ul className={s.pages}>
-								<li>
-									<Link to="/">Account</Link>
-								</li>
-								<li>
-									<Link to="/">Account</Link>
-								</li>
-								<li>
-									<Link to="/">Account</Link>
-								</li>
-								<li>
-									<Link to="/">Account</Link>
-								</li>
-								<li>
-									<Link to="/">Account</Link>
-								</li>
-							</ul>
+							<HeaderH4>Popular articles</HeaderH4>
+							<ul className={s.pages}>{displayPopularArticles}</ul>
 						</div>
 						<div>
-							<Paragraph400>Pages</Paragraph400>
+							<HeaderH4>Pages</HeaderH4>
 							<ul className={s.pages}>
 								<li>
-									<Link to="/">Account</Link>
+									<Link to="/services">Service</Link>
 								</li>
 								<li>
-									<Link to="/">Account</Link>
+									<Link to="/">Home</Link>
 								</li>
 								<li>
-									<Link to="/">Account</Link>
+									<Link to="/blog">Blog</Link>
 								</li>
 								<li>
-									<Link to="/">Account</Link>
+									<Link to="/about">About</Link>
 								</li>
 								<li>
-									<Link to="/">Account</Link>
+									<Link to="/contact">Contact</Link>
 								</li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<hr className={s.line} />
+
 				<div className={s.subFooter}>
 					<div className={s.copyrightContainer}>
 						<span className={s.copyRightsText}>
@@ -82,6 +76,7 @@ export default function Footer({}: Props) {
 							{new Date().getFullYear()} Joyful Coaching .All rights reserved.{" "}
 						</span>
 					</div>
+
 					<div className={s.paymentContainer}>
 						<img src={VisaIcon} alt="visa icon" className={s.paymentIcon} />
 						<img src={ExpressIcon} alt="express" className={s.paymentIcon} />

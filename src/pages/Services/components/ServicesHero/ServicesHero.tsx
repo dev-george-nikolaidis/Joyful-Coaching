@@ -8,7 +8,9 @@ export default function ServicesHero({}: Props) {
 	return (
 		<div className={` col-12 ${s.serviceHero} `}>
 			<section className={s.heroTextWrapper}>
-				<HeaderH1>I help people to discover their true potential</HeaderH1>
+				<HeaderH1>
+					I <span className={s.titleSpanText}> help</span> people to discover their true potential
+				</HeaderH1>
 				<Paragraph500 className={s.para}>
 					I help people to discover their true potential and live a fulfilling life.Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin
 					using backed by science. Wanna transform your life?
