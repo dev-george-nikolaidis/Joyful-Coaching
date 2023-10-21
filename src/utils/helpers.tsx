@@ -1,5 +1,4 @@
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 
 export const registerUserSchema = yup.object().shape({
@@ -24,11 +23,11 @@ export const updatePasswordSchema = yup.object().shape({
 });
 
 export const loginUserSchema = yup.object().shape({
-	email: yup.string().min(2, "Email is required").required("Email is required"),
+	email: yup.string().email("Please enter a valid email address").min(2, "Email is required").required("Email is required"),
 	password: yup.string().required("Password is required"),
 });
 export const passwordResetSchema = yup.object().shape({
-	email: yup.string().min(2, "Email is required").required("Email is required"),
+	email: yup.string().email("Please enter a valid email address").min(2, "Email is required").required("Email is required"),
 });
 export const passwordResetLoginSchema = yup.object().shape({
 	password: yup
@@ -43,7 +42,7 @@ export const passwordResetLoginSchema = yup.object().shape({
 export const contactSchema = yup.object().shape({
 	name: yup.string().min(2, "Name must be at list 2 characters long.").required("Name is required"),
 	subject: yup.string().min(2, "Subject must be at list 2 characters long.").required("Subject is required"),
-	email: yup.string().min(2, "Email is required").required("Email is required"),
+	email: yup.string().email("Please enter a valid email address").min(2, "Email is required").required("Email is required"),
 	textarea: yup.string().min(20, "Message must be at list 20 characters long.").required("Message is required"),
 });
 
@@ -67,11 +66,6 @@ export const fetchAxios = async (url: string, method = "get", data?: any, token?
 				data: errorMessage.response,
 			};
 		});
-};
-
-export const redirect = (path: string) => {
-	const navigate = useNavigate();
-	navigate(path);
 };
 
 export function calculateAppointmentTime(hour: string, minutes: string) {
@@ -120,3 +114,7 @@ export const convertAppointmentNumberToStringTime = (num: number) => {
 
 	return appointment;
 };
+
+export function getRandomNumberBetween(min: number, max: number) {
+	return Math.floor(Math.random() * (max - min + 1) + min);
+}

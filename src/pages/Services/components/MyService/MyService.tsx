@@ -1,6 +1,5 @@
 import { MdLabelImportant } from "react-icons/md";
-import SessionsImg from "../../../../assets/img/sessions.png";
-import HeaderH4 from "../../../../components/HeadingH4/HeadingH4";
+import HeaderH4 from "../../../../components/HeaderH4/HeaderH4.";
 import Paragraph400 from "../../../../components/Paragraph400/Paragraph400";
 import SectionTitle from "../../../../components/SectionTitle/SectionTitle";
 import { benefits } from "../../../../data/data";
@@ -27,7 +26,7 @@ export default function MyService({}: Props) {
 			<div className={s.containerWrapper}>
 				<div className={s.textContainer}>{displaySessionBenefits}</div>
 				<figure className={s.imgWrapper}>
-					<img src={SessionsImg} alt="" />
+					<img src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697880142/Joyful%20Coaching/session-packet_ag84qf.webp" alt="" />
 				</figure>
 			</div>
 		</div>

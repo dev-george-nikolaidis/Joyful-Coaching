@@ -4,7 +4,7 @@ import "react-calendar/dist/Calendar.css";
 import { useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 import Close from "../../components/Close/Close";
-import HeaderH4 from "../../components/HeadingH4/HeadingH4";
+import HeaderH4 from "../../components/HeaderH4/HeaderH4.";
 import Logo from "../../components/Logo/Logo";
 import Modal from "../../components/Modal/Modal";
 import Paragraph400 from "../../components/Paragraph400/Paragraph400";

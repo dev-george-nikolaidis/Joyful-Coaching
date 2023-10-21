@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdRemoveRedEye } from "react-icons/md";
 import Close from "../../../../components/Close/Close";
-import HeaderH3 from "../../../../components/HeadingH3/HeadingH3";
+import HeaderH3 from "../../../../components/HeaderH3/HeaderH3";
 import LoginButton from "../../../../components/LoginButton/LoginButton";
 import Modal from "../../../../components/Modal/Modal";
 import Spinner from "../../../../components/Spinner/Spinner";

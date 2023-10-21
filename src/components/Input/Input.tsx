@@ -13,9 +13,10 @@ type Props = {
 	children?: ReactNode;
 	withShow?: boolean;
 	propFunc: any[];
+	className?: string;
 };
 
-export default function Input({ type, label, value, name, placeholder, withShow, disabled, onChange, children, propFunc }: Props) {
+export default function Input({ type, label, value, name, className, placeholder, withShow, disabled, onChange, children, propFunc }: Props) {
 	const [showPassword, setShowPassword] = useState(false);
 
 	function handlerShowHidePassword() {
@@ -38,7 +39,7 @@ export default function Input({ type, label, value, name, placeholder, withShow,
 					onChange={onChange}
 					disabled={disabled}
 					{...propFunc}
-					className={s.input}
+					className={`${s.input} ${className}`}
 				/>
 				{withShow && (
 					<>

@@ -116,7 +116,7 @@ export const testimonials = [
 	{
 		id: 0,
 		name: "Petr",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/petr.png",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879607/Joyful%20Coaching/testimonials/petr_ptdmzr.webp",
 		job: "Photographer",
 		text:
 			"My experience with my live coach has been transformative. Their expert guidance and unwavering support have empowered me to overcome obstacles and achieve my goals. Their compassionate and insightful approach truly made a difference in my life. I am grateful for their wisdom and encouragement, which have been instrumental in my personal growth journey.",
@@ -125,7 +125,7 @@ export const testimonials = [
 	{
 		id: 1,
 		name: "Olivia",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/olivia.png",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879607/Joyful%20Coaching/testimonials/olivia_gj2f2h.webp",
 		job: "Photographer",
 		text:
 			"I have had the privilege of experiencing live coaching sessions and I must say, it has been an incredibly transformative and empowering journey. The guidance and support provided by the live coach have been nothing short of exceptional. Their expertise and ability to ask thought-provoking questions have helped me gain valuable insights and clarity in various aspects of my life. ",
@@ -135,7 +135,7 @@ export const testimonials = [
 	{
 		id: 2,
 		name: "Hana",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/tsu.png",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879608/Joyful%20Coaching/testimonials/tsu_n5iam4.webp",
 		job: "Photographer",
 		text:
 			"Natalia has been a game-changer in my life! Her coaching has empowered me to overcome obstacles, set clear goals, and tap into my full potential. Her unwavering support and guidance have transformed my mindset and life trajectory. Natalia is a true catalyst for personal growth and success!",
@@ -143,8 +143,8 @@ export const testimonials = [
 	},
 	{
 		id: 3,
-		name: "Hazel",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/hazel.png",
+		name: "Michel",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879607/Joyful%20Coaching/testimonials/hazel_fnpj0z.webp",
 		job: "Doctor",
 		text:
 			"I am incredibly grateful for the opportunity to work with Natalia as my live coach. Her expertise, empathy, and unwavering support have been instrumental in my personal and professional growth. Natalia's ability to ask thought-provoking questions and provide insightful guidance has helped me gain clarity, overcome challenges, and achieve my goals. Her genuine care for my well-being and success shines through in every session.",
@@ -153,7 +153,7 @@ export const testimonials = [
 	{
 		id: 4,
 		name: "James",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/james.png",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879607/Joyful%20Coaching/testimonials/james_dgk33v.webp",
 		job: "Photographer",
 		text:
 			"My live coach has been a true catalyst for my personal and professional growth. Their guidance and expertise have empowered me to overcome obstacles and achieve my goals. Their unwavering support and wisdom have been instrumental in my journey towards success and fulfillment.",
@@ -162,7 +162,7 @@ export const testimonials = [
 	{
 		id: 5,
 		name: "David",
-		urlImg: "http://127.0.0.1:5173/assets/testimonials/david.png",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879606/Joyful%20Coaching/testimonials/david_e5shmk.webp",
 		job: "Photographer",
 		text:
 			"Natalia has been an incredible live coach, guiding me with unwavering support and invaluable insights. Her empathetic approach and deep understanding helped me navigate challenges and discover my true potential. With her guidance, I've achieved remarkable personal growth and newfound confidence.",
@@ -174,7 +174,7 @@ export const blogs = [
 	{
 		id: 0,
 		title: "The Power of Self-Expression.",
-		urlImg: "http://127.0.0.1:5173/assets/blog/exprecion.jpg",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879798/Joyful%20Coaching/blog/exprecion_e4xpod.webp",
 		text: `Self-expression is a potent force that can transform our lives. It enables us to communicate our thoughts, emotions, and identity to the world. Through creative outlets, open conversations, and authentic actions, self-expression empowers us to connect with others, overcome obstacles, and ultimately lead more fulfilling lives.
 
 		When we express ourselves, we discover our true identity. It's a journey of self-discovery, helping us understand our values and beliefs. This self-awareness forms the foundation for building healthy relationships, enhancing creativity, and finding our voice in the world.
@@ -192,7 +192,7 @@ export const blogs = [
 	{
 		id: 1,
 		title: "The Power of Positivity.",
-		urlImg: "http://127.0.0.1:5173/assets/blog/positive.jpg",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879797/Joyful%20Coaching/blog/positive_l1lgss.webp",
 		text: `Positivity is a force that can transform our lives. It's more than just seeing the glass as half full; it's a mindset that opens doors to countless benefits.
 
 		Maintaining a positive outlook enhances our overall well-being. It reduces stress, boosts our immune system, and even contributes to a longer life. When we focus on the good, we attract positive experiences and improve our mental and physical health.
@@ -208,7 +208,7 @@ export const blogs = [
 	{
 		id: 2,
 		title: "Passion Unleashed.",
-		urlImg: "http://127.0.0.1:5173/assets/blog/passion.jpg",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879797/Joyful%20Coaching/blog/passion_yebobp.webp",
 		text: `Passion is a formidable force that drives us to pursue our dreams, overcome obstacles, and live a fulfilling life. When passion is unleashed, it can be a game-changer, igniting our inner fire.
 
 		Passion is the fuel that propels us forward. It fuels our ambitions, inspires us to set audacious goals, and gives us the relentless energy to pursue them. It's the driving force behind great achievements and remarkable breakthroughs.
@@ -224,7 +224,7 @@ export const blogs = [
 	{
 		id: 3,
 		title: "The Healing Power of Forgiveness.",
-		urlImg: "http://127.0.0.1:5173/assets/blog/forgiveness.jpg",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879797/Joyful%20Coaching/blog/forgiveness_jngxcg.webp",
 		text: `Forgiveness is a profound act of self-healing and empowerment. It's a journey towards inner peace, releasing the heavy burdens of resentment and anger that weigh us down.
 
 		Forgiving others doesn't mean condoning their actions; rather, it's a decision to let go of the negative emotions that hold us captive. The act of forgiveness frees us from the past, allowing us to move forward with a lighter heart.
@@ -240,7 +240,7 @@ export const blogs = [
 	{
 		id: 4,
 		title: `Embracing Change`,
-		urlImg: "http://127.0.0.1:5173/assets/blog/change.jpg",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879805/Joyful%20Coaching/blog/change_jtohmh.webp",
 		text: `Change is an inevitable part of life, and it often arrives unannounced, challenging our comfort zones. Embracing change, rather than resisting it, can lead to personal growth and transformation.
 
 		Change offers new experiences and opportunities for learning. It pushes us out of our routines and forces us to adapt. By embracing these shifts, we open the door to self-discovery and resilience.
@@ -255,7 +255,7 @@ export const blogs = [
 	{
 		id: 5,
 		title: `Clear Intentions`,
-		urlImg: "http://127.0.0.1:5173/assets/blog/clear.jpg",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879803/Joyful%20Coaching/blog/clear_s5qjbl.webp",
 		text: `n the journey of life, clear intentions act as our guiding light, illuminating our path to success. When we set clear intentions, we're essentially defining our aspirations, outlining our objectives, and charting a course toward our desired destinations.
 
 		These intentions give us a sense of purpose, serving as a constant reminder of what we're working toward. They provide the clarity needed to focus our energy and efforts on what truly matters. With clear intentions, we can bypass distractions and stay committed to our chosen course.
@@ -274,7 +274,7 @@ export const blogs = [
 	{
 		id: 6,
 		title: `Alignment with Values`,
-		urlImg: "http://127.0.0.1:5173/assets/blog/alignment.jpg",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879811/Joyful%20Coaching/blog/alignment_ckycec.webp",
 		text: `Living in alignment with our core values is the cornerstone of a fulfilling and purpose-driven life. It's about recognizing what truly matters to us and making choices that reflect those values.
 
 		When our actions align with our values, we experience a deep sense of authenticity and purpose. We're living in congruence with our true selves, which brings inner peace and contentment.
@@ -357,17 +357,17 @@ export const questions = [
 ];
 
 export const companies = [
-	{ name: "Layers", urlImg: "http://127.0.0.1:5173/assets/companies/layers.svg" },
+	{ name: "Layers", urlImg: "/src/assets/img/companies/layers.svg" },
 	{
 		name: "Sisyphus",
-		urlImg: "http://127.0.0.1:5173/assets/companies/sisyphus.svg",
+		urlImg: "/src/assets/img/companies/sisyphus.svg",
 	},
 	{
 		name: "Circooles",
-		urlImg: "http://127.0.0.1:5173/assets/companies/circooles.svg",
+		urlImg: "/src/assets/img/companies/circooles.svg",
 	},
-	{ name: "Catalog", urlImg: "http://127.0.0.1:5173/assets/companies/catalog.svg" },
-	{ name: "Quotient", urlImg: "http://127.0.0.1:5173/assets/companies/quotient.svg" },
+	{ name: "Catalog", urlImg: "/src/assets/img/companies/catalog.svg" },
+	{ name: "Quotient", urlImg: "/src/assets/img/companies/quotient.svg" },
 ];
 
 export const maxAvailableAppointments = [

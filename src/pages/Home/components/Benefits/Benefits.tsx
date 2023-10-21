@@ -1,5 +1,5 @@
 import { MdDoneOutline } from "react-icons/md";
-import HeaderH4 from "../../../../components/HeadingH4/HeadingH4";
+import HeaderH4 from "../../../../components/HeaderH4/HeaderH4.";
 import Paragraph400 from "../../../../components/Paragraph400/Paragraph400";
 import SectionTitle from "../../../../components/SectionTitle/SectionTitle";
 import { benefits } from "../../../../data/data";

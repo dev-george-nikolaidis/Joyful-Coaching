@@ -1,4 +1,4 @@
-import HeaderH3 from "../HeadingH3/HeadingH3";
+import HeaderH3 from "../HeaderH3/HeaderH3";
 import Paragraph400 from "../Paragraph400/Paragraph400";
 import s from "./Service.module.scss";
 

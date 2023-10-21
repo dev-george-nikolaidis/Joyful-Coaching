@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "../../../../components/Button/Button";
-import HeaderH4 from "../../../../components/HeadingH4/HeadingH4";
+import HeaderH4 from "../../../../components/HeaderH4/HeaderH4.";
 import Paragraph400 from "../../../../components/Paragraph400/Paragraph400";
 import SectionTitle from "../../../../components/SectionTitle/SectionTitle";
 import { questions } from "../../../../data/data";

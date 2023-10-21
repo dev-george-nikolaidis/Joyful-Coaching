@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import sessionPacketImg from "../../../../../assets/img/session-packet.png";
 import ButtonCancel from "../../../../../components/ButtonCancel/ButtonCancel";
-import HeaderH3 from "../../../../../components/HeadingH3/HeadingH3";
-import HeaderH4 from "../../../../../components/HeadingH4/HeadingH4";
+import HeaderH3 from "../../../../../components/HeaderH3/HeaderH3";
+import HeaderH4 from "../../../../../components/HeaderH4/HeaderH4.";
 import LoginButton from "../../../../../components/LoginButton/LoginButton";
 import Modal from "../../../../../components/Modal/Modal";
 import { ActionTypes } from "../../../../../context/Actions";
@@ -48,7 +47,11 @@ export default function StripeProducts({}: Props) {
 	return (
 		<Modal>
 			<section className={s.product}>
-				<img src={sessionPacketImg} alt={sessionPacket?.service} className={s.sessionPacketImg} />
+				<img
+					src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697880142/Joyful%20Coaching/session-packet_ag84qf.webp"
+					alt={sessionPacket?.service}
+					className={s.sessionPacketImg}
+				/>
 				<div className={s.textContainer}>
 					<HeaderH3 className={s.title}> Packet: {sessionPacket?.level} </HeaderH3>
 					<HeaderH4 className={s.price}>Cost: {sessionPacket?.price}</HeaderH4>

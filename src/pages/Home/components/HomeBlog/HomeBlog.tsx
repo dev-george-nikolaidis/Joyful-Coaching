@@ -1,6 +1,6 @@
 import { MdEast } from "react-icons/md";
 import { NavLink } from "react-router-dom";
-import HeaderH4 from "../../../../components/HeadingH4/HeadingH4";
+import HeaderH4 from "../../../../components/HeaderH4/HeaderH4.";
 import Paragraph400 from "../../../../components/Paragraph400/Paragraph400";
 import SectionTitle from "../../../../components/SectionTitle/SectionTitle";
 import { blogs } from "../../../../data/data";
@@ -20,7 +20,7 @@ export default function HomeBlog({}: Props) {
 					<Paragraph400 className={s.bogText}>{b.text}</Paragraph400>
 				</div>
 
-				<NavLink to={`/blog/${b.id}`} className={s.blogLink}>
+				<NavLink to={`/blog/post/${b.id}`} className={s.blogLink}>
 					<span className={s.linkText}> Read more</span>
 					<MdEast className={s.arrowIcon} />
 				</NavLink>

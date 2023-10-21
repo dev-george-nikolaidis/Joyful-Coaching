@@ -4,8 +4,8 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 import ReCAPTCHA from "react-google-recaptcha";
-import HeaderH3 from "../../../components/HeadingH3/HeadingH3";
-import HeaderH4 from "../../../components/HeadingH4/HeadingH4";
+import HeaderH3 from "../../../components/HeaderH3/HeaderH3";
+import HeaderH4 from "../../../components/HeaderH4/HeaderH4.";
 import Input from "../../../components/Input/Input";
 import Logo from "../../../components/Logo/Logo";
 import Modal from "../../../components/Modal/Modal";

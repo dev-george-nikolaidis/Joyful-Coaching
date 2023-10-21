@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
 import Close from "../../Close/Close";
-import HeaderH3 from "../../HeadingH3/HeadingH3";
+import HeaderH3 from "../../HeaderH3/HeaderH3";
 import Modal from "../../Modal/Modal";
 import s from "./ThemeModal.module.scss";
 

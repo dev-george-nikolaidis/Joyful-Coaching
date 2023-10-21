@@ -31,6 +31,7 @@
 
 .blogImg {
 	width: 100%;
+	padding: 2rem 2rem 0 2rem;
 	max-height: 22rem;
 }
 .blogCardWrapper {
@@ -60,7 +61,7 @@
 .blogLink {
 	display: flex;
 	align-items: center;
-	color: blue;
+	color: rgb(29, 110, 250);
 	gap: 1rem;
 	margin: 0 0 2rem 2rem;
 	transition: 0.5s color ease-in-out;

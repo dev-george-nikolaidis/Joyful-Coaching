@@ -93,13 +93,15 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
   - [x] User register/Login client validation
   - [x] User password JWT reset
   - [x] Working Contact form
+  - [x] Working newsletter form
   - [x] Contact form validation
   - [x] impletion reCAPTCHA V2 for contact,register forms.
+  - [x] impletion custom reCAPTCHA for newsletter.
   - [x] Appointment booking functionality.
   - [x] Appointment dates availability check.
   - [x] Stripe payment.
   - [x] Dark theme support
-  - [x] Images optimization at webp format
+  - [x] Optimizing images in WebP format with automatic resizing
   - [x] Responsive Design
   - [ ] Accessibility
   - [ ] Search Engine Optimization (SEO)
@@ -118,7 +120,7 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
 
 ## App Current Version
 
--- 0.34.0
+-- 0.36.0
 
 ## License
 

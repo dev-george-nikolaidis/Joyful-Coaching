@@ -1,4 +1,4 @@
-import HeaderH1 from "../../../../components/HeadingH1/HeadingH1";
+import HeaderH1 from "../../../../components/HeaderH1/HeaderH1";
 import Paragraph500 from "../../../../components/Paragraph500/Paragraph500";
 import s from "./Article.module.scss";
 

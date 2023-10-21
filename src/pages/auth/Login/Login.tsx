@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
 import { yupResolver } from "@hookform/resolvers/yup";
-import HeaderH4 from "../../../components/HeadingH4/HeadingH4";
+import HeaderH4 from "../../../components/HeaderH4/HeaderH4.";
 import Input from "../../../components/Input/Input";
 import LoginButton from "../../../components/LoginButton/LoginButton";
 import Logo from "../../../components/Logo/Logo";

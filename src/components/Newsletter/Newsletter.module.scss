@@ -12,11 +12,16 @@
 	justify-content: space-between;
 }
 
+.form {
+}
+
+.formControl {
+	display: flex;
+	align-items: center;
+}
 .inputNewsletter {
 	width: 35rem;
-	padding: 0.6rem 1rem;
 	margin-right: 2rem;
-	border-radius: 0.8rem;
 }
 
 .inputNewsletter:focus {
@@ -25,5 +30,21 @@
 
 .btnNewsletter {
 	text-transform: none;
+	// height: 6rem;
+	align-self: flex-end;
 	font-weight: 500;
+}
+
+.errorPlaceholder {
+	opacity: 0;
+}
+
+.error {
+	color: var(--c-error-400);
+}
+
+.successMessage {
+	margin-top: 1rem;
+	color: var(--c-success-400);
+	font-weight: 600;
 }

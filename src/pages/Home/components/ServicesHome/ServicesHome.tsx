@@ -1,7 +1,7 @@
 import { MdLabelImportant } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 import Button from "../../../../components/Button/Button";
-import HeaderH4 from "../../../../components/HeadingH4/HeadingH4";
+import HeaderH4 from "../../../../components/HeaderH4/HeaderH4.";
 import SectionTitle from "../../../../components/SectionTitle/SectionTitle";
 import { services } from "../../../../data/data";
 import s from "./ServicesHome.module.scss";
@@ -23,7 +23,11 @@ export default function ServicesHome({}: Props) {
 			</SectionTitle>
 			<div className={s.servicesWrapper}>
 				<figure>
-					<img src="http://127.0.0.1:5173/assets/support1.jpg" alt="a woden art statue holds a tree  " className={s.supportImg} />
+					<img
+						src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879511/Joyful%20Coaching/support1_dir6ab.webp"
+						alt="a woden art statue holds a tree  "
+						className={s.supportImg}
+					/>
 				</figure>
 				<div className={s.servicesTextContainer}>
 					{displayServices}

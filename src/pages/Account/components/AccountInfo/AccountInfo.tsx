@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import HeaderH3 from "../../../../components/HeadingH3/HeadingH3";
+import HeaderH3 from "../../../../components/HeaderH3/HeaderH3";
 import Spinner from "../../../../components/Spinner/Spinner";
 import { ActionTypes } from "../../../../context/Actions";
 import { useGeneralContext } from "../../../../context/GeneralContext";

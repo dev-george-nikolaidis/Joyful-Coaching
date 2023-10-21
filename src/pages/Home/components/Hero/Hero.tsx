@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-import HeroImg from "../../../../assets/img/home-hero.png";
 import SuccessImg from "../../../../assets/img/success.svg";
 import Button from "../../../../components/Button/Button";
-import HeadingH1 from "../../../../components/HeadingH1/HeadingH1";
+import HeadingH1 from "../../../../components/HeaderH1/HeaderH1";
 import Paragraph500 from "../../../../components/Paragraph500/Paragraph500";
 import s from "./Hero.module.scss";
 type Props = {};
@@ -23,7 +22,7 @@ export default function Hero({}: Props) {
 				</Link>
 			</section>
 			<figure className={s.heroImgWrapper}>
-				<img src={HeroImg} alt="Natalia life Coach" className={s.heroImg} />
+				<img src="https://res.cloudinary.com/dsrzlxnkc/image/upload/q_auto/Joyful%20Coaching/home-hero_he7fnz.webp" alt="Natalia life Coach" className={s.heroImg} />
 			</figure>
 			<img src={SuccessImg} alt="100% success on improving your life" className={s.heroSuccessImg} />
 		</div>

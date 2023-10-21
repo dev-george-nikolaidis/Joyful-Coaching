@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MdOutlineControlPoint, MdSettingsBackupRestore } from "react-icons/md";
-import HeaderH4 from "../../../../../components/HeadingH4/HeadingH4";
+import HeaderH4 from "../../../../../components/HeaderH4/HeaderH4.";
 import Paragraph400 from "../../../../../components/Paragraph400/Paragraph400";
 import s from "./QnaCard.module.scss";
 type Props = {

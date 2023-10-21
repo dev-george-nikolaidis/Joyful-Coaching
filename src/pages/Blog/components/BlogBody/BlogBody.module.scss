@@ -1,0 +1,96 @@
+.blogBody {
+	grid-column: 2 / 14;
+
+	// background-image: url("https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697896926/Joyful%20Coaching/blog-hero-2_ypgumi.webp");
+}
+
+.heroSection {
+	position: relative;
+	height: 67rem;
+}
+
+.heroBackgroundImg {
+	position: absolute;
+	width: 100%;
+	max-height: 67rem;
+	z-index: 0;
+}
+
+.textContainer {
+	position: absolute;
+	max-width: 100rem;
+	top: 20%;
+	left: 2%;
+	z-index: 5;
+}
+
+.title {
+	// background-color: red;
+	// color: #fff;
+}
+
+.titleTextSpan {
+	color: var(--c-a-300);
+}
+
+.backgroundModal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: 0.2);
+	z-index: 1;
+}
+
+.blogCardWrapper {
+	cursor: pointer;
+	transition: 0.4s all ease-in-out;
+	max-width: 36rem;
+	background-color: var(--c-p-400);
+}
+
+.blogCardWrapper:hover {
+	background-color: var(--c-a-400);
+	transform: scale(1.02);
+}
+
+.blogImgWrapper {
+	margin-bottom: 2rem;
+}
+
+.blogImg {
+	width: 100%;
+	max-height: 22rem;
+	padding: 2rem 2rem 0 2rem;
+}
+
+.blogHeader {
+	height: 8rem;
+	padding: 2rem 2rem 0 2rem;
+}
+
+.textWrapper {
+	margin: 2rem;
+}
+
+.bogText {
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.blogsSection {
+	margin-top: var(--mt-section-400);
+}
+.articlesWrapper {
+	margin-top: 4rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4rem;
+}
+
+.spanSectionTitle {
+	color: var(--c-a-400);
+}

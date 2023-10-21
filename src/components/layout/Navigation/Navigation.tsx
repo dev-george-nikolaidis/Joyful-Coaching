@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { MdAccountCircle, MdArrowDropDown, MdManageAccounts, MdOutlineBrush, MdOutlineLogout } from "react-icons/md";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../../../assets/img/logo.svg";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
 import s from "./Navigation.module.scss";
-
 type Props = {};
 
 export default function Navigation({}: Props) {
@@ -28,7 +28,7 @@ export default function Navigation({}: Props) {
 		<header className={s.header}>
 			<nav className={s.nav}>
 				<NavLink to="/" end className={s.navLogoWrapper}>
-					<img src="http://127.0.0.1:5173/assets/logo.svg" alt="" />
+					<img src={Logo} alt="" className={s.logo} />
 					<span className={s.logoText}>Joyful Coaching</span>
 				</NavLink>
 

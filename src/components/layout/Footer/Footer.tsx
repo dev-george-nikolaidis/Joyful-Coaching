@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Logo from "../../../assets/img/logo.svg";
 import FacebookIcon from "../../../assets/img/socials/facebook.svg";
 import InstagramIcon from "../../../assets/img/socials/instagram.svg";
 import LinkedinIcon from "../../../assets/img/socials/linkedin.svg";
@@ -11,13 +12,13 @@ import MastercardIcon from "../../../assets/img/payment/master-card.svg";
 import StripeIcon from "../../../assets/img/payment/stripe.svg";
 import VisaIcon from "../../../assets/img/payment/visa.svg";
 import { blogs } from "../../../data/data";
-import HeaderH4 from "../../HeadingH4/HeadingH4";
+import HeaderH4 from "../../HeaderH4/HeaderH4.";
 type Props = {};
 
 export default function Footer({}: Props) {
 	const displayPopularArticles = blogs.map((a, i) => {
 		return (
-			<Link to={`/blog/${a.id}`} key={i}>
+			<Link to={`/blog/post/${a.id}`} key={i}>
 				<li>{a.title}</li>
 			</Link>
 		);
@@ -29,9 +30,10 @@ export default function Footer({}: Props) {
 				<div className={s.subFooterContainer}>
 					<div className={s.logoContainer}>
 						<div className={s.navLogoWrapper}>
-							<img src="http://127.0.0.1:5173/assets/logo.svg" alt="" />
+							<img src={Logo} alt="" />
 							<span className={s.logoText}>Joyful Coaching</span>
 						</div>
+						<Paragraph500 className={s.telephoneText}>Telephone: +43 660 096 9080</Paragraph500>
 						<Paragraph500>Address: 18, Süßenbrunner Straße, Vienna 1220</Paragraph500>
 						<div className={s.socialsContainer}>
 							<img src={FacebookIcon} alt="facebook icon" className={s.socialIcon} />

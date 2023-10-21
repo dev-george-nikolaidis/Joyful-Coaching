@@ -6,6 +6,7 @@ import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
 import About from "./pages/About/About";
 import Account from "./pages/Account/Account";
 import Blog from "./pages/Blog/Blog";
+import BlogSinglePage from "./pages/BlogSinglePage/BlogSinglePage";
 import BookSession from "./pages/BookSession/BookSession";
 import CheckBookings from "./pages/CheckBookings/CheckBookings";
 import Contact from "./pages/Contact/Contact";
@@ -28,6 +29,7 @@ const Router: React.FC = () => {
 					<Route path="/services" element={<Services />} />
 					<Route path="/blog" element={<Blog />} />
 					<Route path="/blog/:id" element={<Blog />} />
+					<Route path="/blog/post/:id" element={<BlogSinglePage />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/user/register" element={<Register />} />
 					<Route path="/user/login" element={<Login />} />

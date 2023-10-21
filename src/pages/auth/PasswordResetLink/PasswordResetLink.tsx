@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import Close from "../../../components/Close/Close";
-import HeaderH4 from "../../../components/HeadingH4/HeadingH4";
+import HeaderH4 from "../../../components/HeaderH4/HeaderH4.";
 import Input from "../../../components/Input/Input";
 import LoginButton from "../../../components/LoginButton/LoginButton";
 import Logo from "../../../components/Logo/Logo";
@@ -21,11 +21,11 @@ type resetPasswordLogin = {
 };
 export default function PasswordResetLink({}: Props) {
 	const [isLoading, setIsloading] = useState(false);
-	const [showPassword, setShowPassword] = useState(false);
 	const query = new URLSearchParams(window.location.search);
 	const [isBackendError, setIsBackendError] = useState(false);
 	const [errorMessageBackend, setErrorMessageBackend] = useState("");
 	const navigate = useNavigate();
+
 	const {
 		state: { backendApiDevelopmentUrl },
 		dispatch,
