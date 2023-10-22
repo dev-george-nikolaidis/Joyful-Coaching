@@ -17,7 +17,6 @@ export default function Services({}: Props) {
 			<Navigation />
 			<ServicesHero />
 			<MyService />
-			{/* <ServicesLayout /> */}
 			<Pricing />
 			<Qna />
 			<Footer />

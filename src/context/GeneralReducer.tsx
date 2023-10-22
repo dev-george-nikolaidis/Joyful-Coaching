@@ -33,6 +33,11 @@ export const reducer: ReducerType = (state, action) => {
 				...state,
 				isModalOpen: !state.isModalOpen,
 			};
+		case ActionTypes.UPDATE_CURRENT_BLOG:
+			return {
+				...state,
+				currentBlogTitle: action.payload,
+			};
 
 		case ActionTypes.CHECK_APPOINTMENTS:
 			return {

@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "../../../assets/img/logo.svg";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import s from "./Navigation.module.scss";
 type Props = {};
 
@@ -114,18 +115,29 @@ export default function Navigation({}: Props) {
 							</li>
 						</>
 					)}
-					{/* <li onClick={toggleTheme} className={s.toggleThemeContainer}>
-						{theme === "Dark" ? <MdToggleOn className={`${s.themeLight} ${s.themeIcon}`} /> : <MdToggleOff className={`${s.themeLight} ${s.themeIcon}`} />}
-						<span className={s.themeText}>{theme}</span>
-					</li> */}
+
 					<li onClick={toggleTheme} className={s.toggleThemeContainer}>
-						{/* {theme === "Dark" ? <MdToggleOn className={`${s.themeLight} ${s.themeIcon}`} /> : <MdToggleOff className={`${s.themeLight} ${s.themeIcon}`} />} */}
 						<MdOutlineBrush className={`${s.themeLight} ${s.themeIcon}`} />
 						<span className={s.themeText}>{theme}</span>
 					</li>
 				</ul>
 			</nav>
-			{/* {isModalOpen && <ThemeModal />} */}
+
+			<nav className={s.navListHamburger}>
+				<NavLink to="/" end className={s.navLogoWrapper}>
+					<img src={Logo} alt="" className={s.logo} />
+					<span className={s.logoText}>Joyful Coaching</span>
+				</NavLink>
+				<ul className={s.hamburgerList}>
+					<li onClick={toggleTheme} className={s.toggleThemeContainer}>
+						<MdOutlineBrush className={`${s.themeLight} ${s.themeIcon}`} />
+						<span className={s.themeText}>{theme}</span>
+					</li>
+					<li className={s.linkHamburger}>
+						<HamburgerMenu />
+					</li>
+				</ul>
+			</nav>
 		</header>
 	);
 }

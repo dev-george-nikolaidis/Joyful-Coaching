@@ -1,4 +1,5 @@
 import HeaderH1 from "../../../../components/HeaderH1/HeaderH1";
+import Img from "../../../../components/Img/Img";
 import Paragraph500 from "../../../../components/Paragraph500/Paragraph500";
 import s from "./ServicesHero.module.scss";
 type Props = {};
@@ -16,7 +17,7 @@ export default function ServicesHero({}: Props) {
 				</Paragraph500>
 			</section>
 			<figure className={s.heroImgWrapper}>
-				<img src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697880116/Joyful%20Coaching/services-hero_wtxeum.webp" alt="Natalia life Coach" className={s.heroImg} />
+				<Img src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697880116/Joyful%20Coaching/services-hero_wtxeum.webp" alt="Natalia life Coach" className={s.heroImg} />
 			</figure>
 		</div>
 	);

@@ -17,6 +17,8 @@ export interface GeneralContextState {
 	appointments: number[];
 	rerenderAccount: boolean;
 	accountInfoPayload: AccountPayload | null;
+	currentBlogTitle: string;
+	displayHamburgerMenu: boolean;
 }
 
 export const initialState: GeneralContextState = {
@@ -34,6 +36,8 @@ export const initialState: GeneralContextState = {
 	pickedDate: new Date(),
 	accountInfoPayload: null,
 	rerenderAccount: false,
+	currentBlogTitle: "",
+	displayHamburgerMenu: true,
 };
 
 type Self = {

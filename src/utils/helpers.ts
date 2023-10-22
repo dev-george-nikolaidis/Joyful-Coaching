@@ -1,6 +1,6 @@
 import axios from "axios";
+import { lazy } from "react";
 import * as yup from "yup";
-
 export const registerUserSchema = yup.object().shape({
 	email: yup.string().email("Please insert a valid email address").required("Email is required"),
 	password: yup
@@ -117,4 +117,15 @@ export const convertAppointmentNumberToStringTime = (num: number) => {
 
 export function getRandomNumberBetween(min: number, max: number) {
 	return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+export function lazyLoad(path: string, nameExport = "") {
+	return lazy(() => {
+		const promise = import(path);
+		if (nameExport === "") {
+			return promise;
+		} else {
+			return promise.then((module) => ({ default: module[nameExport] }));
+		}
+	});
 }

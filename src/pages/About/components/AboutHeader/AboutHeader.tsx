@@ -1,5 +1,6 @@
 import HeaderH1 from "../../../../components/HeaderH1/HeaderH1";
 import HeaderH4 from "../../../../components/HeaderH4/HeaderH4.";
+import Img from "../../../../components/Img/Img";
 import Paragraph400 from "../../../../components/Paragraph400/Paragraph400";
 import s from "./AboutHeader.module.scss";
 type Props = {};
@@ -54,7 +55,7 @@ export default function AboutHeader({}: Props) {
 					</div>
 				</div>
 				<figure className={s.imgWrapper}>
-					<img src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697880798/Joyful%20Coaching/about_fboxli.webp" alt="Natalia about me" className={s.aboutHederImg} />
+					<Img src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697880798/Joyful%20Coaching/about_fboxli.webp" alt="Natalia about me" className={s.aboutHederImg} />
 				</figure>
 			</div>
 		</div>

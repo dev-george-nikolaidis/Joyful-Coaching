@@ -326,6 +326,17 @@ select {
 	}
 }
 
+// Global Classes
+
+#modalWrapper {
+	position: absolute;
+	z-index: 2;
+	background-color: rgba($color: #000000, $alpha: 0.4);
+	width: 100%;
+	min-height: 100vh;
+	// height: 100%;
+}
+
 // 481px - 750px
 @media (min-width: 30.1em) and (max-width: 46.875em) {
 }
