@@ -1,12 +1,12 @@
+import config from "../../config";
 const user = localStorage.getItem("self");
-
 const parsedUser = JSON.parse(user as string);
 
+const { production } = config;
+
 export interface GeneralContextState {
-	test: string;
 	isModalOpen: boolean;
-	backendApiDevelopmentUrl: string;
-	backendApiProductionUrl: string;
+	backendApiUrl: string;
 	self: Self;
 	theme: string;
 	displayThemeModal: boolean;
@@ -22,10 +22,8 @@ export interface GeneralContextState {
 }
 
 export const initialState: GeneralContextState = {
-	test: "",
 	isModalOpen: false,
-	backendApiDevelopmentUrl: "http://localhost:3001/api/v1",
-	backendApiProductionUrl: "https://joyful-coaching-api.onrender.com",
+	backendApiUrl: production ? "https://joyful-coaching-api.onrender.com/api/v1" : "http://localhost:3001/api/v1",
 	self: parsedUser,
 	theme: localStorage.getItem("theme") || "Dark",
 	displayThemeModal: false,

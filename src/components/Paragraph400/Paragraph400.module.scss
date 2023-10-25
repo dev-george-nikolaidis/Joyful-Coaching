@@ -5,3 +5,16 @@
 	color: var(--c-s-500);
 	font-family: "Poppins";
 }
+
+@media (max-width: 64em) {
+	.text {
+		font-size: 1.6rem;
+	}
+}
+
+@media (max-width: 30em) {
+	.text {
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+	}
+}

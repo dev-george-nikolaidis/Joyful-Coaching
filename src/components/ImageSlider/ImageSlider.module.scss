@@ -62,3 +62,43 @@
 	left: 0%;
 	top: 30%;
 }
+
+@media (max-width: 64em) {
+	.testimonialText {
+		margin-top: 8rem;
+		max-width: 80%;
+		line-height: 3.2rem;
+		min-height: 30rem;
+	}
+
+	.arrow {
+		font-size: 4rem;
+	}
+
+	.arrowRight {
+		top: 20%;
+	}
+	.arrowLeft {
+		top: 20%;
+	}
+}
+
+@media (max-width: 30em) {
+	.testimonialText {
+		margin-top: 6rem;
+		max-width: 80%;
+		line-height: 3.2rem;
+		min-height: 40rem;
+	}
+
+	.arrowRight {
+		top: 25%;
+	}
+	.arrowLeft {
+		top: 25%;
+	}
+
+	.arrow {
+		font-size: 2.5rem;
+	}
+}

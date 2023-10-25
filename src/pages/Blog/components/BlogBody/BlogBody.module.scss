@@ -1,7 +1,5 @@
 .blogBody {
 	grid-column: 2 / 14;
-
-	// background-image: url("https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697896926/Joyful%20Coaching/blog-hero-2_ypgumi.webp");
 }
 
 .heroSection {
@@ -21,7 +19,7 @@
 	max-width: 100rem;
 	top: 20%;
 	left: 2%;
-	z-index: 5;
+	z-index: 2;
 }
 
 .title {
@@ -93,4 +91,31 @@
 
 .spanSectionTitle {
 	color: var(--c-a-400);
+}
+
+@media (max-width: 64em) {
+	.textContainer {
+		max-width: 80rem;
+		top: 20%;
+	}
+
+	.heroSection {
+		position: relative;
+		height: 40rem;
+	}
+	.blogCardWrapper {
+		max-width: 30rem;
+		background-color: var(--c-p-400);
+	}
+}
+
+@media (max-width: 30em) {
+	.heroSection {
+		position: relative;
+		height: 20rem;
+	}
+	.articlesWrapper {
+		display: flex;
+		justify-content: center;
+	}
 }

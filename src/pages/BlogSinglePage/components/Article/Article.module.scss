@@ -16,3 +16,21 @@
 	letter-spacing: 5%;
 	line-height: 4rem;
 }
+
+@media (max-width: 64em) {
+	.blogImg {
+		margin: 2rem 0;
+		height: 40rem;
+	}
+	.text {
+		letter-spacing: 1%;
+		line-height: 2.5rem;
+	}
+}
+
+@media (max-width: 30em) {
+	.blogImg {
+		margin: 2rem 0;
+		height: 20rem;
+	}
+}

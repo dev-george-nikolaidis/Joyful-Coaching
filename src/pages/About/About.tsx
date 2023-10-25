@@ -2,7 +2,6 @@ import Companies from "../../components/layout/Companies/Companies";
 import Footer from "../../components/layout/Footer/Footer";
 import Navigation from "../../components/layout/Navigation/Navigation";
 import { useScrollToTop } from "../../hooks/useScrollToTop";
-import Qna from "../Services/components/Qna/Qna";
 import "./About.module.scss";
 import s from "./About.module.scss";
 import AboutHeader from "./components/AboutHeader/AboutHeader";
@@ -15,7 +14,7 @@ export default function About({}: Props) {
 			<Navigation />
 			<AboutHeader />
 			<Companies />
-			<Qna />
+			{/* <Qna /> */}
 			<Footer />
 		</div>
 	);

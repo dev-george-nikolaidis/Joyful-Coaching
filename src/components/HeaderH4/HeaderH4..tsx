@@ -8,5 +8,5 @@ type Props = {
 };
 
 export default function HeaderH4({ children, className }: Props) {
-	return <h1 className={` ${s.title}  ${className}`}>{children}</h1>;
+	return <h4 className={` ${s.title}  ${className}`}>{children}</h4>;
 }

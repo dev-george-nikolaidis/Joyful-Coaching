@@ -33,7 +33,7 @@ export default function Register({}: Props) {
 	const [isUserCreated, setIsUserCreated] = useState(false);
 	const captchaRef = useRef<any>(null);
 	const {
-		state: { backendApiDevelopmentUrl, isModalOpen },
+		state: { backendApiUrl },
 		dispatch,
 	} = useGeneralContext();
 	const {
@@ -56,7 +56,7 @@ export default function Register({}: Props) {
 
 		setIsloading(true);
 		dispatch({ type: ActionTypes.OPEN_CLOSE_MODAL });
-		const url = `${backendApiDevelopmentUrl}/users/register`;
+		const url = `${backendApiUrl}/users/register`;
 		fetchAxios(url, "POST", registerUserPayload)
 			.then((p) => {
 				const { data } = p;
@@ -90,7 +90,7 @@ export default function Register({}: Props) {
 					return;
 				}
 			})
-			.catch((error: any) => {
+			.catch((_err: any) => {
 				setIsloading(false);
 				setIsBackendError(true);
 				setErrorMessageBackend("Server is not responding, please try again");
@@ -108,10 +108,10 @@ export default function Register({}: Props) {
 					{isUserCreated && <HeaderH3 className={s.successMessage}>Your account has been created successfully!</HeaderH3>}
 					<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
 						<HeaderH4>Sign Up</HeaderH4>
-						<Input label="Email" placeholder="Email" type="email" propFunc={...register("email") as any} />
+						<Input label="Email" placeholder="Email" type="email" propFunc={register("email") as any} />
 						{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-						<Input label="Password" placeholder="Password" propFunc={{ ...(register("password") as any) }} withShow={true} type="password" />
+						<Input label="Password" placeholder="Password" propFunc={register("password") as any} withShow={true} type="password" />
 						{errors.password ? <span className={s.error}>{errors.password.message}</span> : isBackendError && <span className={s.error}>{}</span>}
 
 						<div className={s.reCaptchaWrapper}>

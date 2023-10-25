@@ -5,8 +5,8 @@ type Props = {};
 
 export default function Testimonial({}: Props) {
 	return (
-		<section className={s.testimonialsContainer}>
-			<div className={` col-12 ${s.testimonialWrapper} `}>
+		<section className={`${s.testimonialsContainer} col-12`}>
+			<div className={` ${s.testimonialWrapper} `}>
 				<SectionTitle className={s.testimonialTitle}>
 					Client <span className={s.titleSpanText}>success</span> stories
 				</SectionTitle>

@@ -23,7 +23,7 @@ export default function BookSession({}: Props) {
 	const [errorMessage, setErrorMessage] = useState("");
 
 	const {
-		state: { appointments, pickedDate, backendApiDevelopmentUrl, self, showPopupWindow },
+		state: { appointments, pickedDate, backendApiUrl, self, showPopupWindow },
 		dispatch,
 	} = useGeneralContext();
 	const navigate = useNavigate();
@@ -38,7 +38,7 @@ export default function BookSession({}: Props) {
 			setErrorMessage("");
 		}
 
-		const url = `${backendApiDevelopmentUrl}/appointments/book`;
+		const url = `${backendApiUrl}/appointments/book`;
 		setIsLoading(true);
 
 		fetchAxios(url, "POST", { appointmentId: appointment, appointmentDate: formatDateAccuracy(pickedDate, "04", "00") }, self.token)
@@ -54,7 +54,7 @@ export default function BookSession({}: Props) {
 					dispatch({ type: ActionTypes.TOGGLE_POPUP_MODAL });
 				}
 			})
-			.catch((error) => {
+			.catch((_err) => {
 				setIsLoading(false);
 			});
 	};
@@ -74,7 +74,7 @@ export default function BookSession({}: Props) {
 	const displayAppointments = maxAvailableAppointments
 		.filter((item) => !appointments.includes(item.id))
 		.filter((item) => {
-			const { id, timeEnd, timeStart, appointmentTime } = item;
+			const { appointmentTime } = item;
 			const currentTime = new Date();
 
 			if (appointmentTime.getDate() === pickedDate.getDate()) {
@@ -88,7 +88,7 @@ export default function BookSession({}: Props) {
 			}
 		})
 		.map((t, i) => {
-			const { id, timeEnd, timeStart, appointmentTime } = t;
+			const { id, timeEnd, timeStart } = t;
 
 			return (
 				<span key={i} className={s.mapContainer} onClick={() => setAppointment(id)}>

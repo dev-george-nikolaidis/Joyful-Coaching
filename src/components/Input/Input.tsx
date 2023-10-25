@@ -16,7 +16,7 @@ type Props = {
 	className?: string;
 };
 
-export default function Input({ type, label, value, name, className, placeholder, withShow, disabled, onChange, children, propFunc }: Props) {
+export default function Input({ type, label, value, name, className, placeholder, withShow, disabled, onChange, propFunc }: Props) {
 	const [showPassword, setShowPassword] = useState(false);
 
 	function handlerShowHidePassword() {

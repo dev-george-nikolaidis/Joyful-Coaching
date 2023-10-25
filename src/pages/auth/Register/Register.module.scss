@@ -1,6 +1,5 @@
 .register {
 	background-color: var(--bg-form-400);
-	// position: relative;
 	grid-column: 2 / 14;
 	justify-self: center;
 	width: 40%;
@@ -48,4 +47,17 @@
 
 .error {
 	color: var(--c-error-400);
+}
+
+@media (max-width: 64em) {
+	.register {
+		width: 80%;
+		min-height: 60rem;
+	}
+}
+
+@media (max-width: 30em) {
+	.register {
+		width: 100%;
+	}
 }

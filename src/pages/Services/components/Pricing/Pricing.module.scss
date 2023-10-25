@@ -4,6 +4,10 @@
 	padding: 10rem 0;
 }
 
+.titleSpanText {
+	color: var(--c-a-400);
+}
+
 .pricingTitle {
 	grid-column: 1 / 14;
 }
@@ -15,4 +19,7 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: 4rem;
+}
+
+@media (max-width: 64em) {
 }

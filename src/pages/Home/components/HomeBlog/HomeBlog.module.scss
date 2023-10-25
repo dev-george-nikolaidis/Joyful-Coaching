@@ -39,10 +39,6 @@
 	background-color: var(--c-p-400);
 }
 
-.blogCardWrapper:hover {
-	// background-color: var(--c-s-400);
-}
-
 .blogHeader {
 	height: 8rem;
 	padding: 2rem 2rem 0 2rem;
@@ -79,4 +75,22 @@
 
 .titleTextSpan {
 	color: var(--c-a-400);
+}
+
+@media (max-width: 64em) {
+	.blogCardWrapper {
+		max-width: 32rem;
+		background-color: var(--c-p-400);
+	}
+
+	.blogsWrapper {
+		margin-top: 4rem;
+		gap: 2rem;
+	}
+}
+
+@media (max-width: 30em) {
+	.blogCardWrapper {
+		max-width: 100%;
+	}
 }

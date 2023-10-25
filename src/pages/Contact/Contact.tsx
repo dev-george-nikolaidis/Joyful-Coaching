@@ -33,8 +33,7 @@ export default function Contact({}: Props) {
 	const [errorReCaptcha, setErrorReCaptcha] = useState(false);
 
 	const {
-		state: { backendApiDevelopmentUrl },
-		dispatch,
+		state: { backendApiUrl },
 	} = useGeneralContext();
 
 	const {
@@ -59,7 +58,7 @@ export default function Contact({}: Props) {
 			token: token,
 		};
 
-		const url = `${backendApiDevelopmentUrl}/contact/contact-us`;
+		const url = `${backendApiUrl}/contact/contact-us`;
 
 		fetchAxios(url, "POST", payload)
 			.then((payload) => {
@@ -78,7 +77,9 @@ export default function Contact({}: Props) {
 				}
 			})
 			.catch((error) => {
+				setErrorMessageBackend(error);
 				setIsloading(false);
+				setIsBackendError(true);
 			});
 	};
 
@@ -92,13 +93,13 @@ export default function Contact({}: Props) {
 					{success && <HeaderH3 className={s.successMessage}>Your message was successfully delivered!</HeaderH3>}
 					<form action="#" className={s.form} onSubmit={handleSubmit(onSubmit)}>
 						<HeaderH4>Contact us</HeaderH4>
-						<Input label="Name*" type="text" propFunc={...register("name") as any} />
+						<Input label="Name*" type="text" propFunc={register("name") as any} />
 						{errors.name ? <span className={s.error}>{errors.name.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-						<Input label="Subject*" type="text" propFunc={...register("subject") as any} />
+						<Input label="Subject*" type="text" propFunc={register("subject") as any} />
 						{errors.subject ? <span className={s.error}>{errors.subject.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-						<Input label="Email" type="email" propFunc={...register("email") as any} />
+						<Input label="Email" type="email" propFunc={register("email") as any} />
 						{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
 						<div className={s.formControl}>

@@ -115,7 +115,7 @@
 	width: 25rem;
 	background-color: var(--bg-body-400);
 	right: 0;
-	top: 5.5rem;
+	top: 4.5rem;
 	z-index: 3;
 	padding: 2rem;
 	box-shadow: var(--box-shadow-400);
@@ -172,11 +172,10 @@
 		-o-transition: position 10s;
 	}
 
-	.navListHamburger {
-	}
 	.nav {
 		display: none;
 	}
+
 	.logo {
 		width: 3rem;
 	}
@@ -201,11 +200,11 @@
 		gap: 2rem;
 		z-index: 10;
 	}
+}
 
-	.toggleThemeContainer {
-		// margin-right: 100rem;
-	}
-
-	.linkHamburger {
+@media (max-width: 30em) {
+	.header {
+		grid-column: 1 -1;
+		height: 8rem;
 	}
 }

@@ -2,6 +2,7 @@
 	grid-column: 1 / -1;
 	margin-top: var(--mt-section-400);
 	background-color: var(--bg-body-400);
+	margin-bottom: 8rem;
 }
 
 .footerWrapper {
@@ -81,4 +82,37 @@
 
 .telephoneText {
 	margin-bottom: 1rem;
+}
+
+@media (max-width: 64em) {
+	.footerWrapper {
+		margin-top: 10rem;
+	}
+	.logo {
+		width: 3rem;
+	}
+
+	.logoText {
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width: 30em) {
+	.subFooterContainer {
+		display: flex;
+		justify-content: none;
+		flex-direction: column;
+	}
+
+	.linksContainer {
+		margin-top: 4rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.subFooter {
+		flex-direction: column;
+		gap: 2rem;
+	}
 }

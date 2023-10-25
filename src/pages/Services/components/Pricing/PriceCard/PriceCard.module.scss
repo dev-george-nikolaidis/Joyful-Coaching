@@ -45,9 +45,24 @@
 	justify-content: center;
 }
 .priceBtn {
-	padding: 0.8rem 8rem;
+	// padding: 0.8rem 8rem;
 	width: 80%;
 	align-self: center;
 	text-transform: none;
 	font-size: 1.8rem;
+}
+
+@media (max-width: 64em) {
+	.container {
+		width: 28rem;
+	}
+
+	.priceBtn {
+	}
+}
+
+@media (max-width: 30em) {
+	.container {
+		width: 90%;
+	}
 }

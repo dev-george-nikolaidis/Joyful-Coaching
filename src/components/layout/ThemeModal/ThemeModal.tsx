@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
 import Close from "../../Close/Close";
@@ -9,14 +8,14 @@ import s from "./ThemeModal.module.scss";
 type Props = {};
 
 export default function ThemeModal({}: Props) {
-	const [currentTheme, setCurrentTheme] = useState();
+	// const [currentTheme, setCurrentTheme] = useState();
 
 	const {
 		state: {},
 		dispatch,
 	} = useGeneralContext();
 
-	const handlerChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const handlerChange = (_e: React.ChangeEvent<HTMLInputElement>) => {
 		//   (e.currentTarget.value);
 	};
 	const closeModal = () => {

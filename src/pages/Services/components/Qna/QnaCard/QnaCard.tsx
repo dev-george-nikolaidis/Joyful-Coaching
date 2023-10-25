@@ -17,7 +17,6 @@ export default function QnaCard({ question }: Props) {
 		setIsPressed(!isPressed);
 	};
 
-	// let displayIcon = isPressed ? <img src={SwapMinus} className={s.icon} alt="" onClick={handlerClick} /> : <img src={SwapPlus} alt="" onClick={handlerClick} className={s.icon} />;
 	let displayIcon = isPressed ? <MdSettingsBackupRestore className={s.icon} onClick={handlerClick} /> : <MdOutlineControlPoint className={s.icon} onClick={handlerClick} />;
 
 	return (

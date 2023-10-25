@@ -27,7 +27,7 @@ export default function MyService({}: Props) {
 			<div className={s.containerWrapper}>
 				<div className={s.textContainer}>{displaySessionBenefits}</div>
 				<figure className={s.imgWrapper}>
-					<Img src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697880142/Joyful%20Coaching/session-packet_ag84qf.webp" alt="Colorful session room" />
+					<Img src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697880142/Joyful%20Coaching/session-packet_ag84qf.webp" alt="Colorful session room" className={s.sessionImg} />
 				</figure>
 			</div>
 		</div>

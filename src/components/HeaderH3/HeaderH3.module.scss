@@ -5,3 +5,17 @@
 	letter-spacing: -3%;
 	color: var(--c-title-400);
 }
+
+@media (max-width: 64em) {
+	.titleH3 {
+		font-size: 3rem;
+		line-height: 110%;
+	}
+}
+
+@media (max-width: 30em) {
+	.titleH3 {
+		font-size: 1.8rem;
+		line-height: 100%;
+	}
+}

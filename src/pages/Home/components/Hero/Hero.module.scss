@@ -16,7 +16,6 @@
 }
 
 .heroImgWrapper {
-	background-image: url();
 	grid-column: 8 / 14;
 	justify-self: end;
 }
@@ -36,4 +35,46 @@
 
 .titleSpanText {
 	color: var(--c-a-400);
+}
+
+@media (max-width: 64em) {
+	.heroSuccessImg {
+		display: none;
+	}
+
+	.hero {
+		height: 100%;
+		padding: 4rem 0;
+	}
+
+	.heroTextWrapper {
+		grid-column: 2 / 10;
+		margin: auto 0.1rem;
+	}
+
+	.heroImgWrapper {
+		grid-column: 10 / 14;
+	}
+}
+
+@media (max-width: 30em) {
+	.hero {
+		// height: 100%;
+		grid-template-columns: 1fr;
+		// padding: 4rem 0;
+	}
+
+	.heroTextWrapper {
+		grid-column: 1 / -1;
+		// margin: auto 0rem;
+		margin: 0 1.5rem;
+	}
+
+	.heroImgWrapper {
+		display: none;
+	}
+
+	.heroImg {
+		display: none;
+	}
 }

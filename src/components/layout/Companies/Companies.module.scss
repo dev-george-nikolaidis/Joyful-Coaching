@@ -5,11 +5,25 @@
 
 .companiesWrapper {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
 .title {
 	text-align: center;
 	margin: 2rem 0;
+}
+.logo {
+	width: 15rem;
+}
+
+@media (max-width: 64em) {
+	.companyIcon {
+		width: 14rem;
+	}
+}
+
+@media (max-width: 30em) {
+	.companyIcon {
+		width: 8rem;
+	}
 }

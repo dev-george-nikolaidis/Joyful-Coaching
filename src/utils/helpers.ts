@@ -52,7 +52,7 @@ export const fetchAxios = async (url: string, method = "get", data?: any, token?
 		url: url,
 		data: data,
 		headers: {
-			Authorization: `Bearer  ${token}`,
+			Authorization: `Bearer ${token}`,
 		},
 	})
 		.then((response) => {
@@ -67,6 +67,9 @@ export const fetchAxios = async (url: string, method = "get", data?: any, token?
 			};
 		});
 };
+
+// "Access-Control-Allow-Origin": "*",
+// "Content-Type": "application/json",
 
 export function calculateAppointmentTime(hour: string, minutes: string) {
 	const date = new Date();

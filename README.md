@@ -20,6 +20,8 @@ Welcome to the Joyful Coaching website, your destination for personalized life c
 
 ## About The Project
 
+## For live preview click <strong>[here](https://joyful-coaching.netlify.app)</strong>
+
 ![Product Name Screen Shot](https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697980092/Joyful%20Coaching/home_j42nhw.webp)
 
 Joyful Coaching is a modern full-stack website designed to provide comprehensive life coaching services. Natalia, our experienced life coach, is here to support you in your journey to a more joyful and fulfilled life.
@@ -72,7 +74,7 @@ We employ advanced analytics tools to collect valuable data on user interactions
 - Sing in
 - Buy sessions
 
-- As you see in the image below , you need to provide following information (Bare in mind this is a test Stripe account)
+- As you see in the image below , you need to provide following information (Stripe test mode)
 
   - email : any text
   - Card information : 4242 4242 4242 4242
@@ -142,7 +144,7 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
 
 ## App Current Version
 
--- 0.38.0
+-- 0.40.0
 
 ## Development
 

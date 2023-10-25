@@ -15,7 +15,9 @@ export default function Qna({}: Props) {
 	});
 	return (
 		<div className={s.qna}>
-			<SectionTitle>Frequently questions asked</SectionTitle>
+			<SectionTitle>
+				<span className={s.titleTextSpan}> Frequently</span> questions asked
+			</SectionTitle>
 			<div className={s.qnaCardContainer}>{displayQuestions}</div>
 			<Link to="/contact" className={s.contactWrapper}>
 				<HeaderH4>Still have questions ?</HeaderH4>

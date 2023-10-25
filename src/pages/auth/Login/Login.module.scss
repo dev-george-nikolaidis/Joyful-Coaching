@@ -1,5 +1,4 @@
 .login {
-	// position: relative;
 	grid-column: 2 / 14;
 	justify-self: center;
 	background-color: var(--bg-form-400);
@@ -37,4 +36,18 @@
 .linkText {
 	font-weight: 600;
 	color: blue;
+}
+
+@media (max-width: 64em) {
+	.login {
+		width: 80%;
+		min-height: 50rem;
+	}
+}
+
+@media (max-width: 30em) {
+	.login {
+		width: 100%;
+		min-height: 50rem;
+	}
 }

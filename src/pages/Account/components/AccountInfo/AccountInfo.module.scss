@@ -43,3 +43,15 @@
 	font-size: 1.8rem;
 	cursor: pointer;
 }
+
+@media (max-width: 30em) {
+	.infoWrapper {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.modifierText {
+		margin-left: 0;
+	}
+}

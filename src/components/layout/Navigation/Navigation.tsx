@@ -12,7 +12,7 @@ export default function Navigation({}: Props) {
 	const [showAccountModal, setShowAccountModal] = useState(false);
 
 	const {
-		state: { theme, self, isModalOpen },
+		state: { theme, self },
 		dispatch,
 	} = useGeneralContext();
 
@@ -93,11 +93,7 @@ export default function Navigation({}: Props) {
 								<span className={s.accountText}>Account</span>
 								<MdArrowDropDown className={s.accountIconArrow} />
 								{showAccountModal && (
-									<ul className={s.accountListModal}>
-										{/* <li className={s.accountLink}>
-											<MdHouse className={s.accountSettingIcon} />
-											<span className={s.accountModalText}>Session room</span>
-										</li> */}
+									<ul className={s.accountListModal} onMouseLeave={() => setShowAccountModal(!showAccountModal)}>
 										<li>
 											<Link to="/account-settings" className={s.accountLink}>
 												<MdManageAccounts className={s.accountSettingIcon} />

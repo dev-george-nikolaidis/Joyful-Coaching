@@ -20,7 +20,7 @@ export default function AccountPasswordChange({}: Props) {
 	const [isPasswordUpdated, setIsPasswordUpdated] = useState(false);
 
 	const {
-		state: { backendApiDevelopmentUrl, self },
+		state: { backendApiUrl, self },
 		dispatch,
 	} = useGeneralContext();
 
@@ -32,10 +32,10 @@ export default function AccountPasswordChange({}: Props) {
 	const handlerPasswordChange = () => {
 		updatePasswordSchema
 			.validate({ password: password })
-			.then((val) => {
+			.then((_val) => {
 				setErrorMessage("");
 				setIsLoading(true);
-				fetchAxios(`${backendApiDevelopmentUrl}/users/password-update`, "PUT", { password: password }, self.token)
+				fetchAxios(`${backendApiUrl}/users/password-update`, "PUT", { password: password }, self.token)
 					.then((r) => {
 						const self = {
 							token: r.data,
@@ -48,7 +48,7 @@ export default function AccountPasswordChange({}: Props) {
 
 						return;
 					})
-					.catch((e) => {});
+					.catch((_e) => {});
 			})
 			.catch((err) => {
 				setErrorMessage(err.message);

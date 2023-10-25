@@ -15,24 +15,24 @@ export default function AccountInfo({}: Props) {
 	const [refetch, setRefetch] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	const {
-		state: { backendApiDevelopmentUrl, self, showPopupWindow, accountInfoPayload },
+		state: { backendApiUrl, self, showPopupWindow, accountInfoPayload },
 		dispatch,
 	} = useGeneralContext();
-	let url = `${backendApiDevelopmentUrl}/users/account`;
+
+	let url = `${backendApiUrl}/users/account`;
 
 	useEffect(() => {
-		return () => {
-			setIsLoading(true);
-			fetchAxios(url, "POST", { token: self.token }, self.token)
-				.then((payload) => {
-					setIsLoading(false);
-					setRefetch(false);
-					dispatch({ type: ActionTypes.FETCH_ACCOUNT_PAYLOAD, payload: payload.data });
-				})
-				.catch((error) => {
-					setIsLoading(false);
-				});
-		};
+		setIsLoading(true);
+		fetchAxios(url, "POST", { token: self.token }, self.token)
+			.then((payload) => {
+				setIsLoading(false);
+				setRefetch(false);
+				dispatch({ type: ActionTypes.FETCH_ACCOUNT_PAYLOAD, payload: payload.data });
+			})
+			.catch((_err) => {
+				setIsLoading(false);
+			});
+		return () => {};
 	}, [refetch]);
 
 	const handlerPasswordChange = () => {

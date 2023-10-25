@@ -24,7 +24,7 @@ export default function PasswordReset({}: Props) {
 	const [errorMessageBackend, setErrorMessageBackend] = useState("");
 	const [success, setSuccess] = useState(false);
 	const {
-		state: { backendApiDevelopmentUrl },
+		state: { backendApiUrl },
 	} = useGeneralContext();
 	const {
 		register,
@@ -37,7 +37,7 @@ export default function PasswordReset({}: Props) {
 
 	const onSubmit = (formData: resetPassword) => {
 		setIsloading(true);
-		const url = `${backendApiDevelopmentUrl}/users/password-reset`;
+		const url = `${backendApiUrl}/users/password-reset`;
 		fetchAxios(url, "Post", { email: formData.email })
 			.then((p) => {
 				const { data } = p;
@@ -68,9 +68,7 @@ export default function PasswordReset({}: Props) {
 					reset();
 				}
 			})
-			.catch((error) => {
-				console.log(`line  error  ${error}`);
-			});
+			.catch((_err) => {});
 	};
 
 	return (
@@ -81,7 +79,7 @@ export default function PasswordReset({}: Props) {
 				{success && <HeaderH3 className={s.successMessage}>Email has been sent,please follow the instructions.</HeaderH3>}
 				<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
 					<HeaderH4>Password reset</HeaderH4>
-					<Input label="Email" type="email" propFunc={...register("email") as any} />
+					<Input label="Email" type="email" propFunc={register("email") as any} />
 					{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 					<LoginButton>Send</LoginButton>
 				</form>

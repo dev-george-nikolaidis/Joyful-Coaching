@@ -13,7 +13,7 @@ type Props = {
 
 export default function AccountAppointments({ setRefetch, setIsLoading }: Props) {
 	const {
-		state: { backendApiDevelopmentUrl, self, accountInfoPayload },
+		state: { backendApiUrl, self, accountInfoPayload },
 	} = useGeneralContext();
 	const todayDate = new Date();
 	const todayTimestamp = new Date(todayDate);
@@ -27,15 +27,14 @@ export default function AccountAppointments({ setRefetch, setIsLoading }: Props)
 
 		const prompt = confirm("Are you sure you want to do cancel your appointment?");
 		if (prompt) {
-			const url = `${backendApiDevelopmentUrl}/appointments/cancel`;
+			const url = `${backendApiUrl}/appointments/cancel`;
 			setIsLoading(true);
 			fetchAxios(url, "DELETE", { appointmentId: appointment, appointmentDate: formatDateAccuracy(date, "04", "00") }, self.token)
-				.then((p) => {
+				.then((_p) => {
 					setRefetch(true);
 					setIsLoading(false);
 				})
-				.catch((error) => {
-					console.log(error);
+				.catch((_err) => {
 					setIsLoading(false);
 				});
 		}

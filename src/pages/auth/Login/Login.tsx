@@ -28,7 +28,7 @@ export default function Login({}: Props) {
 	const [errorMessageBackend, setErrorMessageBackend] = useState("");
 	let navigate = useNavigate();
 	const {
-		state: { backendApiDevelopmentUrl },
+		state: { backendApiUrl },
 		dispatch,
 	} = useGeneralContext();
 	const {
@@ -47,8 +47,7 @@ export default function Login({}: Props) {
 		};
 		setIsloading(true);
 		dispatch({ type: ActionTypes.OPEN_CLOSE_MODAL });
-
-		const url = `${backendApiDevelopmentUrl}/users/login`;
+		const url = `${backendApiUrl}/users/login`;
 		fetchAxios(url, "POST", loginUserPayload)
 			.then((p) => {
 				const { data } = p;
@@ -97,10 +96,10 @@ export default function Login({}: Props) {
 					<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
 						<HeaderH4>Login</HeaderH4>
 
-						<Input label="Email" type="email" propFunc={...register("email") as any} />
+						<Input label="Email" type="email" propFunc={register("email") as any} />
 						{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
-						<Input label="Password" propFunc={{ ...(register("password") as any) }} withShow={true} type="password" />
+						<Input label="Password" propFunc={register("password") as any} withShow={true} type="password" />
 						{errors.password ? <span className={s.error}>{errors.password.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
 						<LoginButton>Login</LoginButton>

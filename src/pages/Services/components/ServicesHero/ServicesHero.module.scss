@@ -25,3 +25,29 @@
 .heroImg {
 	max-height: 60rem;
 }
+
+@media (max-width: 64em) {
+	.serviceHero {
+		height: 100%;
+		padding: 4rem 0;
+	}
+	.heroTextWrapper {
+		grid-column: 2 / 10;
+		margin: auto 0.1rem;
+	}
+	.heroImgWrapper {
+		grid-column: 10 / 14;
+		justify-self: end;
+	}
+}
+
+@media (max-width: 30em) {
+	.heroImgWrapper {
+		display: none;
+	}
+
+	.heroTextWrapper {
+		grid-column: 2 / 14;
+		margin: 0;
+	}
+}

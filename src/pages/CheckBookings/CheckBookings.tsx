@@ -23,7 +23,7 @@ export default function CheckBookings({}: Props) {
 	const [isLoading, setIsLoading] = useState(false);
 	const navigate = useNavigate();
 	const {
-		state: { backendApiDevelopmentUrl, self },
+		state: { backendApiUrl, self },
 		dispatch,
 	} = useGeneralContext();
 
@@ -35,7 +35,7 @@ export default function CheckBookings({}: Props) {
 		if (date.getDay() === 6 || date.getDay() === 0) {
 			return;
 		}
-		const url = `${backendApiDevelopmentUrl}/appointments/check-availability`;
+		const url = `${backendApiUrl}/appointments/check-availability`;
 		setIsLoading(true);
 		fetchAxios(url, "POST", { data: formatDateAccuracy(date, "04", "00") }, self.token)
 			.then((r) => {
@@ -45,7 +45,7 @@ export default function CheckBookings({}: Props) {
 					navigate("/booking/appointments");
 				}
 			})
-			.catch((e) => {
+			.catch((_error) => {
 				setIsLoading(false);
 			});
 	};

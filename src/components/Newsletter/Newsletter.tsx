@@ -16,13 +16,11 @@ type newsletterT = {
 };
 
 export default function Newsletter({}: Props) {
-	const [isLoading, setIsloading] = useState(false);
 	const [isBackendError, setIsBackendError] = useState(false);
 	const [errorMessageBackend, setErrorMessageBackend] = useState("");
 	const [success, setSuccess] = useState(false);
 	const {
-		state: { backendApiDevelopmentUrl },
-		dispatch,
+		state: { backendApiUrl },
 	} = useGeneralContext();
 
 	const value1 = getRandomNumberBetween(1, 10);
@@ -52,14 +50,11 @@ export default function Newsletter({}: Props) {
 			return;
 		}
 
-		setIsloading(true);
-
-		const url = `${backendApiDevelopmentUrl}/contact/newsletter`;
+		const url = `${backendApiUrl}/contact/newsletter`;
 		fetchAxios(url, "POST", { email: formData.email })
 			.then((p) => {
 				const { data } = p;
 
-				setIsloading(false);
 				setSuccess(false);
 				if (data.Invalid || data.zodErrors) {
 					setIsBackendError(true);
@@ -77,13 +72,11 @@ export default function Newsletter({}: Props) {
 					setErrorMessageBackend("");
 				}
 			})
-			.catch((error) => {
-				console.log(`line error    ${error}`);
-			});
+			.catch((_err) => {});
 	};
 
 	return (
-		<section className={`col-12 ${s.newsletter}`}>
+		<section className={` ${s.newsletter} col-12 `}>
 			<div className={s.newsLetterWrapper}>
 				<div className={s.textWrapper}>
 					<HeaderH4>Get notified when I publish new articles.</HeaderH4>
@@ -91,7 +84,7 @@ export default function Newsletter({}: Props) {
 				</div>
 				<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
 					<div className={s.formControl}>
-						<Input className={s.inputNewsletter} label="Email" type="email" propFunc={...register("email") as any} />
+						<Input className={s.inputNewsletter} label="Email" type="email" propFunc={register("email") as any} />
 						<Button className={s.btnNewsletter}>Subscribe</Button>
 					</div>
 					{success && <span className={s.successMessage}>You successfully registered in our newsletter</span>}

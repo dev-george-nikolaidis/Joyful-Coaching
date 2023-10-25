@@ -32,3 +32,34 @@
 .titleSpanText {
 	color: var(--c-a-400);
 }
+
+@media (max-width: 64em) {
+	.servicesWrapper {
+		display: flex;
+	}
+	.imgWrapper {
+		display: none;
+	}
+
+	.supportImg {
+		display: none;
+	}
+}
+
+@media (max-width: 30em) {
+	.servicesHome {
+		grid-column: 2 / 14;
+		margin-top: var(--mt-section-400);
+	}
+
+	.servicesTextContainer {
+		padding: 1rem;
+	}
+
+	.serviceContainer {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 0.5rem;
+	}
+}

@@ -3,10 +3,10 @@ import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Error404 from "./components/Error404/Error404";
 import ProtectedRoutes from "./components/ProtectedRoutes/ProtectedRoutes";
+import Spinner from "./components/Spinner/Spinner.tsx";
+import Home from "./pages/Home/Home.tsx";
 
 // lazy loading imports
-import Spinner from "./components/Spinner/Spinner";
-import Home from "./pages/Home/Home";
 
 const About = lazy(() => import("./pages/About/About.tsx"));
 const Services = lazy(() => import("./pages/Services/Services.tsx"));
@@ -52,7 +52,6 @@ const Router: React.FC = () => {
 							<Route path="/booking" element={<CheckBookings />} />
 							<Route path="/account-settings" element={<Account />} />
 							<Route path="/appointment-buy" element={<Stripe />} />
-							<Route path="/checkout-success" element={<StripeSuccess />} />
 						</Route>
 						{/* Error */}
 						<Route path="*" element={<Error404 />} />

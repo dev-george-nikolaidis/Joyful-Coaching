@@ -16,20 +16,19 @@ type Props = {};
 export default function BlogSinglePage({}: Props) {
 	const {
 		state: { currentBlogTitle },
-		dispatch,
 	} = useGeneralContext();
 
 	const [blog, setBlog] = useState(blogs.find((b) => b.title === currentBlogTitle));
 	const [filteredBlogs, setFilteredBlog] = useState(blogs.filter((b) => b.title != currentBlogTitle));
 
 	const [currentIndex, setCurrentIndex] = useState(0);
-	const [currentSlideBlog, setCurrentSlideBlog] = useState(filteredBlogs[currentIndex]);
+	const [_currentSlideBlog, setCurrentSlideBlog] = useState(filteredBlogs[currentIndex]);
 
 	function changeCurrentBlogTitle(title: string) {
 		setBlog(blogs.find((b) => b.title === title));
 		setFilteredBlog(blogs.filter((b) => b.title != title));
-		// setCurrentSlideBlog(filteredBlogs[currentIndex]);
 		window.scrollTo(0, 0);
+		// setCurrentSlideBlog(filteredBlogs[currentIndex]);
 	}
 
 	// const goToSlide = (slideIndex: number, title: string) => {

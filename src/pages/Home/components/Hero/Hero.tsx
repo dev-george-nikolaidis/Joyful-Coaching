@@ -10,7 +10,7 @@ type Props = {};
 
 export default function Hero({}: Props) {
 	return (
-		<div className={`col-12 ${s.hero}`}>
+		<div className={` ${s.hero} col-12`}>
 			<section className={s.heroTextWrapper}>
 				<HeadingH1>
 					Live life at the <span className={s.titleSpanText}>full</span> potential.

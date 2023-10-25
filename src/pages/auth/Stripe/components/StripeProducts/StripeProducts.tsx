@@ -13,7 +13,7 @@ import s from "./StripeProducts.module.scss";
 type Props = {};
 export default function StripeProducts({}: Props) {
 	const {
-		state: { backendApiDevelopmentUrl, self, sessionPacket },
+		state: { backendApiUrl, self, sessionPacket },
 		dispatch,
 	} = useGeneralContext();
 	const navigate = useNavigate();
@@ -31,7 +31,7 @@ export default function StripeProducts({}: Props) {
 	const handlerClick = (e: React.MouseEvent<HTMLSpanElement>) => {
 		e.preventDefault();
 
-		const url = `${backendApiDevelopmentUrl}/appointments/buy`;
+		const url = `${backendApiUrl}/appointments/buy`;
 
 		fetchAxios(url, "POST", { sessionPacket: sessionPacket }, self.token)
 			.then((r) => {
@@ -41,7 +41,7 @@ export default function StripeProducts({}: Props) {
 					window.location.href = r.data.url;
 				}
 			})
-			.catch((e) => {});
+			.catch((_err) => {});
 	};
 
 	return (

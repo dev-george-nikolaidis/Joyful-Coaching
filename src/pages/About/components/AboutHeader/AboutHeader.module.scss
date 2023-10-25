@@ -49,3 +49,41 @@
 .subParagraphText {
 	margin-bottom: 6rem;
 }
+
+@media (max-width: 64em) {
+	.imgWrapper {
+		position: absolute;
+		top: 10%;
+	}
+
+	.title {
+		width: 70%;
+	}
+
+	.aboutHederImg {
+		height: 30rem;
+	}
+}
+
+@media (max-width: 30em) {
+	.imgWrapper {
+		position: absolute;
+		top: 2rem;
+		left: 10%;
+		right: 10%;
+	}
+	.aboutHederImg {
+		height: 20rem;
+	}
+
+	.aboutTextContainer {
+		grid-column: 2 / 14;
+		margin-top: 25rem;
+	}
+	.title {
+		width: 100%;
+	}
+	.paragraphText {
+		width: 100%;
+	}
+}

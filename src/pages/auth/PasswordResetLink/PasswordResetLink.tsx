@@ -27,7 +27,7 @@ export default function PasswordResetLink({}: Props) {
 	const navigate = useNavigate();
 
 	const {
-		state: { backendApiDevelopmentUrl },
+		state: { backendApiUrl },
 		dispatch,
 	} = useGeneralContext();
 	const token = query.get("token");
@@ -41,7 +41,7 @@ export default function PasswordResetLink({}: Props) {
 	});
 	const onSubmit = (formData: resetPasswordLogin) => {
 		setIsloading(true);
-		const url = `${backendApiDevelopmentUrl}/users/password-rest-login`;
+		const url = `${backendApiUrl}/users/password-rest-login`;
 
 		fetchAxios(url, "PUT", { password: formData.password, token: token }, token!)
 			.then((p) => {
@@ -62,7 +62,7 @@ export default function PasswordResetLink({}: Props) {
 					navigate("/");
 				}
 			})
-			.catch((error) => {});
+			.catch((_err) => {});
 	};
 
 	return (

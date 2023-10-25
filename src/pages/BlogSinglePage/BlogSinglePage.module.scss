@@ -4,7 +4,6 @@
 
 .blogSinglePageWrapper {
 	grid-column: 2 / 14;
-
 	margin: 8rem auto;
 	width: 70%;
 	background-color: var(--c-p-400);
@@ -110,4 +109,28 @@
 .arrowLeft {
 	left: 0%;
 	top: 50%;
+}
+
+@media (max-width: 64em) {
+	.blogSinglePage {
+		grid-column: 1 / -1;
+	}
+
+	.blogSinglePageWrapper {
+		width: 100%;
+		grid-column: 1 / -1;
+	}
+}
+
+@media (max-width: 30em) {
+	.arrow {
+		font-size: 3rem;
+	}
+
+	.arrowRight {
+		right: -12%;
+	}
+	.arrowLeft {
+		left: -12%;
+	}
 }

@@ -36,7 +36,6 @@
 
 .btnWrapper {
 	width: 10%;
-	// margin-left: auto;
 	margin-right: 2rem;
 }
 
@@ -46,4 +45,32 @@
 
 .btnDisable:hover {
 	background: var(--c-s-400);
+}
+
+@media (max-width: 64em) {
+	.dateContainer {
+		height: 8rem;
+		margin-bottom: 2rem;
+	}
+
+	.textWrapper {
+		display: flex;
+		flex-direction: column;
+		margin-left: 1rem;
+	}
+
+	.dateText {
+		width: 15em;
+		margin: 0;
+	}
+	.dateSpan {
+		font-weight: 600;
+		color: var(--c-a-400);
+	}
+
+	.btnWrapper {
+		width: 20%;
+
+		margin-right: 2rem;
+	}
 }

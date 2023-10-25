@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../../assets/img/logo.svg";
 import FacebookIcon from "../../../assets/img/socials/facebook.svg";
 import InstagramIcon from "../../../assets/img/socials/instagram.svg";
@@ -11,14 +11,21 @@ import ExpressIcon from "../../../assets/img/payment/american-express.svg";
 import MastercardIcon from "../../../assets/img/payment/master-card.svg";
 import StripeIcon from "../../../assets/img/payment/stripe.svg";
 import VisaIcon from "../../../assets/img/payment/visa.svg";
+import { ActionTypes } from "../../../context/Actions";
+import { useGeneralContext } from "../../../context/GeneralContext";
 import { blogs } from "../../../data/data";
 import HeaderH4 from "../../HeaderH4/HeaderH4.";
 type Props = {};
 
 export default function Footer({}: Props) {
+	const { dispatch } = useGeneralContext();
+	const location = useLocation();
+	function handlerBlogNavigation(title: string) {
+		dispatch({ type: ActionTypes.UPDATE_CURRENT_BLOG, payload: title });
+	}
 	const displayPopularArticles = blogs.map((a, i) => {
 		return (
-			<Link to={`/blog/post/${a.id}`} key={i}>
+			<Link to={`/blog/post/${a.id}`} key={i} onClick={() => handlerBlogNavigation(a.title)}>
 				<li>{a.title}</li>
 			</Link>
 		);
@@ -30,7 +37,7 @@ export default function Footer({}: Props) {
 				<div className={s.subFooterContainer}>
 					<div className={s.logoContainer}>
 						<div className={s.navLogoWrapper}>
-							<img src={Logo} alt="" />
+							<img src={Logo} alt="" className={s.logo} />
 							<span className={s.logoText}>Joyful Coaching</span>
 						</div>
 						<Paragraph500 className={s.telephoneText}>Telephone: +43 660 096 9080</Paragraph500>
@@ -43,10 +50,12 @@ export default function Footer({}: Props) {
 						</div>
 					</div>
 					<div className={s.linksContainer}>
-						<div>
-							<HeaderH4>Popular articles</HeaderH4>
-							<ul className={s.pages}>{displayPopularArticles}</ul>
-						</div>
+						{!location.pathname.includes("blog") && (
+							<div>
+								<HeaderH4>Popular articles</HeaderH4>
+								<ul className={s.pages}> {displayPopularArticles}</ul>
+							</div>
+						)}
 						<div>
 							<HeaderH4>Pages</HeaderH4>
 							<ul className={s.pages}>

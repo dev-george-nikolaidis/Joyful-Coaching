@@ -23,7 +23,7 @@ export default function ServicesHome({}: Props) {
 				How can I <span className={s.titleSpanText}>support</span> your goals
 			</SectionTitle>
 			<div className={s.servicesWrapper}>
-				<figure>
+				<figure className={s.imgWrapper}>
 					<Img
 						src="https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879511/Joyful%20Coaching/support1_dir6ab.webp"
 						alt="a woden art statue holds a tree "

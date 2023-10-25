@@ -10,14 +10,13 @@ export default function useFetchAxios<T>(url: string, method = "get", data?: any
 	useEffect(() => {
 		return () => {
 			const fetchData = async () => {
-				("useFetchAxios fetching");
 				try {
 					const res = await axios_obj({
 						method: method,
 						url: url,
 						data: data,
 						headers: {
-							Authorization: `Bearer  ${token}`,
+							Authorization: `Bearer ${token}`,
 						},
 					});
 					setResponse(res.data);

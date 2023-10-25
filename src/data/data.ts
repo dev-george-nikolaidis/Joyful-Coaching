@@ -255,7 +255,7 @@ export const blogs = [
 	{
 		id: 5,
 		title: `Clear Intentions`,
-		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1697879803/Joyful%20Coaching/blog/clear_s5qjbl.webp",
+		urlImg: "https://res.cloudinary.com/dsrzlxnkc/image/upload/v1698090980/Joyful%20Coaching/blog/nubelson-fernandes-Q1b9mMFSaX8-unsplash_znwvti.webp",
 		text: `n the journey of life, clear intentions act as our guiding light, illuminating our path to success. When we set clear intentions, we're essentially defining our aspirations, outlining our objectives, and charting a course toward our desired destinations.
 
 		These intentions give us a sense of purpose, serving as a constant reminder of what we're working toward. They provide the clarity needed to focus our energy and efforts on what truly matters. With clear intentions, we can bypass distractions and stay committed to our chosen course.
@@ -356,19 +356,18 @@ export const questions = [
 	},
 ];
 
-export const companies = [
-	{ name: "Layers", urlImg: "/src/assets/img/companies/layers.svg" },
-	{
-		name: "Sisyphus",
-		urlImg: "/src/assets/img/companies/sisyphus.svg",
-	},
-	{
-		name: "Circooles",
-		urlImg: "/src/assets/img/companies/circooles.svg",
-	},
-	{ name: "Catalog", urlImg: "/src/assets/img/companies/catalog.svg" },
-	{ name: "Quotient", urlImg: "/src/assets/img/companies/quotient.svg" },
-];
+// export const companies = [
+// 	{ name: "Layers", urlImg: "/src/assets/img/companies/layers.svg" },
+// 	{
+// 		name: "Sisyphus",
+// 		urlImg: "/src/assets/img/companies/sisyphus.svg",
+// 	},
+// 	{
+// 		name: "Circooles",
+// 		urlImg: "/src/assets/img/companies/circooles.svg",
+// 	},
+// 	{ name: "Catalog", urlImg: "/src/assets/img/companies/catalog.svg" },
+// ];
 
 export const maxAvailableAppointments = [
 	{
