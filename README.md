@@ -132,7 +132,7 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
   - [ ] Multi-language Support
   - [ ] Unit Testing
 
-- <strong>Backend</strong>roadmap
+- <strong>Backend</strong> roadmap
 
   - [x] Online
   - [x] User register/Login functionality with JWT
