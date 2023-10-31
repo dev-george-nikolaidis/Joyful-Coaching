@@ -1,3 +1,4 @@
+import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeaderH3 from "../../../../components/HeaderH3/HeaderH3";
@@ -15,23 +16,36 @@ export default function AccountInfo({}: Props) {
 	const [refetch, setRefetch] = useState(false);
 	const [isLoading, setIsLoading] = useState(false);
 	const {
-		state: { backendApiUrl, self, showPopupWindow, accountInfoPayload },
+		state: { backendApiUrl, self, showPopupWindow, accountInfoPayload, refreshToken },
 		dispatch,
 	} = useGeneralContext();
 
 	let url = `${backendApiUrl}/users/account`;
-
 	useEffect(() => {
 		setIsLoading(true);
-		fetchAxios(url, "POST", { token: self.token }, self.token)
-			.then((payload) => {
-				setIsLoading(false);
-				setRefetch(false);
-				dispatch({ type: ActionTypes.FETCH_ACCOUNT_PAYLOAD, payload: payload.data });
+
+		const refreshUrl = `${backendApiUrl}/auth/refresh-token`;
+		fetchAxios(refreshUrl, "POST", { refreshToken: refreshToken }, self)
+			.then((d) => {
+				let currentDate = new Date();
+				const decodedToken = jwtDecode(self);
+				console.log(decodedToken.exp!);
+				console.log(decodedToken.exp! * 1000 < currentDate.getTime());
+				//   localStorage.setItem("self",)
+				fetchAxios(url, "POST", { token: self }, self)
+					.then((payload) => {
+						setIsLoading(false);
+						setRefetch(false);
+						dispatch({ type: ActionTypes.FETCH_ACCOUNT_PAYLOAD, payload: payload.data });
+					})
+					.catch((_err) => {
+						setIsLoading(false);
+					});
 			})
-			.catch((_err) => {
-				setIsLoading(false);
+			.catch((e) => {
+				console.log(e);
 			});
+
 		return () => {};
 	}, [refetch]);
 

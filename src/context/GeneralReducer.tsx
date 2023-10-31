@@ -7,11 +7,14 @@ export const reducer: ReducerType = (state, action) => {
 	switch (action.type) {
 		case ActionTypes.GET_SELF:
 			const user = localStorage.getItem("self");
+			const auth = localStorage.getItem("refresh");
 			const parsedUser = JSON.parse(user as string);
-
+			const parsedAuth = JSON.parse(auth as string);
+			console.log(`parsedUser ${parsedUser}`);
 			return {
 				...state,
 				self: parsedUser,
+				refreshToken: parsedAuth,
 			};
 		case ActionTypes.UPDATE_PASSWORD:
 			const updatedUser = localStorage.getItem("self");

@@ -15,7 +15,6 @@ type Props = {};
 export default function Home({}: Props) {
 	const [searchParams] = useSearchParams();
 	const navigate = useNavigate();
-
 	useEffect(() => {
 		if (searchParams.toString() === "success=true") {
 			navigate("/checkout-success");

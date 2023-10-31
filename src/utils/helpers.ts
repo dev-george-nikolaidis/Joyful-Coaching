@@ -46,7 +46,34 @@ export const contactSchema = yup.object().shape({
 	textarea: yup.string().min(20, "Message must be at list 20 characters long.").required("Message is required"),
 });
 
-export const fetchAxios = async (url: string, method = "get", data?: any, token?: string): Promise<any> => {
+export const fetchAxios = async (
+	url: string,
+	method = "get",
+	data?: any,
+	token?: string
+	// withRefreshToken?: boolean,
+	// backendApiUrl?: string,
+	// refreshToken?: string
+): Promise<any> => {
+	// if (withRefreshToken) {
+	// 	const axiosJWT = axios.create();
+	// 	axiosJWT.interceptors.request.use(
+	// 		async (config) => {
+	// 			let currentDate = new Date();
+	// 			const decodedToken = jwtDecode(token ? token : "")!;
+	// 			if (decodedToken.exp! * 1000 < currentDate.getTime()) {
+	// 				config.headers["authorization"] = "Bearer " + token;
+	// 				const data = await axios.post(`${backendApiUrl}/auth/refresh-token`, { refreshToken: refreshToken });
+
+	// 			}
+	// 			return config;
+	// 		},
+	// 		(error) => {
+	// 			return Promise.reject(error);
+	// 		}
+	// 	);
+	// }
+
 	return await axios({
 		method: method,
 		url: url,

@@ -2,12 +2,14 @@ import config from "../../config";
 const user = localStorage.getItem("self");
 const parsedUser = JSON.parse(user as string);
 
+const auth = localStorage.getItem("refresh");
+const parsedAuth = JSON.parse(auth as string);
 const { production } = config;
 
 export interface GeneralContextState {
 	isModalOpen: boolean;
 	backendApiUrl: string;
-	self: Self;
+	self: string;
 	theme: string;
 	displayThemeModal: boolean;
 	showPopupWindow: boolean;
@@ -19,6 +21,7 @@ export interface GeneralContextState {
 	accountInfoPayload: AccountPayload | null;
 	currentBlogTitle: string;
 	displayHamburgerMenu: boolean;
+	refreshToken: string;
 }
 
 export const initialState: GeneralContextState = {
@@ -36,6 +39,7 @@ export const initialState: GeneralContextState = {
 	rerenderAccount: false,
 	currentBlogTitle: "",
 	displayHamburgerMenu: true,
+	refreshToken: parsedAuth,
 };
 
 type Self = {

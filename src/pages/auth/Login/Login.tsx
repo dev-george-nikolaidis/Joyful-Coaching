@@ -64,10 +64,10 @@ export default function Login({}: Props) {
 					setErrorMessageBackend("Invalid credentials");
 					return;
 				}
-
 				if (data.token) {
 					document.body.style.overflow = "auto";
-					localStorage.setItem("self", JSON.stringify(data));
+					localStorage.setItem("self", JSON.stringify(data.token));
+					localStorage.setItem("refresh", JSON.stringify(data.refreshToken));
 					dispatch({ type: ActionTypes.GET_SELF });
 					setIsBackendError(false);
 					setErrorMessageBackend("");
