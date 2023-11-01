@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "../../../assets/img/logo.svg";
 import { ActionTypes } from "../../../context/Actions";
 import { useGeneralContext } from "../../../context/GeneralContext";
+import { fetchAxios } from "../../../utils/helpers";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import s from "./Navigation.module.scss";
 type Props = {};
@@ -12,7 +13,7 @@ export default function Navigation({}: Props) {
 	const [showAccountModal, setShowAccountModal] = useState(false);
 
 	const {
-		state: { theme, self },
+		state: { theme, self, backendApiUrl },
 		dispatch,
 	} = useGeneralContext();
 
@@ -23,6 +24,9 @@ export default function Navigation({}: Props) {
 
 	const logout = () => {
 		dispatch({ type: ActionTypes.LOGOUT, payload: { token: "" } });
+		const url = `${backendApiUrl}/users/logout`;
+		fetchAxios(url, "POST", {}, self);
+		console.log("You have been logged out");
 	};
 
 	return (

@@ -1,11 +1,10 @@
-import { jwtDecode } from "jwt-decode";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HeaderH3 from "../../../../components/HeaderH3/HeaderH3";
 import Spinner from "../../../../components/Spinner/Spinner";
 import { ActionTypes } from "../../../../context/Actions";
 import { useGeneralContext } from "../../../../context/GeneralContext";
-import { fetchAxios } from "../../../../utils/helpers";
+import { fetchAxios, fetchRefreshToken2 } from "../../../../utils/helpers";
 import AccountAppointments from "../AccountAppointments/AccountAppointments";
 import AccountPasswordChange from "../AccountPasswordChange/AccountPasswordChange";
 import s from "./AccountInfo.module.scss";
@@ -19,34 +18,40 @@ export default function AccountInfo({}: Props) {
 		state: { backendApiUrl, self, showPopupWindow, accountInfoPayload, refreshToken },
 		dispatch,
 	} = useGeneralContext();
-
-	let url = `${backendApiUrl}/users/account`;
 	useEffect(() => {
-		setIsLoading(true);
-
-		const refreshUrl = `${backendApiUrl}/auth/refresh-token`;
-		fetchAxios(refreshUrl, "POST", { refreshToken: refreshToken }, self)
-			.then((d) => {
-				let currentDate = new Date();
-				const decodedToken = jwtDecode(self);
-				console.log(decodedToken.exp!);
-				console.log(decodedToken.exp! * 1000 < currentDate.getTime());
-				//   localStorage.setItem("self",)
-				fetchAxios(url, "POST", { token: self }, self)
-					.then((payload) => {
-						setIsLoading(false);
-						setRefetch(false);
-						dispatch({ type: ActionTypes.FETCH_ACCOUNT_PAYLOAD, payload: payload.data });
-					})
-					.catch((_err) => {
-						setIsLoading(false);
-					});
-			})
-			.catch((e) => {
-				console.log(e);
-			});
-
-		return () => {};
+		return () => {
+			// let currentDate = new Date();
+			// const refreshUrl = `${backendApiUrl}/auth/refresh-token`;
+			// const decodedToken = jwtDecode(self);
+			// const currentTimeTimestamp = currentDate.getTime();
+			// console.log(decodedToken.exp!);
+			// const accessTokenTimestamp = decodedToken.exp! * 1000;
+			// console.log(accessTokenTimestamp < currentTimeTimestamp);
+			// console.log(`accessTokenTimestamp    ${accessTokenTimestamp}`);
+			// console.log(`currentTimeTimestamp    ${currentTimeTimestamp}`);
+			// if (accessTokenTimestamp < currentDate.getTime()) {
+			// 	fetchAxios(refreshUrl, "POST", { refreshToken: refreshToken }, self).then((d) => {
+			// 		console.log("fetching refresh tokens");
+			// 		console.log(`line  d.token  ${d.data.token}`);
+			// 		if (d.data.token) {
+			// 			localStorage.setItem("self", JSON.stringify(d.data.token));
+			// 			localStorage.setItem("refresh", JSON.stringify(d.data.refreshToken));
+			// 		}
+			// 	});
+			// }
+			setIsLoading(true);
+			fetchRefreshToken2(self, refreshToken);
+			let url = `${backendApiUrl}/users/account`;
+			fetchAxios(url, "POST", { token: self }, self)
+				.then((payload) => {
+					setIsLoading(false);
+					setRefetch(false);
+					dispatch({ type: ActionTypes.FETCH_ACCOUNT_PAYLOAD, payload: payload.data });
+				})
+				.catch((_err) => {
+					setIsLoading(false);
+				});
+		};
 	}, [refetch]);
 
 	const handlerPasswordChange = () => {

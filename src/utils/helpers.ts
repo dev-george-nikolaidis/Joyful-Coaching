@@ -1,6 +1,9 @@
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 import { lazy } from "react";
 import * as yup from "yup";
+import config from "../../config";
+
 export const registerUserSchema = yup.object().shape({
 	email: yup.string().email("Please insert a valid email address").required("Email is required"),
 	password: yup
@@ -46,34 +49,70 @@ export const contactSchema = yup.object().shape({
 	textarea: yup.string().min(20, "Message must be at list 20 characters long.").required("Message is required"),
 });
 
-export const fetchAxios = async (
-	url: string,
-	method = "get",
-	data?: any,
-	token?: string
-	// withRefreshToken?: boolean,
-	// backendApiUrl?: string,
-	// refreshToken?: string
-): Promise<any> => {
-	// if (withRefreshToken) {
-	// 	const axiosJWT = axios.create();
-	// 	axiosJWT.interceptors.request.use(
-	// 		async (config) => {
-	// 			let currentDate = new Date();
-	// 			const decodedToken = jwtDecode(token ? token : "")!;
-	// 			if (decodedToken.exp! * 1000 < currentDate.getTime()) {
-	// 				config.headers["authorization"] = "Bearer " + token;
-	// 				const data = await axios.post(`${backendApiUrl}/auth/refresh-token`, { refreshToken: refreshToken });
+export const fetchRefreshToken2 = async (accessToken: string, refreshToken: string) => {
+	const axiosJWT = axios.create();
 
-	// 			}
-	// 			return config;
-	// 		},
-	// 		(error) => {
-	// 			return Promise.reject(error);
-	// 		}
-	// 	);
-	// }
+	axiosJWT.interceptors.request.use(
+		async (c) => {
+			let currentDate = new Date();
+			const decodedToken = jwtDecode(accessToken);
+			const currentTimeTimestamp = currentDate.getTime();
+			const accessTokenTimestamp = decodedToken.exp! * 1000;
+			if (accessTokenTimestamp < currentTimeTimestamp) {
+				c.headers["authorization"] = "Bearer " + accessToken;
+				try {
+					const backendApiUrl = config.production ? "https://joyful-coaching-api.onrender.com/api/v1" : "http://localhost:3001/api/v1";
+					const url = `${backendApiUrl}/auth/refresh-token`;
+					const d = await axios.post(url, { refreshToken: refreshToken });
+					console.log(d);
+					if (d.data.token) {
+						console.log(d.data.token);
+						localStorage.setItem("self", JSON.stringify(d.data.token));
+						localStorage.setItem("refresh", JSON.stringify(d.data.refreshToken));
+					}
+				} catch (err) {
+					console.log(err);
+				}
+			}
+			return c;
+		},
+		(error) => {
+			return Promise.reject(error);
+		}
+	);
+};
 
+export const fetchRefreshToken = async (accessToken: string, refreshToken: string) => {
+	try {
+		if (accessToken) {
+			let currentDate = new Date();
+			const decodedToken = jwtDecode(accessToken);
+			const currentTimeTimestamp = currentDate.getTime();
+			const accessTokenTimestamp = decodedToken.exp! * 1000;
+			// console.log(`currentTimeTimestamp ${currentTimeTimestamp}`);
+			// console.log(`accessTokenTimestamp ${accessTokenTimestamp}`);
+
+			if (accessTokenTimestamp < currentTimeTimestamp) {
+				console.log("fetching refresh tokens");
+				const backendApiUrl = config.production ? "https://joyful-coaching-api.onrender.com/api/v1" : "http://localhost:3001/api/v1";
+				const url = `${backendApiUrl}/auth/refresh-token`;
+
+				fetchAxios(url, "POST", { refreshToken: refreshToken }).then((d) => {
+					console.log(d);
+					if (d.data.token) {
+						console.log(d.data.token);
+						localStorage.setItem("self", JSON.stringify(d.data.token));
+						localStorage.setItem("refresh", JSON.stringify(d.data.refreshToken));
+					}
+				});
+			}
+		}
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+export const fetchAxios = async (url: string, method = "get", data?: any, token?: string): Promise<any> => {
 	return await axios({
 		method: method,
 		url: url,
@@ -94,9 +133,6 @@ export const fetchAxios = async (
 			};
 		});
 };
-
-// "Access-Control-Allow-Origin": "*",
-// "Content-Type": "application/json",
 
 export function calculateAppointmentTime(hour: string, minutes: string) {
 	const date = new Date();
