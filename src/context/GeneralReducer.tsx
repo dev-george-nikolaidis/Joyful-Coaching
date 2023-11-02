@@ -7,18 +7,15 @@ export const reducer: ReducerType = (state, action) => {
 	switch (action.type) {
 		case ActionTypes.GET_SELF:
 			const user = localStorage.getItem("self");
-			const auth = localStorage.getItem("refresh");
-			const parsedUser = JSON.parse(user!);
-			const parsedAuth = JSON.parse(auth!);
+			const parsedUser = JSON.parse(user as string);
 
 			return {
 				...state,
 				self: parsedUser,
-				refreshToken: parsedAuth,
 			};
 		case ActionTypes.UPDATE_PASSWORD:
 			const updatedUser = localStorage.getItem("self");
-			const updatedParsedUser = JSON.parse(updatedUser!);
+			const updatedParsedUser = JSON.parse(updatedUser as string);
 			return {
 				...state,
 				self: {
@@ -27,7 +24,6 @@ export const reducer: ReducerType = (state, action) => {
 			};
 		case ActionTypes.LOGOUT:
 			localStorage.removeItem("self");
-			localStorage.removeItem("refresh");
 			return {
 				...state,
 				self: null,
