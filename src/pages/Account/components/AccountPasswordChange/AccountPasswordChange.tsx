@@ -37,6 +37,11 @@ export default function AccountPasswordChange({}: Props) {
 				setIsLoading(true);
 				fetchAxios(`${backendApiUrl}/users/password-update`, "PUT", { password: password }, self.token)
 					.then((r) => {
+						// jwt expired error handling
+						if (r.data.tokenExpiredError) {
+							dispatch({ type: ActionTypes.LOGOUT, payload: { token: "" } });
+						}
+
 						const self = {
 							token: r.data,
 						};

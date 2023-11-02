@@ -144,7 +144,7 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
 
 ## App Current Version
 
--- 0.40.0
+-- 0.42.0
 
 ## Development
 

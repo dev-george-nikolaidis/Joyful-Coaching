@@ -35,6 +35,11 @@ export default function StripeProducts({}: Props) {
 
 		fetchAxios(url, "POST", { sessionPacket: sessionPacket }, self.token)
 			.then((r) => {
+				// jwt expired error handling
+				if (r.data.tokenExpiredError) {
+					dispatch({ type: ActionTypes.LOGOUT, payload: { token: "" } });
+				}
+
 				dispatch({ type: ActionTypes.PROCESSING_PAYMENT });
 				localStorage.setItem("session_id", JSON.stringify(r.data.session_id));
 				if (r.data.url) {

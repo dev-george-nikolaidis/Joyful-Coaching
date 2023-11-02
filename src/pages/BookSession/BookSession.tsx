@@ -42,15 +42,18 @@ export default function BookSession({}: Props) {
 		setIsLoading(true);
 
 		fetchAxios(url, "POST", { appointmentId: appointment, appointmentDate: formatDateAccuracy(pickedDate, "04", "00") }, self.token)
-			.then((payload) => {
+			.then((p) => {
 				setIsLoading(false);
-
-				if (payload.data.status == 402) {
+				// jwt expired error handling
+				if (p.data.tokenExpiredError) {
+					dispatch({ type: ActionTypes.LOGOUT, payload: { token: "" } });
+				}
+				if (p.data.status == 402) {
 					setErrorMessage("Not enough sessions.");
 					return;
 				}
 
-				if (payload.data === "Success") {
+				if (p.data === "Success") {
 					dispatch({ type: ActionTypes.TOGGLE_POPUP_MODAL });
 				}
 			})

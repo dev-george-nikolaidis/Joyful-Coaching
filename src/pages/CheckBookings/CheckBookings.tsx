@@ -39,6 +39,11 @@ export default function CheckBookings({}: Props) {
 		setIsLoading(true);
 		fetchAxios(url, "POST", { data: formatDateAccuracy(date, "04", "00") }, self.token)
 			.then((r) => {
+				// jwt expired error handling
+				if (r.data.tokenExpiredError) {
+					dispatch({ type: ActionTypes.LOGOUT, payload: { token: "" } });
+				}
+
 				if (r.data) {
 					dispatch({ type: ActionTypes.CHECK_APPOINTMENTS, payload: { pickedDate: formatDateAccuracy(date, "04", "00"), dataPayload: r.data } });
 					setIsLoading(false);

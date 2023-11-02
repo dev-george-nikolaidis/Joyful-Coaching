@@ -1,5 +1,6 @@
 import ButtonCancel from "../../../../components/ButtonCancel/ButtonCancel";
 import Paragraph500 from "../../../../components/Paragraph500/Paragraph500";
+import { ActionTypes } from "../../../../context/Actions";
 import { useGeneralContext } from "../../../../context/GeneralContext";
 import { days, months } from "../../../../data/data";
 import { convertAppointmentNumberToStringTime, fetchAxios, formatDateAccuracy } from "../../../../utils/helpers";
@@ -14,6 +15,7 @@ type Props = {
 export default function AccountAppointments({ setRefetch, setIsLoading }: Props) {
 	const {
 		state: { backendApiUrl, self, accountInfoPayload },
+		dispatch,
 	} = useGeneralContext();
 	const todayDate = new Date();
 	const todayTimestamp = new Date(todayDate);
@@ -31,6 +33,10 @@ export default function AccountAppointments({ setRefetch, setIsLoading }: Props)
 			setIsLoading(true);
 			fetchAxios(url, "DELETE", { appointmentId: appointment, appointmentDate: formatDateAccuracy(date, "04", "00") }, self.token)
 				.then((_p) => {
+					// jwt expired error handling
+					if (_p.data.tokenExpiredError) {
+						dispatch({ type: ActionTypes.LOGOUT, payload: { token: "" } });
+					}
 					setRefetch(true);
 					setIsLoading(false);
 				})

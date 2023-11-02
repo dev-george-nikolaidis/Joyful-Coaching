@@ -49,6 +49,11 @@ export default function PasswordResetLink({}: Props) {
 
 				setIsloading(false);
 
+				// jwt expired error handling
+				if (p.data.tokenExpiredError) {
+					dispatch({ type: ActionTypes.LOGOUT, payload: { token: "" } });
+				}
+
 				if (data.Invalid || data.zodErrors) {
 					setIsBackendError(true);
 					setErrorMessageBackend(data.invalid);

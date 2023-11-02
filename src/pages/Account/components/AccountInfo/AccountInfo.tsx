@@ -24,10 +24,15 @@ export default function AccountInfo({}: Props) {
 	useEffect(() => {
 		setIsLoading(true);
 		fetchAxios(url, "POST", { token: self.token }, self.token)
-			.then((payload) => {
+			.then((p) => {
+				// jwt expired error handling
+				if (p.data.tokenExpiredError) {
+					dispatch({ type: ActionTypes.LOGOUT, payload: { token: "" } });
+				}
+
 				setIsLoading(false);
 				setRefetch(false);
-				dispatch({ type: ActionTypes.FETCH_ACCOUNT_PAYLOAD, payload: payload.data });
+				dispatch({ type: ActionTypes.FETCH_ACCOUNT_PAYLOAD, payload: p.data });
 			})
 			.catch((_err) => {
 				setIsLoading(false);
