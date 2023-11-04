@@ -3,7 +3,7 @@
 	justify-self: center;
 	background-color: var(--bg-form-400);
 	width: 40%;
-	min-height: 60rem;
+	height: 100%;
 	border-radius: 2rem;
 	margin-top: 6rem;
 }
@@ -12,6 +12,43 @@
 	margin: 0 auto;
 	width: 4rem;
 	margin-top: 2rem;
+}
+
+.authSocialContainer {
+	display: flex;
+	justify-content: space-evenly;
+	gap: 2rem;
+	margin-top: 4rem;
+}
+.socialMediaControl {
+	width: 15rem;
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--b-btn-form-400);
+	padding: 1rem;
+	cursor: pointer;
+}
+
+.authIcon {
+	width: 3rem;
+	margin-right: 1rem;
+}
+.authText {
+	color: var(--c-text-400);
+	font-size: 1.8rem;
+}
+
+.line {
+	width: 80%;
+	text-align: center;
+	border-bottom: 1px solid #000;
+	line-height: 0.1em;
+	// margin: 1rem 0 2rem;
+	margin: 4rem auto 0 auto;
+}
+.lineText {
+	background-color: var(--bg-form-400);
+	padding: 0 10px;
 }
 
 .form {
@@ -49,5 +86,22 @@
 	.login {
 		width: 100%;
 		min-height: 50rem;
+	}
+
+	.authSocialContainer {
+		gap: 1rem;
+		margin-top: 4rem;
+	}
+
+	.socialMediaControl {
+		width: 13rem;
+	}
+
+	.authIcon {
+		width: 2rem;
+		margin-right: 0.5rem;
+	}
+	.authText {
+		font-size: 1.4rem;
 	}
 }

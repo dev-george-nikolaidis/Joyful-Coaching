@@ -3,6 +3,9 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
 import { yupResolver } from "@hookform/resolvers/yup";
+import FacebookSvg from "../../../assets/img/socials/facebook.svg";
+import GoogleSvg from "../../../assets/img/socials/google.svg";
+import LinkedIn from "../../../assets/img/socials/linkedin.svg";
 import HeaderH4 from "../../../components/HeaderH4/HeaderH4.";
 import Input from "../../../components/Input/Input";
 import LoginButton from "../../../components/LoginButton/LoginButton";
@@ -26,6 +29,7 @@ export default function Login({}: Props) {
 	const [isLoading, setIsloading] = useState(false);
 	const [isBackendError, setIsBackendError] = useState(false);
 	const [errorMessageBackend, setErrorMessageBackend] = useState("");
+
 	let navigate = useNavigate();
 	const {
 		state: { backendApiUrl },
@@ -38,6 +42,19 @@ export default function Login({}: Props) {
 	} = useForm<LoginUserT>({
 		resolver: yupResolver(loginUserSchema),
 	});
+
+	const handleAuth = (authProvider: string) => {
+		console.log(authProvider);
+		if (authProvider === "google") {
+			window.location.href = `${backendApiUrl}/users/auth/google`;
+		}
+		if (authProvider === "linkedin") {
+			window.location.href = `${backendApiUrl}/users/auth/linkedin`;
+		}
+		if (authProvider === "facebook") {
+			window.location.href = `${backendApiUrl}/users/auth/facebook`;
+		}
+	};
 
 	// Handle onSubmit
 	const onSubmit = (formData: LoginUserT) => {
@@ -68,9 +85,9 @@ export default function Login({}: Props) {
 				if (data.token) {
 					document.body.style.overflow = "auto";
 					localStorage.setItem("self", JSON.stringify(data));
-					dispatch({ type: ActionTypes.GET_SELF });
 					setIsBackendError(false);
 					setErrorMessageBackend("");
+					dispatch({ type: ActionTypes.GET_SELF });
 					navigate("/");
 				}
 			})
@@ -93,6 +110,23 @@ export default function Login({}: Props) {
 				{isLoading && <Spinner />}
 				<section className={s.login}>
 					<Logo className={s.logoImg} />
+					<div className={s.authSocialContainer}>
+						<div className={s.socialMediaControl} onClick={() => handleAuth("facebook")}>
+							<img src={FacebookSvg} alt="google svg image for social media register" className={s.authIcon} />
+							<span className={s.authText}>Facebook</span>
+						</div>
+						<div className={s.socialMediaControl} onClick={() => handleAuth("google")}>
+							<img src={GoogleSvg} alt="google svg image for social media register" className={s.authIcon} />
+							<span className={s.authText}>Google</span>
+						</div>
+						<div className={s.socialMediaControl} onClick={() => handleAuth("linkedin")}>
+							<img src={LinkedIn} alt="google svg image for social media register" className={s.authIcon} />
+							<span className={s.authText}>Linkedin</span>
+						</div>
+					</div>
+					<HeaderH4 className={s.line}>
+						<span className={s.lineText}>OR</span>
+					</HeaderH4>
 					<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
 						<HeaderH4>Login</HeaderH4>
 

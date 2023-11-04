@@ -19,11 +19,6 @@ export default function StripeSuccess({}: Props) {
 	const url = `${backendApiUrl}/appointments/confirm`;
 	const session_id = localStorage.getItem("session_id");
 
-	// const { response, isLoading } = useFetchAxios(url, "POST", { session_id: JSON.parse(session_id as string) }, self.token);
-	// if (response === "Update was a success!") {
-	// 	localStorage.removeItem("session_id");
-	// }
-
 	useEffect(() => {
 		return () => {
 			setIsloading(true);

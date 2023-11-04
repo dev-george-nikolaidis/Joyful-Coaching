@@ -22,6 +22,7 @@ const CheckBookings = lazy(() => import("./pages/CheckBookings/CheckBookings.tsx
 const BookSession = lazy(() => import("./pages/BookSession/BookSession.tsx"));
 const BlogSinglePage = lazy(() => import("./pages/BlogSinglePage/BlogSinglePage.tsx"));
 const Account = lazy(() => import("./pages/Account/Account.tsx"));
+const OAuth2 = lazy(() => import("./pages/OAuth2/OAuth2.tsx"));
 
 const Router: React.FC = () => {
 	return (
@@ -40,6 +41,7 @@ const Router: React.FC = () => {
 						<Route path="/contact" element={<Contact />} />
 						<Route path="/user/password-rest" element={<PasswordReset />} />
 						<Route path="/user/enter-new-password" element={<PasswordResetLink />} />
+						<Route path="/user/OAuth2" element={<OAuth2 />} />
 
 						{/* Protected */}
 						<Route element={<ProtectedRoutes path="/" withPayment={true} />}>

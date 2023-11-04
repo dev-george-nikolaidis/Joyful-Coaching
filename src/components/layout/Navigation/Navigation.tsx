@@ -12,7 +12,7 @@ export default function Navigation({}: Props) {
 	const [showAccountModal, setShowAccountModal] = useState(false);
 
 	const {
-		state: { theme, self, backendApiUrl },
+		state: { theme, self },
 		dispatch,
 	} = useGeneralContext();
 

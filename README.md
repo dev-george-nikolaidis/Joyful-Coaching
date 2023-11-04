@@ -112,7 +112,7 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
 
   - [x] Online
   - [x] User register JWT authentication
-  - [x] User register/Login client validation
+  - [x] User register/Login client validation with local strategy and Google OAuth 2.0
   - [x] User password JWT reset
   - [x] Working Contact form
   - [x] Working newsletter form

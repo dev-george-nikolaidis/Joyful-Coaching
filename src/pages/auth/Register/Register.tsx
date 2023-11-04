@@ -4,6 +4,9 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 import ReCAPTCHA from "react-google-recaptcha";
+import FacebookSvg from "../../../assets/img/socials/facebook.svg";
+import GoogleSvg from "../../../assets/img/socials/google.svg";
+import LinkedIn from "../../../assets/img/socials/linkedin.svg";
 import HeaderH3 from "../../../components/HeaderH3/HeaderH3";
 import HeaderH4 from "../../../components/HeaderH4/HeaderH4.";
 import Input from "../../../components/Input/Input";
@@ -45,6 +48,19 @@ export default function Register({}: Props) {
 		resolver: yupResolver(registerUserSchema),
 	});
 
+	const handleAuth = (authProvider: string) => {
+		console.log(authProvider);
+		if (authProvider === "google") {
+			window.location.href = `${backendApiUrl}/users/auth/google`;
+		}
+		if (authProvider === "linkedin") {
+			window.location.href = `${backendApiUrl}/users/auth/linkedin`;
+		}
+		if (authProvider === "facebook") {
+			window.location.href = `${backendApiUrl}/users/auth/facebook`;
+		}
+	};
+
 	// Handle onSubmit
 	const onSubmit = (formData: RegisterUserT) => {
 		const token = captchaRef.current.getValue();
@@ -79,7 +95,7 @@ export default function Register({}: Props) {
 					setErrorMessageBackend("Email is already taken.");
 					return;
 				}
-
+				console.log(data);
 				if (data.user) {
 					setIsUserCreated(true);
 					setIsBackendError(false);
@@ -105,6 +121,23 @@ export default function Register({}: Props) {
 				<Navigation />
 				<section className={s.register}>
 					<Logo className={s.logoImg} />
+					<div className={s.authSocialContainer}>
+						<div className={s.socialMediaControl} onClick={() => handleAuth("facebook")}>
+							<img src={FacebookSvg} alt="google svg image for social media register" className={s.authIcon} />
+							<span className={s.authText}>Facebook</span>
+						</div>
+						<div className={s.socialMediaControl} onClick={() => handleAuth("google")}>
+							<img src={GoogleSvg} alt="google svg image for social media register" className={s.authIcon} />
+							<span className={s.authText}>Google</span>
+						</div>
+						<div className={s.socialMediaControl} onClick={() => handleAuth("linkedin")}>
+							<img src={LinkedIn} alt="google svg image for social media register" className={s.authIcon} />
+							<span className={s.authText}>Linkedin</span>
+						</div>
+					</div>
+					<HeaderH4 className={s.line}>
+						<span className={s.lineText}>OR</span>
+					</HeaderH4>
 					{isUserCreated && <HeaderH3 className={s.successMessage}>Your account has been created successfully!</HeaderH3>}
 					<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
 						<HeaderH4>Sign Up</HeaderH4>
