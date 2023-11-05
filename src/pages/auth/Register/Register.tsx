@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 import ReCAPTCHA from "react-google-recaptcha";
-import FacebookSvg from "../../../assets/img/socials/facebook.svg";
 import GoogleSvg from "../../../assets/img/socials/google.svg";
 import LinkedIn from "../../../assets/img/socials/linkedin.svg";
 import HeaderH3 from "../../../components/HeaderH3/HeaderH3";
@@ -122,10 +121,10 @@ export default function Register({}: Props) {
 				<section className={s.register}>
 					<Logo className={s.logoImg} />
 					<div className={s.authSocialContainer}>
-						<div className={s.socialMediaControl} onClick={() => handleAuth("facebook")}>
+						{/* <div className={s.socialMediaControl} onClick={() => handleAuth("facebook")}>
 							<img src={FacebookSvg} alt="google svg image for social media register" className={s.authIcon} />
 							<span className={s.authText}>Facebook</span>
-						</div>
+						</div> */}
 						<div className={s.socialMediaControl} onClick={() => handleAuth("google")}>
 							<img src={GoogleSvg} alt="google svg image for social media register" className={s.authIcon} />
 							<span className={s.authText}>Google</span>

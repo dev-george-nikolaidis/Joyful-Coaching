@@ -108,43 +108,50 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
 
 ## Roadmap
 
-- <strong>Frontend </strong>roadmap
+- <strong>App </strong>roadmap
 
-  - [x] Online
-  - [x] User register JWT authentication
-  - [x] User register/Login client validation with local strategy and Google OAuth 2.0
-  - [x] User password JWT reset
-  - [x] Working Contact form
-  - [x] Working newsletter form
-  - [x] Contact form validation
-  - [x] impletion reCAPTCHA V2 for contact,register forms.
-  - [x] impletion custom reCAPTCHA for newsletter.
-  - [x] Appointment booking functionality.
-  - [x] Appointment dates availability check.
-  - [x] Stripe payment.
-  - [x] Dark theme support
-  - [x] Optimizing images in WebP format with automatic resizing
-  - [x] Optimize app speed by lazy loading images
-  - [x] Responsive Design
-  - [x] Optimize speed with routes lazy loading (Code splitting)
-  - [ ] Accessibility
+  - [x] User Registration with JWT Authentication:
+    - Secure user registration and authentication using JSON Web Tokens (JWT).
+  - [x] User Registration/Login with Multiple Strategies:
+    - Implement user registration and login with client-side validation using a local strategy and integrate popular OAuth 2.0 providers such as Google, and LinkedIn.
+  - [x] User Password Reset with JWT:
+    - Enable users to securely reset their passwords using JWT for authentication.
+  - [x] Functional Contact Form
+    - Incorporate a fully functional contact form for user inquiries and communication.
+  - [x] Newsletter Subscription Form
+    - Implement a working newsletter subscription form for user engagement and updates.
+  - [x] Contact Form Validation:
+    - Ensure data integrity and user-friendly interaction with contact form input validation
+  - [x] reCAPTCHA Integration (V2):
+  - Enhance security and prevent spam by implementing reCAPTCHA V2 for contact and registration forms.
+  - [x] Custom reCAPTCHA for Newsletter:
+    - Develop a custom reCAPTCHA solution for newsletter subscriptions to protect against unwanted sign-ups.
+  - [x] Appointment Booking Functionality:
+    - Provide users with the ability to schedule appointments or bookings within the app.
+  - [x] Appointment Date Availability Check:
+    - Enable users to check the availability of appointment dates and times.
+  - [x] Stripe Payment Integration:
+    - Implement secure payment processing through Stripe for transactions within the app.
+  - [x] Dark Theme Support:
+    - Offer users the option to switch between dark and light themes for a personalized experience.
+  - [x] Optimized Images in WebP Format:
+    - Improve page loading speed and performance by optimizing images in the WebP format with automatic resizing.
+  - [x] Optimized App Speed with Lazy Loading Images:
+    - Enhance app speed by implementing lazy loading techniques for images, ensuring faster loading times.
+  - [x] Responsive Design:
+    - Create a responsive design to ensure the app functions seamlessly on various devices and screen sizes.
+  - [x] Optimize Speed with Routes Lazy Loading (Code Splitting):
+    - Improve loading speed by utilizing code splitting and lazy loading for app routes and components.
+  - [x] Online Availability:
+    - Ensure the app is accessible and available for users to access and interact with online.
   - [ ] Search Engine Optimization (SEO)
+  - [ ] Unit Testing
   - [ ] Multi-language Support
-  - [ ] Unit Testing
-
-- <strong>Backend</strong> roadmap
-
-  - [x] Online
-  - [x] User register/Login functionality with JWT
-  - [x] User register/Login backend validation
-  - [x] User password reset functionality
-  - [x] Working Contact form functionality
-  - [x] Optimize speed with routes lazy loading (Code splitting)
-  - [ ] Unit Testing
+  - [ ] Accessibility
 
 ## App Current Version
 
--- 0.42.0
+-- 0.45.0
 
 ## Development
 

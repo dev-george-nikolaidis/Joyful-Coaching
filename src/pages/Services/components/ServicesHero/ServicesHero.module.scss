@@ -17,13 +17,15 @@
 .heroImgWrapper {
 	grid-column: 8 / 14;
 	justify-self: end;
+
+	max-height: 60rem;
 }
 .para {
 	margin: 2rem 0;
 }
 
 .heroImg {
-	max-height: 60rem;
+	height: 100%;
 }
 
 @media (max-width: 64em) {

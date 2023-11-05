@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 
 import { yupResolver } from "@hookform/resolvers/yup";
-import FacebookSvg from "../../../assets/img/socials/facebook.svg";
 import GoogleSvg from "../../../assets/img/socials/google.svg";
 import LinkedIn from "../../../assets/img/socials/linkedin.svg";
 import HeaderH4 from "../../../components/HeaderH4/HeaderH4.";
@@ -111,10 +110,10 @@ export default function Login({}: Props) {
 				<section className={s.login}>
 					<Logo className={s.logoImg} />
 					<div className={s.authSocialContainer}>
-						<div className={s.socialMediaControl} onClick={() => handleAuth("facebook")}>
+						{/* <div className={s.socialMediaControl} onClick={() => handleAuth("facebook")}>
 							<img src={FacebookSvg} alt="google svg image for social media register" className={s.authIcon} />
 							<span className={s.authText}>Facebook</span>
-						</div>
+						</div> */}
 						<div className={s.socialMediaControl} onClick={() => handleAuth("google")}>
 							<img src={GoogleSvg} alt="google svg image for social media register" className={s.authIcon} />
 							<span className={s.authText}>Google</span>
