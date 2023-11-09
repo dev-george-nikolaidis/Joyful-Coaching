@@ -111,7 +111,7 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
 - <strong>App </strong>roadmap
 
   - [x] User Registration with JWT Authentication:
-    - Secure user registration and authentication using JSON Web Tokens (JWT).
+    - User registration and authentication using JSON Web Tokens (JWT).
   - [x] User Registration/Login with Multiple Strategies:
     - Implement user registration and login with client-side validation using a local strategy and integrate popular OAuth 2.0 providers such as Google, and LinkedIn.
   - [x] User Password Reset with JWT:
@@ -145,8 +145,8 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
   - [x] Online Availability:
     - Ensure the app is accessible and available for users to access and interact with online.
   - [ ] Search Engine Optimization (SEO)
-  - [ ] Unit Testing
   - [ ] Multi-language Support
+  - [ ] Unit Testing for Front
   - [ ] Accessibility
 
 ## App Current Version

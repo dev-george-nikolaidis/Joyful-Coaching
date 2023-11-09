@@ -129,7 +129,7 @@ export default function Login({}: Props) {
 					<form className={s.form} onSubmit={handleSubmit(onSubmit)}>
 						<HeaderH4>Login</HeaderH4>
 
-						<Input label="Email" type="email" propFunc={register("email") as any} />
+						<Input data-testId="emailInput" label="Email" type="email" propFunc={register("email") as any} />
 						{errors.email ? <span className={s.error}>{errors.email.message}</span> : isBackendError && <span className={s.error}>{errorMessageBackend}</span>}
 
 						<Input label="Password" propFunc={register("password") as any} withShow={true} type="password" />
