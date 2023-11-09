@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import Newsletter from "../../components/Newsletter/Newsletter";
+import Seo from "../../components/Seo/Seo";
 import Footer from "../../components/layout/Footer/Footer";
 import Navigation from "../../components/layout/Navigation/Navigation";
 import Testimonial from "../../components/layout/Testimonial/Testimonial";
@@ -23,6 +24,7 @@ export default function Home({}: Props) {
 
 	return (
 		<section className={` ${s.home} col-12`}>
+			<Seo pageTitle="Home" pagePath="/" />
 			<Navigation />
 			<Hero />
 			<Benefits />

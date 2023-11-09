@@ -4,6 +4,7 @@ import HeaderH3 from "../../components/HeaderH3/HeaderH3";
 import HeaderH4 from "../../components/HeaderH4/HeaderH4.";
 import Img from "../../components/Img/Img";
 import Paragraph400 from "../../components/Paragraph400/Paragraph400";
+import Seo from "../../components/Seo/Seo";
 import Footer from "../../components/layout/Footer/Footer";
 import Navigation from "../../components/layout/Navigation/Navigation";
 import { useGeneralContext } from "../../context/GeneralContext";
@@ -63,6 +64,7 @@ export default function BlogSinglePage({}: Props) {
 
 	return (
 		<div className={`${s.blogSinglePage} col-12`}>
+			<Seo pageTitle="Blog Post" pagePath="/blog/post/:id" />
 			<Navigation />
 			<div className={s.blogSinglePageWrapper}>
 				<Article blog={blog!} />

@@ -144,14 +144,14 @@ Joyful Coaching is built using a cutting-edge technology stack, including:
     - Improve loading speed by utilizing code splitting and lazy loading for app routes and components.
   - [x] Online Availability:
     - Ensure the app is accessible and available for users to access and interact with online.
-  - [ ] Search Engine Optimization (SEO)
+  - [x] Search Engine Optimization (SEO)
   - [ ] Multi-language Support
   - [ ] Unit Testing for Front
   - [ ] Accessibility
 
 ## App Current Version
 
--- 0.45.0
+-- 0.48.0
 
 ## Development
 

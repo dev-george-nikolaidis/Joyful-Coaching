@@ -9,6 +9,7 @@ import Input from "../../components/Input/Input";
 import LoginButton from "../../components/LoginButton/LoginButton";
 import Logo from "../../components/Logo/Logo";
 import Modal from "../../components/Modal/Modal";
+import Seo from "../../components/Seo/Seo";
 import Spinner from "../../components/Spinner/Spinner";
 import Navigation from "../../components/layout/Navigation/Navigation";
 import { useGeneralContext } from "../../context/GeneralContext";
@@ -85,6 +86,7 @@ export default function Contact({}: Props) {
 
 	return (
 		<Modal>
+			<Seo pageTitle="Contact" pagePath="/contact" />
 			<div className={`col-12`}>
 				<Navigation />
 				{isLoading && <Spinner />}

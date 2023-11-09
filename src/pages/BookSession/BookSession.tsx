@@ -9,6 +9,7 @@ import LoginButton from "../../components/LoginButton/LoginButton";
 import Modal from "../../components/Modal/Modal";
 import Paragraph400 from "../../components/Paragraph400/Paragraph400";
 import PopupModal from "../../components/PopupModal/PopupModal";
+import Seo from "../../components/Seo/Seo";
 import Spinner from "../../components/Spinner/Spinner";
 import { ActionTypes } from "../../context/Actions";
 import { useGeneralContext } from "../../context/GeneralContext";
@@ -102,6 +103,7 @@ export default function BookSession({}: Props) {
 
 	return (
 		<Modal>
+			<Seo pageTitle="Appointments" pagePath="/booking/appointments" />
 			{isLoading && <Spinner />}
 			<section className={s.session}>
 				<div className={s.sessionContainer}>

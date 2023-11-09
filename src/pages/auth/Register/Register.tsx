@@ -12,6 +12,7 @@ import Input from "../../../components/Input/Input";
 import Logo from "../../../components/Logo/Logo";
 import Modal from "../../../components/Modal/Modal";
 import RegisterButton from "../../../components/RegisterButton/RegisterButton";
+import Seo from "../../../components/Seo/Seo";
 import Spinner from "../../../components/Spinner/Spinner";
 import Navigation from "../../../components/layout/Navigation/Navigation";
 import { ActionTypes } from "../../../context/Actions";
@@ -115,6 +116,7 @@ export default function Register({}: Props) {
 
 	return (
 		<Modal>
+			<Seo pageTitle="Register " pagePath="/user/register" />
 			<div className={` ${s.registerWrapper} col-12`}>
 				{isLoading && <Spinner />}
 				<Navigation />

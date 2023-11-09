@@ -1,3 +1,4 @@
+import Seo from "../../components/Seo/Seo";
 import Companies from "../../components/layout/Companies/Companies";
 import Footer from "../../components/layout/Footer/Footer";
 import Navigation from "../../components/layout/Navigation/Navigation";
@@ -11,6 +12,7 @@ export default function About({}: Props) {
 	useScrollToTop();
 	return (
 		<div className={`col-12 ${s.about}`}>
+			<Seo pageTitle="About " pagePath="/about" />
 			<Navigation />
 			<AboutHeader />
 			<Companies />

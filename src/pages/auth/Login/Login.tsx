@@ -10,6 +10,7 @@ import Input from "../../../components/Input/Input";
 import LoginButton from "../../../components/LoginButton/LoginButton";
 import Logo from "../../../components/Logo/Logo";
 import Modal from "../../../components/Modal/Modal";
+import Seo from "../../../components/Seo/Seo";
 import Spinner from "../../../components/Spinner/Spinner";
 import Navigation from "../../../components/layout/Navigation/Navigation";
 import { ActionTypes } from "../../../context/Actions";
@@ -104,6 +105,7 @@ export default function Login({}: Props) {
 
 	return (
 		<Modal>
+			<Seo pageTitle="Login " pagePath="/user/login" />
 			<div className={` ${s.loginWrapper} col-12`}>
 				<Navigation />
 				{isLoading && <Spinner />}

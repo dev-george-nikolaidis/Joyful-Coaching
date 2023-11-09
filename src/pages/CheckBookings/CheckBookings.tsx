@@ -8,6 +8,7 @@ import HeaderH4 from "../../components/HeaderH4/HeaderH4.";
 import Logo from "../../components/Logo/Logo";
 import Modal from "../../components/Modal/Modal";
 import Paragraph400 from "../../components/Paragraph400/Paragraph400";
+import Seo from "../../components/Seo/Seo";
 import Spinner from "../../components/Spinner/Spinner";
 import { ActionTypes } from "../../context/Actions";
 import { useGeneralContext } from "../../context/GeneralContext";
@@ -56,6 +57,7 @@ export default function CheckBookings({}: Props) {
 	};
 	return (
 		<Modal>
+			<Seo pageTitle="Booking" pagePath="/booking" />
 			{isLoading && <Spinner />}
 			<div className={s.booking}>
 				<Logo className={s.logoImg} />
